@@ -120,6 +120,8 @@
 	line-height: 1.2em;
 	text-indent: -1px;
 	max-height: 3.8em;
+	overflow: hidden;
+    padding-bottom: 0.2em;
 }
 .featured-post .post-meta {}
 .featured-post .post-article {
