@@ -10,7 +10,7 @@
 						<?php _e('Tag','oblivion'); ?> “<?php single_tag_title(); ?>”
 
 					<?php elseif (is_author()) : ?>
-						<?php _e('Author','oblivion'); $userInfo = get_user_by('slug', get_query_var('author_name')); echo '“' .$userInfo->display_name . '”'; ?>
+						<?php _e('Author','oblivion'); $userInfo = get_user_by('slug', get_query_var('author_name')); echo ' “' .$userInfo->display_name . '”'; ?>
 
 					<?php elseif (is_day()) : ?>
 						<?php _e('Day','oblivion'); ?> “<?php the_time('j. F Y'); ?>”
