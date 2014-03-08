@@ -203,6 +203,10 @@ body:before {
 	-webkit-box-shadow: 0 0 4px rgba(0,0,0,0.05);
 	box-shadow: 0 0 4px rgba(0,0,0,0.05);
 }
+#header .inner {
+	width: auto !important;
+	max-width: none;
+}
 .active-menu #header {
 	max-height: none;
 }
