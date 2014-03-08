@@ -63,6 +63,11 @@
 						<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
 							<?php the_post_thumbnail('medium-square'); ?>
 						</a>
+						<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
+							<figcaption class="post-thumbnail-caption">
+								<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
+							</figcaption>
+						<?php endif; ?>
 					</figure>
 				<?php endif; ?>
 				<header class="post-header">

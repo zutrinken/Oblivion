@@ -644,6 +644,7 @@ a#search-handler.active .search-open {
 	border: 0;
 }
 .post-thumbnail {
+	position: relative;
 	float: left;
 	margin: 0 1.6em 0.8em 0;
 	overflow: hidden;
@@ -672,6 +673,20 @@ a#search-handler.active .search-open {
 .post-thumbnail:focus img {
 	width: 104%;
 	margin: -2% 0 0 -2%;
+}
+.post-thumbnail-caption {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: block;
+	padding: 0.375em 0.625em;
+	font-size: 0.875em;
+	line-height: 1em;
+	background: rgba(0,0,0,0.375);
+	color: #fff;
+}
+.post-thumbnail-caption a {
+	color: inherit;
 }
 .post-video {
 	float: left;
