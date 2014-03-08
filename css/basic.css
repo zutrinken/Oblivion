@@ -162,9 +162,10 @@ blockquote p {
 }
 
 em, q {
-	font-family: 'Vollkorn', 'Open Sans', sans-serif;
+	font-family: 'Vollkorn', 'Georgia', serif;
 	font-size: 1.2em;
 	font-style: italic;
+	font-weight: 400;
 }
 
 small {
