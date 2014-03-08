@@ -1,0 +1,167 @@
+	/* ------------------------------ Alignments */
+
+.alignnone {
+	margin: 1.6em auto;
+}
+.aligncenter {
+	display: block;
+	margin: 2.4em auto;
+}
+.alignleft {
+	float: left;
+	margin: 0.4em 2.4em 1.6em -12.5%;
+}
+.alignright {
+	float: right;
+	margin: 0.4em -12.5% 1.6em 2.4em;
+}
+
+
+.size-thumbnail {}
+.alignleft.size-thumbnail,
+.alignright.size-thumbnail {
+	max-width: 25%;
+
+}
+
+
+.size-small {}
+.size-small.alignleft,
+.size-small.alignright {
+	max-width: 25%;
+}
+
+
+.size-medium {}
+.size-medium.alignleft,
+.size-medium.alignright {
+	max-width: 37.5%;
+}
+
+.size-large {}
+.alignleft.size-large,
+.alignright.size-large {
+	max-width: 62.5%;
+}
+
+
+.size-full {}
+.size-full.aligncenter {
+	width: 125% !important;
+	max-width: none;
+	margin: 3.2em -12.5%;
+}
+.size-full.alignleft,
+.size-full.alignright {
+	max-width: 62.5%;
+}
+
+
+	/* ------------------------------ Caption */
+
+.wp-caption {
+	max-width: 100%;
+	height: auto;
+	font-size: 0.8em;
+	line-height: 1.2em;
+}
+.wp-caption .wp-caption-text {
+	display: block;
+	text-align: center;
+	margin: 0.8em 0;
+	padding: 0;
+	color: #b6babf;
+}
+.wp-caption .wp-caption-text a,
+.wp-caption .wp-caption-text a:active
+.wp-caption .wp-caption-text a:visited {
+	color: inherit;
+	text-decoration: underline;
+}
+.wp-caption .wp-caption-text a:hover,
+.wp-caption .wp-caption-text a:focus {
+	text-decoration: none;
+}
+
+	/* ------------------------------ Gallery */
+
+.gallery {
+	margin: auto;
+	font-size: 0.8em;
+	line-height: 1.2em;
+}
+.gallery .gallery-item {
+	position: relative;
+	float: left;
+	margin: 1px;
+	overflow: hidden;
+}
+.gallery .gallery-item .gallery-icon {
+	float: none;
+	clear: both;
+	margin: 0;
+	width: auto;
+}
+.gallery .gallery-item .gallery-icon img {}
+
+.gallery .gallery-item .gallery-caption {
+	position: absolute;
+	left: 0;
+	bottom: -100px;
+	width: 95%;
+	background: rgba(0,0,0,0.625);
+	display: block;
+	text-align: center;
+	margin: 0;
+	padding: 12px 2.5%;
+	color: #fff;
+
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+.gallery .gallery-item:hover .gallery-caption,
+.gallery .gallery-item:focus .gallery-caption {
+	bottom: 0;
+}
+
+.gallery .gallery-item .gallery-caption a,
+.gallery .gallery-item .gallery-caption a:active
+.gallery .gallery-item .gallery-caption a:visited {
+	color: inherit;
+	text-decoration: underline;
+}
+.gallery .gallery-item .gallery-caption a:hover,
+.gallery .gallery-item .gallery-caption a:focus {
+	text-decoration: none;
+}
+
+
+
+/* ==========================================================================
+   2. Media Queries - Smaller than 480px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 480px) {
+	.alignnone,
+	.aligncenter,
+	.alignleft,
+	.alignright,
+	.size-thumbnail,
+	.size-small,
+	.size-medium,
+	.size-large,
+	.size-full {
+		float: none !important;
+		margin: 2.4em auto !important;
+		width: auto !important;
+		max-width: 100% !important;
+	}
+	.alignnone img,
+	.aligncenter img,
+	.alignleft img,
+	.alignright img {
+		margin: auto !important;
+	}
+	
+}

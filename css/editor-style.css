@@ -1,0 +1,12 @@
+body#tinymce {
+	padding: 30px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+object,
+iframe {
+	max-width: 100%;
+}

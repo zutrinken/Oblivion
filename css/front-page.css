@@ -1,0 +1,319 @@
+.frontpage-section {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+.section-header {
+	padding-bottom: 1em;
+	margin-bottom: 2em;
+	border-bottom: 1px solid #e4e6eb;
+	overflow: auto;
+}
+.section-title {
+	float: left;
+	font-size: 0.875em;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #757a80;
+	margin: 0;
+	padding: 0;
+}
+.section-more {
+	float: right;
+	font-size: 0.875em;
+	font-weight: 300;
+	line-height: 1em;
+}
+.section-more a {
+	position: relative;
+	font-weight: 300;
+	color: #2996cc;
+	padding-left: 1em;
+	white-space: pre;
+	display: inline-block;
+}
+.section-more a:hover,
+.section-more a:focus {
+	color: #1f7099;
+}
+.section-more a:after {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: '\f0da';
+	position: absolute;
+	top: 0.1em;
+	left: 0.2em;
+	padding: 0;
+	margin: 0;
+	width: auto;
+	color: #ff9500;
+}
+.section-aside {}
+.section-aside p {
+	margin: 0 0 1em;
+}
+
+
+#logo-large {
+	margin-top: -8%;
+}
+#logoless {
+	font-family: 'PoliticsHeadBold', 'Open Sans', sans-serif;
+	font-size: 5em;
+	line-height: 0.875em;
+	text-align: center;
+	margin-top: -8%;
+}
+
+/* ==========================================================================
+   Blog Posts
+   ========================================================================== */
+
+
+#section-blog {
+	padding-top: 64px;
+}
+#section-blog .inner {
+	width: 90% !important;
+	max-width: 90em;
+}
+
+.featured-post.post {
+	float: left;
+	width: 30.666%;
+	padding: 1px 0;
+	margin-right: 4%;
+	margin-bottom: 6em;
+	position: relative;
+	border: 0;
+}
+.featured-post.post.post-count-3,
+.featured-post.post.post-count-6,
+.featured-post.post.post-count-9,
+.featured-post.post.post-count-12 {
+	margin-right: 0;
+}
+.featured-post.post.post-count-4,
+.featured-post.post.post-count-7,
+.featured-post.post.post-count-10 {
+	clear: both;
+}
+
+.featured-post .post-inner {}
+.featured-post .post-thumbnail {
+	float: none;
+	width: 100%;
+	height: 0;
+	padding-bottom: 62.5%;
+	margin: 0 auto 2.4em;
+}
+.featured-post .post-header {
+	min-height: 5.6em;
+	margin-bottom: 0.8em;
+}
+.featured-post .post-title {
+	font-size: 1.6em;
+	line-height: 1.2em;
+	text-indent: -1px;
+	max-height: 3.8em;
+}
+.featured-post .post-meta {}
+.featured-post .post-article {
+	-webkit-column-count: 1 !important;
+	-moz-column-count: 1 !important;
+	column-count: 1 !important;
+}
+
+
+
+
+/* ==========================================================================
+   Blog More
+   ========================================================================== */
+
+#section-blog-more {
+	padding: 40px 0 24px;
+	border-top: 1px solid #e4e6eb;
+}
+#section-blog-more .inner {
+	width: 90% !important;
+	max-width: 90em;
+}
+.featured-post-more {}
+.featured-post-more a.blog-btn {
+	float: right;
+	font-weight: 600;
+}
+.featured-post-more a.standard-btn {
+	margin: 0 0 1em;
+}
+.featured-post-more a.standard-btn i {
+	font-size: 1.2em;
+}
+a.sp {
+	margin-right: 1em !important;
+}
+a.sp-twitter {
+	background: #3ea9dd;
+}
+a.sp-facebook {
+	background: #3c5a98;
+}
+a.sp-googleplus {
+	background: #d14836;
+}
+a.sp-youtube {
+	background: #c6312b;
+}
+a.sp-rss {
+	background: #f60;
+}
+
+
+/* ==========================================================================
+   Newsletter
+   ========================================================================== */
+
+#section-newsletter {
+	padding: 96px 0 128px;
+	background: #fff;
+	border-top: 1px solid #e4e6eb;
+}
+#section-newsletter .inner {}
+
+#newsletter-form {
+	position: relative;
+	overflow: auto;
+	margin: auto;
+}
+#newsletter-email {
+	float: left;
+	width: 75%;
+	margin: 0;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	
+	-webkit-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#newsletter-email:hover {}
+#newsletter-email:focus {}
+#newsletter-submit {
+	float: left;
+	width: 25%;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	
+	-webkit-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#newsletter-submit:hover {}
+#newsletter-submit:focus {}
+
+
+
+/* ==========================================================================
+   Widgets
+   ========================================================================== */
+
+
+#section-widgets {
+	padding: 96px 0 128px;
+	position: relative;
+	background: #fff;
+	border-top: 1px solid #e4e6eb;
+}
+#section-widgets .inner {
+	width: 90% !important;
+	max-width: 90em;
+}
+
+.frontpage-widget.widget {
+	padding: 1px 0;
+	float: left;
+	width: 25%;
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries - Smaller than 1280px
+   ========================================================================== */
+
+@media only screen and (max-width: 1280px) {}
+
+/* ==========================================================================
+   Media Queries - Smaller than 960px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 960px) {
+	#logoless {
+		font-size: 3.75em;
+	}
+	.featured-post.post {
+		width: 48%;
+	}
+	.featured-post.post.post-count-3,
+	.featured-post.post.post-count-9 {
+		margin-right: 4%;
+	}
+	.featured-post.post.post-count-4,
+	.featured-post.post.post-count-10 {
+		clear: none;
+	}
+	.featured-post.post.post-count-2,
+	.featured-post.post.post-count-4,
+	.featured-post.post.post-count-6,
+	.featured-post.post.post-count-8,
+	.featured-post.post.post-count-10,
+	.featured-post.post.post-count-12 {
+		margin-right: 0;
+	}
+	.featured-post.post.post-count-1,
+	.featured-post.post.post-count-3,
+	.featured-post.post.post-count-5,
+	.featured-post.post.post-count-7,
+	.featured-post.post.post-count-9,
+	.featured-post.post.post-count-11 {
+		clear: none;
+	}
+}
+
+/* ==========================================================================
+   Media Queries - Smaller than 640px
+   ========================================================================== */
+
+
+@media only screen and (max-width: 640px) {
+	#logoless {
+		font-size: 2em;
+	}
+	.featured-post.post {
+		float: none;
+		width: auto;
+	}
+	.featured-post .post-inner {
+		min-height: 0;
+	}
+	.frontpage-widget.widget {
+		float: none;
+		width: auto;
+	}
+}

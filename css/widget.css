@@ -1,0 +1,246 @@
+.widget {
+	position: relative;
+}
+.widget-inner {
+	margin: 2em;
+}
+.widget-title {
+	font-size: 0.8em;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	color: #757a80;
+	margin-bottom: 1em;
+}
+.widget a {
+	color: #2996cc;
+}
+.widget a:hover,
+.widget a:focus {
+	color: #1f7099;
+}
+
+.widget ul {
+	list-style: none;
+	border-top: 1px solid #e4e6eb;
+	margin: 0;
+}
+.widget ul li {
+	padding: 0.8em 0;
+	border-bottom: 1px solid #e4e6eb;
+}
+
+	/* ------------------------------ Widget Banner */
+
+.widget_banner {}
+.widget_banner .widget-inner {
+	padding: 0 !important;
+	border: 0 !important;
+	background: transparent !important;
+}
+
+	/* ------------------------------ Widget Submenu */
+
+.widget_nav_menu,
+.widget_pages {}
+
+.widget_nav_menu ul,
+.widget_pages ul {}
+.widget_nav_menu ul li,
+.widget_pages ul li {}
+.widget_nav_menu ul li:hover,
+.widget_nav_menu ul li:focus,
+.widget_pages ul li:hover,
+.widget_pages ul li:focus {}
+.widget_nav_menu ul li a,
+.widget_pages ul li a {}
+.widget_nav_menu ul li.current_page_item > a,
+.widget_pages ul li.current_page_item > a {}
+
+.widget_nav_menu ul ul,
+.widget_pages ul ul {}
+.widget_nav_menu ul ul li,
+.widget_pages ul ul li {}
+.widget_nav_menu ul ul li:before,
+.widget_pages ul ul li:before {}
+.widget_nav_menu ul ul ul,
+.widget_pages ul ul ul {}
+
+	/* ------------------------------ Widget Text */
+
+.widget_text {}
+
+	/* ------------------------------ Widget Calendar */
+
+
+.widget_calendar {}
+
+#wp-calendar {
+	position: relative;
+	overflow: visible;
+
+	text-align: center;
+	width: 100%;
+	border: 0;
+	margin: 0;
+	border-left: 1px solid #e4e6eb;
+	border-right: 1px solid #e4e6eb;
+	-webkit-border-radius: 2px;
+	border-radius: 2px;
+}
+.widget_calendar caption {
+	height: 2.4em;
+	line-height: 2.4em;
+	margin: 0 auto;
+	border: 1px solid #e4e6eb;
+	color: #2e3033;
+	background: #f2f3f5;
+	-webkit-border-radius: 2px 2px 0 0;
+	border-radius: 2px 2px 0 0;
+}
+.widget_calendar tr {
+	border: 0;
+}
+.widget_calendar td,
+.widget_calendar th {
+	text-align: center;
+	border: 1px solid #e4e6eb;
+	background: transparent !important;
+}
+.widget_calendar th {
+	font-size: 0.8em;
+	font-weight: 400;
+	color: #b6babf;
+	border: 0;
+}
+.widget_calendar tfoot {
+	height: 0;
+}
+.widget_calendar tfoot .pad {
+	display: none;
+}
+.widget_calendar #prev,
+.widget_calendar #next {
+	width: 25%;
+	white-space: nowrap;
+	border: 0;
+	display: block;
+	position: absolute;
+	top: 0;
+	padding: 0;
+	height: 2.4em;
+	line-height: 2.4em;
+	color: #2e3033;
+}
+.widget_calendar #prev {
+	text-align: left;
+	left: 0;
+}
+.widget_calendar #prev a {
+	padding-left: 0.8em;
+}
+.widget_calendar #next {
+	text-align: right;
+	right: 0;
+}
+.widget_calendar #next a {
+	padding-right: 0.8em;
+}
+.widget_calendar #prev a,
+.widget_calendar #next a {
+	display: block;
+	color: #757a80;
+}
+.widget_calendar #prev:hover a,
+.widget_calendar #next:focus a {
+	color: #232529;
+}
+.widget_calendar .pad {}
+.widget_calendar #today {
+	color: #000;
+	font-weight: 700;
+	background: #f2f3f5 !important;
+}
+.widget_calendar tbody a {
+	display: block;
+	color: #000;
+}
+.widget_calendar tbody a:hover,
+.widget_calendar tbody a:focus {
+	background: rgba(0,0,0,0.2);
+}
+
+	/* ------------------------------ Widget Tagcloud */
+
+.widget_tag_cloud {}
+.widget_tag_cloud .tagcloud {}
+.widget_tag_cloud .tagcloud a {
+	font-size: inherit !important;
+	display: inline-block;
+	background: #2996cc;
+	color: #fff;
+	padding: 0.2em 0.8em;
+	margin: 0.2em 0;
+	
+	-webkit-border-radius: 2em;
+	border-radius: 2em;
+}
+.widget_tag_cloud .tagcloud a:hover,
+.widget_tag_cloud .tagcloud a:focus {
+	background: #1f7099;
+	color: #fff;
+}
+
+	/* ------------------------------ Widget RSS */
+
+.widget_rss {}
+.widget_rss ul {}
+.widget_rss ul li {}
+.widget_rss ul li a.rsswidget {
+	display: block;
+	font-weight: 700;
+	margin: 1em 0;
+
+	font-size: 1.666em;
+	line-height: 1.25em;
+}
+.widget_rss ul li span.rss-date {
+	display: block;
+	margin: 0 0 2em;
+
+	font-weight: 700;
+}
+.widget_rss ul li .rssSummary {}
+.widget_rss ul li cite {
+	display: block;
+	margin: 1em 0;
+	font-weight: 700;
+}
+
+	/* ------------------------------ Widget Comments */
+
+.widget_recent_comments {}
+
+	/* ------------------------------ Widget Meta */
+
+.widget_meta {}
+
+	/* ------------------------------ Widget Archive */
+
+.widget_archive {}
+
+	/* ------------------------------ Widget Category */
+
+.widget_categories {}
+
+	/* ------------------------------ Widget Links */
+
+.widget_links {}
+
+	/* ------------------------------ Widget Recent Entries */
+
+.widget_recent_entries {}
+
+	/* ------------------------------ Widget Search */
+
+.widget_search {}

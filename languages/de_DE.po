@@ -1,0 +1,507 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Oblivion v0.9\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2014-03-08 16:58:25+0000\n"
+"Last-Translator: zutrinken <mirgehtsganzgut@web.de>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: German\n"
+"X-Poedit-Country: GERMANY\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#: 404.php:6
+#@ oblivion
+msgid "404"
+msgstr "404"
+
+#: 404.php:9
+#@ oblivion
+msgid "Nothing found here."
+msgstr "Nichts gefunden."
+
+#: archive.php:7
+#@ oblivion
+msgid "Category"
+msgstr "Kategorie"
+
+#: archive.php:10
+#@ oblivion
+msgid "Tag"
+msgstr "Tag"
+
+#: archive.php:13
+#@ oblivion
+msgid "Author"
+msgstr "Autor"
+
+#: archive.php:16
+#@ oblivion
+msgid "Day"
+msgstr "Tag"
+
+#: archive.php:19
+#@ oblivion
+msgid "Month"
+msgstr "Monat"
+
+#: archive.php:22
+#@ oblivion
+msgid "Year"
+msgstr "Jahr"
+
+#: archive.php:25
+#@ oblivion
+msgid "Archive"
+msgstr "Archiv"
+
+#: archive.php:38
+#@ oblivion
+msgid "No Posts"
+msgstr "Keine Artikel"
+
+#: archive.php:40
+#@ oblivion
+msgid "Post"
+msgstr "Artikel"
+
+#: archive.php:42
+#@ oblivion
+msgid "Posts"
+msgstr "Artikel"
+
+#: archive.php:73
+#: front-page.php:37
+#: front-page.php:115
+#: index.php:35
+#: search.php:21
+#: single.php:17
+#@ oblivion
+msgid "Posted by"
+msgstr "Erstellt von"
+
+#: archive.php:75
+#: front-page.php:39
+#: front-page.php:117
+#: index.php:37
+#: search.php:23
+#: single.php:19
+#@ oblivion
+msgid "on"
+msgstr "am"
+
+#: comments.php:2
+#, php-format
+#@ default
+msgid "Theme without %1$s"
+msgstr ""
+
+#: comments.php:2
+#, php-format
+#@ default
+msgid "Please include a %1$s template in your theme."
+msgstr ""
+
+#: comments.php:7
+#@ oblivion
+msgid "This is not the content you are looking for."
+msgstr "Das ist nicht der Inhalt wonach du suchst."
+
+#: comments.php:15
+#, php-format
+#@ oblivion
+msgid "One comment"
+msgid_plural "%1$s comments"
+msgstr[0] "Ein Kommentar"
+msgstr[1] "%1$s Kommentare"
+
+#: comments.php:23
+#@ oblivion
+msgid "Older comments"
+msgstr "Ältere Kommentare"
+
+#: comments.php:24
+#@ oblivion
+msgid "Newer Comments"
+msgstr "Neuere Kommentare"
+
+#: comments.php:35
+#@ oblivion
+msgid "What do you think?"
+msgstr "Was denkst du?"
+
+#: comments.php:35
+#, php-format
+#@ oblivion
+msgid "Leave a reply to %s"
+msgstr "Hinterlasse eine Antwort auf %s"
+
+#: comments.php:41
+#, php-format
+#@ oblivion
+msgid "You have to be <a href=\"%s\">logged in</a>."
+msgstr "Du musst <a href=\"%s\">eingeloggt</a> sein."
+
+#: comments.php:47
+#, php-format
+#@ oblivion
+msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
+msgstr "Eingeloggt als <a href=\"%1$s\">%2$s</a>."
+
+#: comments.php:47
+#@ default
+msgid "Log out of this account"
+msgstr ""
+
+#: comments.php:47
+#@ oblivion
+msgid "Log out"
+msgstr "Ausloggen"
+
+#: comments.php:51
+#@ oblivion
+msgid "Name"
+msgstr "Name"
+
+#: comments.php:51
+#: comments.php:57
+#: comments.php:71
+#@ oblivion
+msgid "required"
+msgstr "erforderlich"
+
+#: comments.php:57
+#@ oblivion
+msgid "Email"
+msgstr "Email"
+
+#: comments.php:63
+#@ oblivion
+msgid "Website"
+msgstr "Website"
+
+#: comments.php:69
+#, php-format
+#@ default
+msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
+msgstr ""
+
+#: comments.php:71
+#@ oblivion
+msgid "Comment"
+msgstr "Kommentar"
+
+#: comments.php:75
+#@ oblivion
+msgid "Submit"
+msgstr "Senden"
+
+#: footer.php:4
+#: header.php:104
+#@ oblivion
+msgid "Navigation"
+msgstr "Navigation"
+
+#: front-page.php:89
+#: index.php:7
+#@ oblivion
+msgid "Blog"
+msgstr "Blog"
+
+#: front-page.php:140
+#@ oblivion
+msgid "See all Posts"
+msgstr "Alle Beiträge"
+
+#: front-page.php:143
+#@ oblivion
+msgid "Twitter"
+msgstr "Twitter"
+
+#: front-page.php:146
+#@ oblivion
+msgid "Facebook"
+msgstr "Facebook"
+
+#: front-page.php:149
+#@ oblivion
+msgid "Google+"
+msgstr "Google+"
+
+#: front-page.php:152
+#@ oblivion
+msgid "Youtube"
+msgstr "Youtube"
+
+#: front-page.php:154
+#@ oblivion
+msgid "RSS"
+msgstr "RSS"
+
+#: front-page.php:194
+#: front-page.php:196
+#@ oblivion
+msgid "Widgets"
+msgstr "Widgets"
+
+#: functions.php:18
+#@ oblivion
+msgctxt "Font: on or off"
+msgid "on"
+msgstr "auf"
+
+#: functions.php:76
+#@ oblivion
+msgid "Twitter (without @)"
+msgstr ""
+
+#: functions.php:147
+#@ oblivion
+msgid "Header"
+msgstr ""
+
+#: functions.php:148
+#@ oblivion
+msgid "Footer"
+msgstr ""
+
+#: functions.php:156
+#@ oblivion
+msgid "Start"
+msgstr ""
+
+#: functions.php:223
+#: inc/theme-options.php:72
+#@ oblivion
+msgid "Frontpage"
+msgstr "Startseite"
+
+#: functions.php:224
+#@ oblivion
+msgid "The default sidebar."
+msgstr "Die Standard Sidebar"
+
+#: functions.php:482
+#: functions.php:519
+#@ oblivion
+msgid "read more"
+msgstr "weiterlesen"
+
+#: functions.php:561
+#: functions.php:582
+#@ oblivion
+msgid "Page "
+msgstr "Seite "
+
+#: functions.php:561
+#: functions.php:582
+#@ oblivion
+msgid " of "
+msgstr "von "
+
+#: functions.php:585
+#: functions.php:587
+#@ oblivion
+msgid "previous"
+msgstr "Vorherige"
+
+#: functions.php:608
+#: functions.php:610
+#@ oblivion
+msgid "next"
+msgstr "Nächste"
+
+#: functions.php:634
+#, php-format
+#@ oblivion
+msgid "%s"
+msgstr "%s"
+
+#: functions.php:635
+#, php-format
+#@ default
+msgid "%1$s"
+msgstr ""
+
+#: functions.php:636
+#@ default
+msgctxt "oblivion"
+msgid "reply"
+msgstr ""
+
+#: functions.php:641
+#@ oblivion
+msgid "Your comment will be public soon."
+msgstr "Dein Kommentar wird bald veröffentlicht."
+
+#: header.php:121
+#: search.php:6
+#: search.php:38
+#@ oblivion
+#@ farewell
+msgid "Search"
+msgstr "Suche"
+
+#: inc/imagefilter.php:28
+#: inc/imagefilter.php:34
+#@ imagefilter
+msgid "PHP GD is required."
+msgstr ""
+
+#: inc/imagefilter.php:31
+#@ imagefilter
+msgid "PHP IMAGECOPY is required."
+msgstr ""
+
+#: inc/imagefilter.php:64
+#@ default
+msgid "Could not read image size"
+msgstr ""
+
+#: inc/imagefilter.php:86
+#: inc/imagefilter.php:89
+#: inc/imagefilter.php:93
+#@ default
+msgid "Resize path invalid"
+msgstr ""
+
+#: inc/theme-options.php:26
+#@ oblivion
+msgid "oblivion Theme-Options"
+msgstr ""
+
+#: inc/theme-options.php:31
+#@ oblivion
+msgid "Settings saved!"
+msgstr "Einstellungen gespeichert!"
+
+#: inc/theme-options.php:40
+#@ oblivion
+msgid "Graphics"
+msgstr ""
+
+#: inc/theme-options.php:41
+#, php-format
+#@ oblivion
+msgid "Choose an Image from your <a target=\"_blank\" href=\"%s/wp-admin/upload.php\">Library</a> or <a target=\"_blank\" href=\"%s/wp-admin/media-new.php\">upload</a> a new one."
+msgstr ""
+
+#: inc/theme-options.php:46
+#: inc/theme-options.php:48
+#@ default
+msgid "logo"
+msgstr ""
+
+#: inc/theme-options.php:55
+#: inc/theme-options.php:57
+#@ default
+msgid "icon"
+msgstr ""
+
+#: inc/theme-options.php:64
+#: inc/theme-options.php:66
+#@ default
+msgid "touch-icon"
+msgstr ""
+
+#: inc/theme-options.php:77
+#@ default
+msgid "sideposts"
+msgstr ""
+
+#: inc/theme-options.php:77
+#@ oblivion
+msgid "set category ID (only one ID)"
+msgstr ""
+
+#: inc/theme-options.php:82
+#@ default
+msgid "youtube"
+msgstr ""
+
+#: inc/theme-options.php:86
+#@ default
+msgid "twitter"
+msgstr ""
+
+#: inc/theme-options.php:90
+#@ default
+msgid "facebook"
+msgstr ""
+
+#: inc/theme-options.php:94
+#@ default
+msgid "google"
+msgstr ""
+
+#: inc/theme-options.php:98
+#@ default
+msgid "newsletter"
+msgstr ""
+
+#: inc/theme-options.php:102
+#@ oblivion
+msgid "Save"
+msgstr "Speichern"
+
+#: search.php:9
+#@ oblivion
+msgid "Results"
+msgstr "Ergebnisse"
+
+#: search.php:41
+#@ oblivion
+msgid "Tags"
+msgstr "Tags"
+
+#: searchform.php:5
+#@ oblivion
+msgid "Search ..."
+msgstr "Suche ..."
+
+#: single.php:34
+#@ oblivion
+msgid "Posted in:"
+msgstr "Abgelegt in:"
+
+#: single.php:51
+#@ oblivion
+msgid "Article Navigation"
+msgstr ""
+
+#: single.php:36
+#@ oblivion
+msgid "Tagged with:"
+msgstr "Getaggt mit:"
+
+#: comments.php:36
+#@ oblivion
+msgid "cancel reply"
+msgstr ""
+
+#: functions.php:112
+#, php-format
+#@ oblivion
+msgid "Page %s"
+msgstr "Seite %s"
+
+#: single.php:54
+#@ oblivion
+msgid "previous post"
+msgstr "vorheriger Artikel"
+
+#: single.php:59
+#@ oblivion
+msgid "next post"
+msgstr "nächster Artikel"
+
