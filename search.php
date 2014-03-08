@@ -37,11 +37,6 @@
 		<div class="searcharea">
 			<h2 class="visuallyhidden"><?php _e('Search','oblivion'); ?></h2>
 			<?php get_search_form(); ?>
-			<div class="search-tags">
-				<h2 class="visuallyhidden"><?php _e('Tags','oblivion'); ?></h2>
-				<?php wp_tag_cloud( 'format=list&orderby=count&order=DESC' ); ?>
-				<div class="clear"></div>
-			</div>
 		</div>
 	<?php endif; ?>
 
