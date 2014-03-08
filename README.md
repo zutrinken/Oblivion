@@ -5,6 +5,8 @@ Yet another wordpress theme.
 * Author: [Peter Amende](http://zutrinken.com/)
 * License: MIT License
 
+[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/oblivion&title=oblivion&language=php-js-html-css&tags=github&category=software)
+
 ## Version
 
 v0.9 <font color="red">**BETA**</font>
@@ -15,7 +17,6 @@ Font **PoliticsHeadBold** by [Fred Bordfeld](http://kaklotter.de/)
 Font **Awesome** by [Dave Gandy](https://github.com/FortAwesome/Font-Awesome)  
 Script **Highlight.js** by [Ivan Sagalaev](https://github.com/isagalaev/highlight.js)  
 Script **FitVids** by [Dave Rupert](https://github.com/davatron5000/FitVids.js)  
-
 
 ## Copyright & License
 
