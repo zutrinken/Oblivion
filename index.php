@@ -1,10 +1,11 @@
 <?php get_header(); ?>
 
-	<?php if(is_home()) : ?>	
+	<?php if(is_home() && get_option('page_for_posts')) : ?>	
 		<header class="page-header">
 			<div class="inner">
+				<?php $blog_page_id = get_option('page_for_posts'); ?>
 				<h2 class="page-title">
-					<?php _e('Blog','oblivion'); ?>
+					<?php echo get_page($blog_page_id)->post_title; ?>
 				</h2>
 				<aside class="page-meta">
 					<?php current_paged(); ?>
