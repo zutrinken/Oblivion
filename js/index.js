@@ -166,6 +166,7 @@ jQuery(function($) {
 	   Parallax Frontpage Banner
 	   ========================================================================== */
 
+/*
 	function parallaxScroll() {
 		var scrolled = viewport.scrollTop();
 		var parallaxOffset = scrolled * 0.375;
@@ -182,11 +183,13 @@ jQuery(function($) {
 			'opacity' : opacity * 0.875
 		});
 	}
+*/
 	
 	/* ==========================================================================
 	   Fire functions on Scroll Event
 	   ========================================================================== */
 	
+/*
 	if(html.hasClass('no-touch')) {
 		function scrollHandler() {
 			parallaxScroll();
@@ -194,6 +197,37 @@ jQuery(function($) {
 		scrollHandler();
 		viewport.on('scroll', function() {
 			scrollHandler();
+		});
+	}
+*/
+	
+	if(html.hasClass('no-touch')) {
+	
+		$('[data-type]').each(function() {
+			$(this).data('speed', $(this).attr('data-speed'));
+		});
+		
+		$('[data-type="prlx"]').each(function() {
+			var self = $(this);
+			var topOffset = self.offset().top;
+		
+			function prlx() {
+				console.log(topOffset);
+				var yPos = (viewport.scrollTop() * self.data('speed'));
+				var opc = 1 - viewport.scrollTop() / 500;
+				if(self.hasClass('page-header-cover')) {
+					opc = opc * 0.875;
+				}
+				self.css({
+					'-webkit-transform' : 'translate3d(0px, ' + yPos + 'px, 0px)',
+					'transform' : 'translate3d(0px, ' + yPos + 'px, 0px)',
+					'opacity' : opc
+				});
+			}
+			viewport.on('scroll', function() {
+				prlx();
+			});
+			prlx();
 		});
 	}
 	

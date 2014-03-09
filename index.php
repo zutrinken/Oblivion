@@ -2,7 +2,7 @@
 
 	<?php if(is_home() && get_option('page_for_posts')) : ?>	
 		<header class="page-header">
-			<div class="inner">
+			<div class="inner" data-type="prlx" data-speed="0.375">
 				<?php $blog_page_id = get_option('page_for_posts'); ?>
 				<h2 class="page-title">
 					<?php echo get_page($blog_page_id)->post_title; ?>

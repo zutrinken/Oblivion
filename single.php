@@ -9,7 +9,7 @@
 			</style>
 		<?php endif; ?>
 		<header class="page-header">
-			<div class="inner">
+			<div class="inner" data-type="prlx" data-speed="0.375">
 				<h2 class="page-title">
 					<?php the_title(); ?>
 				</h2>
@@ -21,7 +21,7 @@
 				</aside>
 			</div>
 			<?php if(has_post_thumbnail() && $Imagefilter) : ?>
-				<div class="page-header-cover"></div>
+				<div class="page-header-cover" data-type="prlx" data-speed="0.625"></div>
 			<?php endif; ?>
 		</header>
 		<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

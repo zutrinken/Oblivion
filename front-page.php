@@ -4,7 +4,7 @@
 		<?php if(is_home()) : ?>
 		
 		<header class="page-header">
-			<div class="inner">
+			<div class="inner" data-type="prlx" data-speed="0.375">
 				<h2 class="page-title">
 					<?php bloginfo('name'); ?>
 				</h2>
@@ -13,7 +13,7 @@
 				</aside>
 			</div>
 			<?php if(get_header_image()) : ?>
-				<div id="page-header-cover" class="page-header-cover"></div>
+				<div id="page-header-cover" class="page-header-cover" data-type="prlx" data-speed="0.625"></div>
 			<?php endif; ?>
 		</header>
 		
@@ -71,7 +71,7 @@
 
 		
 		<section class="page-header">
-			<div class="inner">
+			<div class="inner" data-type="prlx" data-speed="0.375">
 				<h1 class="page-title" id="logoless">
 					<?php if($options['logo']) : ?>
 						<img id="logo-large" src="<?php echo $options['logo']; ?>" alt="<?php bloginfo('name'); ?>" />
@@ -81,7 +81,7 @@
 				</h1>
 			</div>
 			<?php if(get_header_image()) : ?>
-				<div id="page-header-cover" class="page-header-cover"></div>
+				<div id="page-header-cover" class="page-header-cover" data-type="prlx" data-speed="0.625"></div>
 			<?php endif; ?>
 		</section>
 		

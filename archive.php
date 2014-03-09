@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 		<section class="page-header">
-			<div class="inner">
+			<div class="inner" data-type="prlx" data-speed="0.375">
 				<h2 class="page-title">
 					<?php if (is_category()) : ?>
 						<?php _e('Category','oblivion'); ?> “<?php single_cat_title(); ?>”
