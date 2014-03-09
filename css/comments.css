@@ -30,6 +30,9 @@
 .commentlist li:last-child:after {
 	display: none;
 }
+.commentlist li.depth-1.parent:last-child:after {
+	display: block;
+}
 .commentlist li .comment-number {
 	display: none;
 }

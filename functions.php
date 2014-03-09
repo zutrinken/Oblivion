@@ -625,8 +625,9 @@ function custom_comment($comment, $args, $depth) {
 		$comment_counter ++;
 	}
 	$GLOBALS['comment'] = $comment;
+	$parent_class = ( empty( $args['has_children'] ) ? '' : 'parent' );
 	?>
-	<li <?php comment_class(); ?> id="li-comment-<?php comment_ID() ?>">
+	<li id="li-comment-<?php comment_ID() ?>" <?php comment_class($parent_class); ?>>
 		<?php if ($comment->comment_parent < 1) {echo '<span class="comment-number">' . $comment_counter . '</span>';} ?>
 		<div id="comment-<?php comment_ID(); ?>" class="comment-body">
 			<div class="comment-info">
