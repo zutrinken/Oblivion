@@ -8,8 +8,9 @@
 	display: none;
 }
 .commentlist {
+	position: relative;
 	list-style: none;
-	margin: 0;
+	margin: 0 0 48px;
 	padding: 0;
 }
 .commentlist li {
@@ -32,6 +33,19 @@
 }
 .commentlist li.depth-1.parent:last-child:after {
 	display: block;
+	top: 0;
+}
+.commentlist li.depth-1.parent:last-child:before {
+	position: absolute;
+	content: '';
+	left: 44px;
+	bottom: -4px;
+	width: 8px;
+	height: 8px;
+	background: #757a80;
+	z-index: 2;
+	-webkit-border-radius: 12px;
+	border-radius: 12px;
 }
 .commentlist li .comment-number {
 	display: none;
@@ -344,5 +358,8 @@
 	}
 	.comment-body .comment-info .comment-date {
 		display: none;
+	}
+	.commentlist li.depth-1.parent:last-child:before {
+		left: 24px;
 	}
 }
