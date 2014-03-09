@@ -11,6 +11,10 @@ Yet another wordpress theme.
 
 v0.9 <font color="red">**BETA**</font>
 
+## Screenshot
+
+![preview](screenshot.png)
+
 ## Credits
 
 Font **PoliticsHeadBold** by [Fred Bordfeld](http://kaklotter.de/)  
