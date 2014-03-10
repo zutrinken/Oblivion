@@ -3,7 +3,7 @@
 <!--[if IE 7]> <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]> <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]> <![endif]-->
-<html class='no-js'>
+<html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml">
 <!-- <![endif] -->
 
 	<?php $options = get_option('oblivion_theme_options'); ?>
@@ -80,6 +80,39 @@
 		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/style.css" media="screen" />
 		<link type="text/css" rel="stylesheet" href="<?php echo $template_url; ?>/css/print.css" media="print" />
 		<link rel="apple-touch-icon-precomposed" href="<?php echo $template_url; ?>/images/touch-icon.png"/>
+		
+		<?php if(is_single()) : ?>
+			<?php
+				$image_id = get_post_thumbnail_id();
+				$image_url = wp_get_attachment_image_src($image_id,'thumbnail', true);
+			?>
+			<meta property="og:title" content="<?php the_title(); ?>" />
+			<meta property="og:type" content="article" />
+			<meta property="og:url" content="<?php the_permalink(); ?>" />
+			<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+			<meta property="og:description" content="<?php if(have_posts()) { while(have_posts()) { the_post(); echo strip_tags(get_the_excerpt()); }} ?>" />
+			<?php if($image_url) : ?>
+			<meta property="og:image" content="<?php echo $image_url[0]; ?>" />
+			<meta property="og:image:width" content="150" />
+			<meta property="og:image:height" content="150" />
+			<?php endif; ?>
+			<meta property="twitter:card" content="summary" />
+			<meta property="twitter:title" content="<?php the_title(); ?>" />
+			<meta property="og:description" content="<?php if(have_posts()) { while(have_posts()) { the_post(); echo strip_tags(get_the_excerpt()); }} ?>" />
+			<?php if($image_url) : ?>
+			<meta property="twitter:image" content="<?php echo $image_url[0]; ?>" />
+			<?php endif; ?>
+		<?php else : ?>
+			<meta property="og:title" content="<?php bloginfo('name'); ?>" />
+			<meta property="og:type" content="website" />
+			<meta property="og:url" content="<?php bloginfo('url'); ?>" />
+			<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+			<meta property="og:description" content="<?php bloginfo('description'); ?>" />
+			<meta property="twitter:card" content="summary" />
+			<meta property="twitter:title" content="<?php the_title(); ?>" />
+			<meta property="twitter:description" content="<?php bloginfo('description'); ?>" />
+		<?php endif; ?>
+		
 		<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
