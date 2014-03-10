@@ -111,6 +111,11 @@
 	padding-bottom: 62.5%;
 	margin: 0 auto 2.4em;
 }
+.featured-post .post-video {
+	float: none;
+	width: 100%;
+	margin: 0 auto 2.4em;
+}
 .featured-post .post-header {
 	min-height: 5.6em;
 	margin-bottom: 0.8em;

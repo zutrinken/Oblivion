@@ -107,7 +107,11 @@
 				if (have_posts()) : while (have_posts()) : the_post(); $counter++; ?>
 					<section id="post-<?php the_ID(); ?>" <?php post_class('post-count-'.$counter.' featured-post'); ?>>
 						<div class="post-inner">
-							<?php if(has_post_thumbnail()) : ?>
+							<?php if(get_post_meta($post->ID, 'video', true)) : ?>
+								<figure class="post-video">
+									<?php echo get_post_meta($post->ID, 'video', true); ?>
+								</figure>
+							<?php elseif(has_post_thumbnail()) : ?>
 								<figure class="post-thumbnail">
 									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">								
 										<?php the_post_thumbnail('medium-featured'); ?>
