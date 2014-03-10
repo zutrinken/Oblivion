@@ -13,26 +13,16 @@ if (extension_loaded('gd') && function_exists('imagecopy') && function_exists('i
 	   Initials
 	   ========================================================================== */
 
-function oblivion_font_url() {
-	$font_url = '';
-	if ('off' !== _x('on','Font: on or off','oblivion')) {
-		$font_url = add_query_arg(
-			'family',
-			urlencode(
-				'Open+Sans:400,700,300,600,400italic,700italic|Inconsolata:400|Vollkorn:400,400italic,700italic'
-			),
-			'//fonts.googleapis.com/css'
-		);
-	}
 
-	return $font_url;
+add_action('wp_enqueue_scripts', 'oblivion_fonts');
+function oblivion_fonts() {
+	wp_register_style('oblivion-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,400italic,700italic|Inconsolata:400|Vollkorn:400,400italic,700italic');
+	wp_enqueue_style('oblivion-fonts');
 }
 
 add_action('wp_enqueue_scripts', 'enqueue_scripts');
 function enqueue_scripts() {
 	$template = get_template_directory_uri();
-
-	wp_register_style('oblivion-fonts', oblivion_font_url(), array(), null);
 	
 	wp_enqueue_script('oblivion-modernizr', $template.'/js/libs/modernizr-2.6.2.min.js', array(), null, false);
 
