@@ -128,7 +128,8 @@
 						<?php */ endif; ?>
 					</a>
 				</h1>
-				<a id="search-handler">
+				<a id="search-link" class="search-handler" href="<?php bloginfo('url'); ?>/?s=&nbsp;&submit="><i class="fa fa-search"></i></a>
+				<a id="search-handler" class="search-handler">
 					<i class="fa fa-times search-close"></i>
 					<i class="fa fa-search search-open"></i>
 				</a>
