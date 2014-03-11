@@ -136,6 +136,11 @@
 	text-decoration: none;
 }
 
+.wp-smiley {
+	display: inline;
+	margin: 0 0.4em;
+	vertical-align: sub;
+}
 
 
 /* ==========================================================================
