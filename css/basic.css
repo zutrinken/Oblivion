@@ -147,18 +147,18 @@ hr {
 
 blockquote {
 	font-family: 'Vollkorn', 'Georgia', serif;
-	font-size: 1.4em;
+	font-size: 1.2em;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.6em 0;
+    margin: 2.4em 0;
     margin-left: -24px;
     padding: 0 0 0 16px;
     border-left: #dadce0 8px solid;
+	font-style: italic;
 }
 
 blockquote p {
-    margin: 0.8em 0;
-    font-style: italic;
+    margin: 1.2em 0;
 }
 
 em, q {
