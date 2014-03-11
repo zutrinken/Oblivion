@@ -694,6 +694,23 @@ a#search-handler.active .search-open {
 	overflow: hidden;
 	width: 50%;
 }
+.post-video {
+	position: relative;
+	float: left;
+	margin: 0 1.6em 0.8em 0;
+	overflow: hidden;
+	width: 50%;
+}
+.no-js .post-video {
+	padding-top: 31.25%;
+}
+.no-js .post-video iframe {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
 .post-title {
 	color: #000;
 	font-size: 2em;
@@ -1154,6 +1171,9 @@ a#search-handler.active .search-open {
 		float: none;
 		margin-right: 0;
 		width: auto;
+	}
+	.no-js .post-video {
+		padding-top: 62.5%;
 	}
 	.pagination-pager {
 		float: none;
