@@ -34,7 +34,7 @@
 			</div>
 		</nav>
 	<?php else : ?>
-		<div class="searcharea">
+		<div id="search-search" class="searcharea">
 			<h2 class="visuallyhidden"><?php _e('Search','oblivion'); ?></h2>
 			<?php get_search_form(); ?>
 		</div>

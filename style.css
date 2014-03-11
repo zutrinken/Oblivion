@@ -593,7 +593,12 @@ a.search-handler.active .search-open {
 	border: 0;
 	color: #333;
 }
-
+#search-search {
+	margin: 144px auto;	
+}
+.no-js #search-search.searcharea .searchform {
+	border: 1px solid #b6babf;
+}
 
 
 #footer {
