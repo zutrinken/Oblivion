@@ -172,6 +172,13 @@ em, q {
 	font-style: italic;
 	font-weight: 400;
 }
+blockquote em,
+blockquote q {
+	font-size: 1em;
+}
+b, strong {
+	font-weight: 700;
+}
 
 small {
     font-size: 0.9em;
