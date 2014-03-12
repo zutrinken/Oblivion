@@ -3,7 +3,7 @@
 		<section class="page-header">
 			<div class="inner" data-type="prlx" data-speed="0.375">
 				<h2 class="page-title">
-					<?php _e('Search','farewell'); ?> “<?php the_search_query(); ?>”
+					<?php _e('Search','oblivion'); ?> “<?php the_search_query(); ?>”
 				</h2>
 				<aside class="page-meta">
 					<?php echo $wp_query->found_posts . '&#32;' . __('Results','oblivion'); ?>
