@@ -107,7 +107,6 @@
 }
 .comment-body .unlock {
 	font-weight: 700;
-	color: #181818;
 }
 .comment-body .comment-info {
 	margin: 1.4em 0 0.4em;
@@ -123,7 +122,7 @@
 	-webkit-border-radius: 128px;
 	border-radius: 128px;
 
-	border: 1px solid #404040;
+	border: 1px solid #2e3033;
 	margin: -2px 0 0 -2px;
 	background: #757a80;
 
@@ -181,6 +180,25 @@
 .pingback .comment-body .comment-avatar img,
 .pingback .comment-body .comment-reply {
 	display: none;
+}
+.pingback .comment-body .comment-avatar:before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 64px;
+	height: 64px;
+	line-height: 64px;
+	text-align: center;
+	margin: 1px 0 0 1px;
+	color: #b6babf;
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: normal;
+	font-size: 2em;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: '\f0c1';
+	z-index: 5;
 }
 
 	/* ------------------------------ Commentform */
@@ -312,6 +330,13 @@
 		height: 48px;
 		left: 4px;
 		width: 48px;
+	}
+	.pingback .comment-body .comment-avatar:before {
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+		margin: 1px 0 0 1px;
+		font-size: 1.6em;
 	}
 	.comment-body .comment-info,
 	.comment-body .comment-text {
