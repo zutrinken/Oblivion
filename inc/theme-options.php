@@ -37,30 +37,21 @@ function oblivion_theme_options_page() {
 			<?php settings_fields( 'oblivion_options' ); ?>
 			<?php $options = get_option( 'oblivion_theme_options' ); ?>
 
-			<h3><?php _e('Graphics','oblivion'); ?></h3>
+			<h3><?php _e('Logo','oblivion'); ?></h3>
 			<p><?php printf(__('Choose an Image from your <a target="_blank" href="%s/wp-admin/upload.php">Library</a> or <a target="_blank" href="%s/wp-admin/media-new.php">upload</a> a new one.','oblivion'), get_home_url(), get_home_url()); ?></p>
 			<table class="form-table">
 				<tr valign="top">
-					<th scope="row">Logo</th>
-					<td>
-						<input id="oblivion_theme_options[logo]" class="regular-text" type="text" name="oblivion_theme_options[logo]" value="<?php esc_attr_e( $options['logo'] ); ?>" />
-						<?php if($options['logo'] == TRUE) : ?>
-							<img style="max-width: 240px; vertical-align: top;margin: 0 0 0 20px;" src="<?php esc_attr_e( $options['logo'] ); ?>" alt="" />
-						<?php endif; ?>
-					</td>
+					<th scope="row">Header Icon</th>
+					<td><input id="oblivion_theme_options[icon]" class="regular-text" type="text" name="oblivion_theme_options[icon]" value="<?php esc_attr_e( $options['icon'] ); ?>" /> <p class="description">104x104px</p></td>
 				</tr>
 				<tr valign="top">
-					<th scope="row">Icon</th>
-					<td>
-						<input id="oblivion_theme_options[icon]" class="regular-text" type="text" name="oblivion_theme_options[icon]" value="<?php esc_attr_e( $options['icon'] ); ?>" />
-						<?php if($options['icon'] == TRUE) : ?>
-							<img style="max-width: 72px; vertical-align: top;margin: 0 0 0 20px;" src="<?php esc_attr_e( $options['icon'] ); ?>" alt="" />
-						<?php endif; ?>
-					</td>
+					<th scope="row">Frontpage Logo</th>
+					<td><input id="oblivion_theme_options[logo]" class="regular-text" type="text" name="oblivion_theme_options[logo]" value="<?php esc_attr_e( $options['logo'] ); ?>" /><p class="description">displayed on orange or header background image</p></td>
 				</tr>
 			</table>
 
 			<h3><?php _e('Frontpage','oblivion'); ?></h3>
+			<p>Only for static frontpages!</p>
 			<table class="form-table">
 				<tr valign="top">
 					<th scope="row">Youtube</th>
