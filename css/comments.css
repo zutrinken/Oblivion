@@ -273,14 +273,19 @@
 #commentform label {
 	padding: 0;
 	margin: 0;
-	font-size: 0.8em;
+	font-size: 0.875em;
 	font-weight: 700;
 	color: #2e3033;
 }
-#commentform label .req {
+#commentform .req {
 	margin-left: 8px;
 	color: #2996cc;
 	font-weight: 400;
+}
+#commentform .req i {
+	font-size: 0.5em;
+	vertical-align: super;
+	color: #ff9500;
 }
 #commentform #submit {}
 
