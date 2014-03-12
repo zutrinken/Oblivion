@@ -569,7 +569,7 @@ function wp_pagination_navi($num_page_links = 5, $min_max_offset = 2){
 		}
 		// More than one page -> render pagination
 		if ( $total_pages > 1 ) {
-			echo '<div class="pagination-info"><span>'. __('Page ','oblivion') . $current_page . __(' of ','oblivion') . $total_pages .'</span></div>';
+			echo '<div class="pagination-info"><span>'. __('Page','oblivion') . ' ' . $current_page . ' ' . __('of','oblivion') . ' ' . $total_pages .'</span></div>';
 			echo '<nav class="pagination-pager">';
            	if ( $current_page > 1 ) {
 				echo '<a class="pagination-previous" href="' .get_pagenum_link($current_page-1) .'" title="previous"><i class="fa fa-angle-left"></i> <span>' . __('previous','oblivion') .'</span></a>';
