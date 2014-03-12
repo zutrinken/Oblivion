@@ -58,25 +58,10 @@ function oblivion_theme_options_page() {
 						<?php endif; ?>
 					</td>
 				</tr>
-				<tr valign="top">
-					<th scope="row">Touch Icon</th>
-					<td>
-						<input id="oblivion_theme_options[touch-icon]" class="regular-text" type="text" name="oblivion_theme_options[touch-icon]" value="<?php esc_attr_e( $options['touch-icon'] ); ?>" />
-						<?php if($options['touch-icon'] == TRUE) : ?>
-							<img style="max-width: 44px; vertical-align: top;margin: 0 0 0 20px;" src="<?php esc_attr_e( $options['touch-icon'] ); ?>" alt="" />
-						<?php endif; ?>
-					</td>
-				</tr>
 			</table>
 
 			<h3><?php _e('Frontpage','oblivion'); ?></h3>
 			<table class="form-table">
-				<tr valign="top">
-					<th scope="row">Side Posts</th>
-					<td>
-						<input id="oblivion_theme_options[sideposts]" class="short-text" type="text" name="oblivion_theme_options[sideposts]" value="<?php esc_attr_e( $options['sideposts'] ); ?>" /> <span class="description"> <?php _e('set category ID (only one ID)','oblivion'); ?></span>
-					</td>
-				</tr>
 				<tr valign="top">
 					<th scope="row">Youtube</th>
 					<td><input id="oblivion_theme_options[youtube]" class="regular-text" type="text" name="oblivion_theme_options[youtube]" value="<?php esc_attr_e( $options['youtube'] ); ?>" /></td>
@@ -95,7 +80,7 @@ function oblivion_theme_options_page() {
 				</tr>
 				<tr valign="top">
 					<th scope="row">Newsletter</th>
-					<td><input id="oblivion_theme_options[newsletter]" class="regular-text" type="text" name="oblivion_theme_options[newsletter]" value="<?php esc_attr_e( $options['newsletter'] ); ?>" /></td>
+					<td><input id="oblivion_theme_options[newsletter]" class="regular-text" type="text" name="oblivion_theme_options[newsletter]" value="<?php esc_attr_e( $options['newsletter'] ); ?>" /> under construction!</td>
 				</tr>
 			</table>
 
