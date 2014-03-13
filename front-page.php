@@ -96,9 +96,14 @@
 		<section id="section-blog" class="frontpage-section scroll-item" title="<?php _e('Blog','oblivion'); ?>">
 			<div class="inner">
 				<?php
+				if($options['post-count']) {
+					$post_count = $options['post-count'];
+				} else {
+					$post_count = 6;
+				}
 				$args = array(
 					'offset' => 0,
-					'posts_per_page' => 6,
+					'posts_per_page' => $post_count,
 					'meta_key' => '_thumbnail_id',
 					'ignore_sticky_posts' => 1
 				);
