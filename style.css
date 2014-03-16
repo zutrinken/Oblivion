@@ -715,7 +715,7 @@ a.search-handler.active .search-open {
 	width: 50%;
 }
 .no-js .post-video {
-	padding-top: 31.25%;
+	padding-bottom: 31.25%;
 }
 .no-js .post-video iframe {
 	height: 100%;
@@ -1186,7 +1186,7 @@ a.search-handler.active .search-open {
 		width: auto;
 	}
 	.no-js .post-video {
-		padding-top: 62.5%;
+		padding-bottom: 62.5%;
 	}
 	.pagination-pager {
 		float: none;

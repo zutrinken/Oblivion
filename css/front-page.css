@@ -115,9 +115,11 @@
 	float: none;
 	width: 100%;
 	margin: 0 auto 2.4em;
+	height: 0;
+	padding-bottom: 62.5%;
 }
 .no-js .featured-post .post-video {
-	padding-top: 62.5%;
+	padding-bottom: 62.5%;
 }
 .featured-post .post-header {
 	min-height: 5.6em;
