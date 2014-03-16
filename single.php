@@ -62,10 +62,11 @@
 				<div class="clear"></div>
 			</div>
 		</nav>
-	
-		<section id="replies">
-			<?php comments_template(); ?>
-		</section>
+		<?php if(comments_open() || get_comments_number()) : ?>
+			<section id="replies">
+				<?php comments_template(); ?>
+			</section>
+		<?php endif; ?>
 	<?php endwhile; endif; ?>
 
 <?php get_footer(); ?>
