@@ -1224,6 +1224,7 @@ a.search-handler.active .search-open {
 
 	.page-title {
 		font-size: 1.8em;
+		max-height: none;
 	}
 	.post-thumbnail {
 		float: none;
