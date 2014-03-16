@@ -35,6 +35,7 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FO
 
 ## How to
 
+* Required Wordpress 3.5 or higher
 * For blurred background images in single and page posts your server needs a "bundled Version" of the PHP DG Library
 * Regenerate your images with the [Regenerate Thumbnails](http://wordpress.org/plugins/regenerate-thumbnails/) Plugin
 * Set a logo-icon and a full logo in the theme options

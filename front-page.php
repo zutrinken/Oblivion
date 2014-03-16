@@ -104,7 +104,15 @@
 				$args = array(
 					'offset' => 0,
 					'posts_per_page' => $post_count,
-					'meta_key' => '_thumbnail_id',
+					'meta_query' => array(
+						'relation' => 'OR',
+						array(
+							'key' => '_thumbnail_id'
+						),
+						array(
+							'key' => 'video'
+						)
+					),
 					'ignore_sticky_posts' => 1
 				);
 				$counter = 0;
