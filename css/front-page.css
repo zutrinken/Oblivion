@@ -75,7 +75,7 @@
 
 
 #section-blog {
-	padding-top: 64px;
+	padding: 64px 0;
 }
 #section-blog .inner {
 	width: 90% !important;
@@ -148,41 +148,49 @@
    ========================================================================== */
 
 #section-blog-more {
-	padding: 40px 0 24px;
+	padding: 0;
 	border-top: 1px solid #e4e6eb;
 }
 #section-blog-more .inner {
 	width: 90% !important;
 	max-width: 90em;
+	border-left: 1px solid #e4e6eb;
+	border-right: 1px solid #e4e6eb;
 }
-.featured-post-more {}
-.featured-post-more a.blog-btn {
-	float: right;
-	font-weight: 600;
-}
-.featured-post-more a.standard-btn {
-	margin: 0 0 1em;
-}
-.featured-post-more a.standard-btn i {
-	font-size: 1.2em;
-}
+
 a.sp {
-	margin-right: 1em !important;
+	line-height: 64px;
+	padding: 0 12px;
+	font-size: 2em;
+	float: left;
+	border: 1px solid #e4e6eb;
+	margin: -1px 0 -1px -1px;
+}
+a.sp-blog {
+	padding: 0 24px;
+	font-size: 1em;
+	float: right;
+	margin: -1px -1px -1px 0;
+	background: #f2f3f5;
 }
 a.sp-twitter {
-	background: #3ea9dd;
+	color: #3ea9dd;
 }
 a.sp-facebook {
-	background: #3c5a98;
+	color: #3c5a98;
 }
 a.sp-googleplus {
-	background: #d14836;
+	color: #d14836;
 }
 a.sp-youtube {
-	background: #c6312b;
+	color: #c6312b;
 }
 a.sp-rss {
-	background: #f60;
+	color: #f60;
+}
+a.sp:hover,
+a.sp:focus {
+	background: #fff;
 }
 
 
@@ -242,7 +250,7 @@ a.sp-rss {
 
 
 #section-widgets {
-	padding: 96px 0 128px;
+	padding: 128px 0;
 	position: relative;
 	background: #fff;
 	border-top: 1px solid #e4e6eb;
