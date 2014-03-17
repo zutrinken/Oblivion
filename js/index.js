@@ -2,6 +2,10 @@ jQuery(function($) {
 
 	var html = $('html');
 	var viewport = $(window);
+
+	$('.sp-newsletter').click(function() {
+		$('.section-newsletter').slideToggle();
+	});
 	
 	/* ==========================================================================
 	   Exponential Width

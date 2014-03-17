@@ -141,17 +141,29 @@
 }
 
 
+#secion-blog-more {
+	text-align: center;
+	width: 62.5%;
+	border-top: 1px solid #e4e6eb;
+	margin: auto;
+	padding: 24px 0 0;
+}
+#secion-blog-more a {
+	display: block;
+	padding: 16px 0;
+	color: #2e3033;
+}
 
 
 /* ==========================================================================
    Blog More
    ========================================================================== */
 
-#section-blog-more {
+#section-social {
 	padding: 0;
 	border-top: 1px solid #e4e6eb;
 }
-#section-blog-more .inner {
+#section-social .inner {
 	width: 90% !important;
 	max-width: 90em;
 	border-left: 1px solid #e4e6eb;
@@ -165,13 +177,18 @@ a.sp {
 	float: left;
 	border: 1px solid #e4e6eb;
 	margin: -1px 0 -1px -1px;
+	cursor: pointer;
+	text-align: center;
 }
-a.sp-blog {
-	padding: 0 24px;
-	font-size: 1em;
+a.sp-newsletter {
 	float: right;
 	margin: -1px -1px -1px 0;
-	background: #f2f3f5;
+	color: #2e3033;
+}
+a.sp-rss {
+	float: right;
+	margin: -1px -1px -1px 0;
+	color: #f60;
 }
 a.sp-twitter {
 	color: #3ea9dd;
@@ -185,25 +202,25 @@ a.sp-googleplus {
 a.sp-youtube {
 	color: #c6312b;
 }
-a.sp-rss {
-	color: #f60;
-}
 a.sp:hover,
 a.sp:focus {
 	background: #fff;
 }
 
 
-/* ==========================================================================
-   Newsletter
-   ========================================================================== */
-
-#section-newsletter {
-	padding: 96px 0 128px;
+.section-newsletter {
+	display: none;
+	padding: 24px;
 	background: #fff;
-	border-top: 1px solid #e4e6eb;
+	border-bottom: 1px solid #e4e6eb;
 }
-#section-newsletter .inner {}
+.no-js .section-newsletter {
+	display: block;
+}
+.section-newsletter p {
+	margin: 0 0 16px;
+}
+
 
 #newsletter-form {
 	position: relative;
@@ -335,5 +352,13 @@ a.sp:focus {
 	.frontpage-widget.widget {
 		float: none;
 		width: auto;
+	}
+	
+	a.sp {
+		padding: 0;
+		float: left;
+		border-right: 0;
+		margin: -1px 0 0 -1px;
+		width: 50%;
 	}
 }

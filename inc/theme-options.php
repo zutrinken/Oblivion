@@ -80,7 +80,7 @@ function oblivion_theme_options_page() {
 				</tr>
 				<tr valign="top">
 					<th scope="row">Newsletter</th>
-					<td><input id="oblivion_theme_options[newsletter]" class="regular-text" type="text" name="oblivion_theme_options[newsletter]" value="<?php esc_attr_e( $options['newsletter'] ); ?>" /> under construction!</td>
+					<td><input id="oblivion_theme_options[newsletter]" class="regular-text" type="text" name="oblivion_theme_options[newsletter]" value="<?php esc_attr_e( $options['newsletter'] ); ?>" /></td>
 				</tr>
 			</table>
 
