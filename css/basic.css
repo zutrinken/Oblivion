@@ -448,6 +448,8 @@ form input[type="submit"]:focus {
 	display: inline-block;
 	margin: 0 0.5em 0 0.25em;
 	color: #bfbfbf;
+	width: 1.2857142857142858em;
+	text-align:center;
 }
 
 .post-article a[href*="/feed"]:before {
