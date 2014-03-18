@@ -606,6 +606,9 @@ a.search-handler.active .search-open {
 	padding: 96px 0;
 	position: relative;
 }
+#footer .inner {
+	width: 90% !important;
+}
 #footer-navigation {}
 #footer-navigation ul {
 	padding: 0;
