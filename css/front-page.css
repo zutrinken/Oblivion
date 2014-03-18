@@ -102,8 +102,6 @@
 .featured-post.post.post-count-10 {
 	clear: both;
 }
-
-.featured-post .post-inner {}
 .featured-post .post-thumbnail {
 	float: none;
 	width: 100%;
@@ -122,19 +120,52 @@
 	padding-bottom: 62.5%;
 }
 .featured-post .post-header {
-	min-height: 5.6em;
+	min-height: 6.4em;
 	margin-bottom: 0.8em;
 }
 .featured-post .post-title {
 	font-size: 1.6em;
 	line-height: 1.2em;
 	text-indent: -1px;
-	max-height: 3.8em;
-	overflow: hidden;
-    padding-bottom: 0.2em;
 }
 .featured-post .post-meta {}
 .featured-post .post-article {
+	-webkit-column-count: 1 !important;
+	-moz-column-count: 1 !important;
+	column-count: 1 !important;
+}
+
+
+
+
+.secondary-post.post {
+	float: left;
+	width: 22%;
+	padding: 1px 0;
+	margin-right: 4%;
+	margin-bottom: 6em;
+	position: relative;
+	border: 0;
+}
+.secondary-post.post.post-count-4,
+.secondary-post.post.post-count-8 {
+	margin-right: 0;
+}
+.secondary-post.post.post-count-5 {
+	clear: both;
+}
+.secondary-post .post-header {
+	min-height: 6.8em;
+	margin-bottom: 0.8em;
+}
+.secondary-post .post-title {
+	font-weight: 700;
+	font-size: 1.1em;
+	line-height: 1.4em;
+}
+.secondary-post .post-meta {}
+.secondary-post .post-article {
+	font-size: 0.9em;
 	-webkit-column-count: 1 !important;
 	-moz-column-count: 1 !important;
 	column-count: 1 !important;
@@ -331,6 +362,18 @@ a.sp:focus {
 	.featured-post.post.post-count-11 {
 		clear: none;
 	}
+	.secondary-post.post {
+		width: 48%;
+	}
+	.secondary-post.post.post-count-2,
+	.secondary-post.post.post-count-4,
+	.secondary-post.post.post-count-6,
+	.secondary-post.post.post-count-8 {
+		margin-right: 0;
+	}
+	.secondary-post.post.post-count-3 {
+		clear: both;
+	}
 }
 
 /* ==========================================================================
@@ -345,9 +388,15 @@ a.sp:focus {
 	.featured-post.post {
 		float: none;
 		width: auto;
+		margin-right: 0 !important;
 	}
 	.featured-post .post-inner {
 		min-height: 0;
+	}
+	.secondary-post.post {
+		float: none;
+		width: auto;
+		margin-right: 0 !important;
 	}
 	.frontpage-widget.widget {
 		float: none;

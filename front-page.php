@@ -96,8 +96,8 @@
 		<section id="section-blog" class="frontpage-section scroll-item" title="<?php _e('Blog','oblivion'); ?>">
 			<div class="inner">
 				<?php
-				if($options['post-count']) {
-					$post_count = $options['post-count'];
+				if($options['featured-post-count']) {
+					$post_count = $options['featured-post-count'];
 				} else {
 					$post_count = 6;
 				}
@@ -155,6 +155,57 @@
 					</section>
 				<?php endwhile; ?><?php endif; wp_reset_query(); ?>
 				<div class="clear"></div>
+				
+				<?php
+				if($options['secondary-post-count']) {
+					$post_count = $options['secondary-post-count'];
+				} else {
+					$post_count = 4;
+				}
+				$args = array(
+					'offset' => 0,
+					'posts_per_page' => $post_count,
+					'meta_query' => array(
+						'relation' => 'AND',
+						array(
+							'key' => '_thumbnail_id',
+							'value' => '?',
+							'compare' => 'NOT EXISTS'
+						),
+						array(
+							'key' => 'video',
+							'value' => '?',
+							'compare' => 'NOT EXISTS'
+						)
+					),
+					'ignore_sticky_posts' => 1
+				);
+				$counter = 0;
+				query_posts($args);
+				if (have_posts()) : while (have_posts()) : the_post(); $counter++; ?>
+					<section id="post-<?php the_ID(); ?>" <?php post_class('post-count-'.$counter.' secondary-post'); ?>>
+						<div class="post-inner">
+							<header class="post-header">
+								<h3 class="post-title">
+									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php echo short_title(' ...', 10); ?></a>
+								</h3>
+								<aside class="post-meta">
+									<?php _e('Posted by','oblivion'); ?>
+									<?php the_author_posts_link(); ?>
+									<?php _e('on','oblivion'); ?>
+									<?php the_time('j.m.y'); ?>
+								</aside>
+							</header>
+							<article class="post-excerpt post-article">
+								<?php echo custom_excerpt(24); ?>
+							</article>
+							<div class="clear"></div>
+						</div>
+					</section>
+				<?php endwhile; ?><?php endif; wp_reset_query(); ?>
+				<div class="clear"></div>
+				
+				
 				<aside id="secion-blog-more">
 					<?php $bloglink = _get_page_link(get_option('page_for_posts')); ?>
 					<a href="<?php echo $bloglink; ?>"><span><?php _e('See all Posts','oblivion'); ?> <i class="fa fa-arrow-circle-o-right fa-fw"></i></span></a>

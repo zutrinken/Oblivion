@@ -54,13 +54,20 @@ function oblivion_theme_options_page() {
 			<p>Only for static frontpages!</p>
 			<table class="form-table">
 				<tr valign="top">
-					<th scope="row">Post count</th>
-					<td><select id="oblivion_theme_options[post-count]" name="oblivion_theme_options[post-count]">
-						<option value="3" <?php selected( $options['post-count'], 3 ); ?>>3</option>
-						<option value="6" <?php selected( $options['post-count'], 6 ); ?>>6</option>
-						<option value="9" <?php selected( $options['post-count'], 9 ); ?>>9</option>
-						<option value="12" <?php selected( $options['post-count'], 12 ); ?>>12</option>
+					<th scope="row">Featured-post count</th>
+					<td><select id="oblivion_theme_options[featured-post-count]" name="oblivion_theme_options[featured-post-count]">
+						<option value="3" <?php selected( $options['featured-post-count'], 3 ); ?>>3</option>
+						<option value="6" <?php selected( $options['featured-post-count'], 6 ); ?>>6</option>
+						<option value="9" <?php selected( $options['featured-post-count'], 9 ); ?>>9</option>
+						<option value="12" <?php selected( $options['featured-post-count'], 12 ); ?>>12</option>
 					</select> <span class="description">Default: 6</span></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row">Second-post count</th>
+					<td><select id="oblivion_theme_options[secondary-post-count]" name="oblivion_theme_options[secondary-post-count]">
+						<option value="4" <?php selected( $options['secondary-post-count'], 4 ); ?>>4</option>
+						<option value="8" <?php selected( $options['secondary-post-count'], 8 ); ?>>8</option>
+					</select> <span class="description">Default: 4</span></td>
 				</tr>	
 				<tr valign="top">
 					<th scope="row">Youtube</th>
