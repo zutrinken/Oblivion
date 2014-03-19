@@ -425,10 +425,16 @@ a.sp:focus {
 	.featured-post .post-inner {
 		min-height: 0;
 	}
+	.featured-post .post-header {
+		min-height: 0;
+	}
 	.secondary-post.post {
 		float: none;
 		width: auto;
 		margin-right: 0 !important;
+	}
+	.secondary-post .post-header {
+		min-height: 0;
 	}
 	.frontpage-widget.widget {
 		float: none;
