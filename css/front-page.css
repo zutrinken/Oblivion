@@ -91,6 +91,22 @@
 	position: relative;
 	border: 0;
 }
+.featured-post.post.sticky .post-inner:after {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: '\f02e';
+	position: absolute;
+	font-size: 2em;
+	top: 1px;
+	right: 8px;
+	padding: 0;
+	margin: 0;
+	width: auto;
+	color: #cc3314;
+}
 .featured-post.post.post-count-3,
 .featured-post.post.post-count-6,
 .featured-post.post.post-count-9,
@@ -146,6 +162,22 @@
 	margin-bottom: 6em;
 	position: relative;
 	border: 0;
+}
+.secondary-post.post.sticky .post-inner:after {
+	font-family: 'FontAwesome';
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content: '\f02e';
+	position: absolute;
+	font-size: 1.2em;
+	top: 1px;
+	right: 8px;
+	padding: 0;
+	margin: 0;
+	width: auto;
+	color: #cc3314;
 }
 .secondary-post.post.post-count-4,
 .secondary-post.post.post-count-8 {
