@@ -66,7 +66,7 @@ function imagefilter_make_imagefilter_image($resized_file){
     
     $dest = wp_load_image( $resized_file );
 
-	imagecopy($dest, $image, 0, 0, 0, 0, $orig_w, $orig_h, 0);
+	imagecopy($dest, $image, 0, 0, 0, 0, $orig_w, $orig_h);
 
     for( $i=0; $i<4; $i++) {
 		imagefilter($dest, IMG_FILTER_GAUSSIAN_BLUR);
