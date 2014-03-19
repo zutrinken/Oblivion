@@ -436,6 +436,10 @@ a.sp:focus {
 	.secondary-post .post-header {
 		min-height: 0;
 	}
+	#section-social .inner {
+		width: auto !important;
+		margin: 0 -1px -1px;
+	}
 	.frontpage-widget.widget {
 		float: none;
 		width: auto;
