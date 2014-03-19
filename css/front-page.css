@@ -428,6 +428,11 @@ a.sp:focus {
 	.featured-post .post-header {
 		min-height: 0;
 	}
+	.featured-post .post-video {
+		margin: 0 auto 2.4em;
+		height: auto;
+		padding-bottom: 0;
+	}
 	.secondary-post.post {
 		float: none;
 		width: auto;
@@ -451,5 +456,16 @@ a.sp:focus {
 		border-right: 0;
 		margin: -1px 0 0 -1px;
 		width: 50%;
+	}
+}
+
+/* ==========================================================================
+   Media Queries - Smaller than 480px
+   ========================================================================== */
+
+@media only screen and (max-width: 480px) {
+	.featured-post .post-thumbnail,
+	.featured-post .post-video {
+		margin: 0 auto 1.2em;
 	}
 }

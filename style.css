@@ -724,12 +724,6 @@ a.search-handler.active .search-open {
 	color: inherit;
 }
 .post-video {
-	float: left;
-	margin: 0 1.6em 0.8em 0;
-	overflow: hidden;
-	width: 50%;
-}
-.post-video {
 	position: relative;
 	float: left;
 	margin: 0 1.6em 0.8em 0;
@@ -1202,6 +1196,9 @@ a.search-handler.active .search-open {
 
 
 @media only screen and (max-width: 640px) {
+	.no-js .inner {
+		width: 90%;
+	}
 	.post-video {
 		float: none;
 		margin-right: 0;
@@ -1246,13 +1243,16 @@ a.search-handler.active .search-open {
 
 	.page-title {
 		font-size: 1.8em;
-		max-height: none;
 	}
-	.post-thumbnail {
+	.post-thumbnail,
+	.post-video {
 		float: none;
 		width: auto;
 		padding-bottom: 62.5%;
-		margin: 0 auto 2.4em;
+		margin: 0 auto 1.2em;
+	}
+	.post-video {
+		padding: 0;
 	}
 	.post-header {
 		min-height: 5.6em;
@@ -1262,7 +1262,6 @@ a.search-handler.active .search-open {
 		font-size: 1.6em;
 		line-height: 1.2em;
 		text-indent: -1px;
-		max-height: 3.8em;
 	}
 	#footer-navigation li {
 		width: 50% !important;
