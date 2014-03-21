@@ -796,6 +796,9 @@ a.search-handler.active .search-open {
 .post-excerpt > p:first-child {
 	margin-top: 0;
 }
+.post-article {
+	position: relative;
+}
 .post-article .post-cut {
 	color: #232529;
 }
