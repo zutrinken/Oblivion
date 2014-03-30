@@ -768,6 +768,7 @@ a.search-handler.active .search-open {
 }
 .post-meta {
 	font-size: 0.875em;
+	line-height: 1.8em;
 	font-weight: 300;
 	color: #757a80;
 	margin: 0 0 1em;
@@ -849,6 +850,9 @@ a.search-handler.active .search-open {
 	top: 0;
 	left: -12.5%;
 	background: #e4e6eb;
+}
+.post-info p {
+	margin: 1.6em 0;
 }
 .post-info p:first-child {
 	margin-top: 0;
