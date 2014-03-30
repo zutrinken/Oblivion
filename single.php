@@ -31,9 +31,8 @@
 				</article>
 				<aside class="post-info">
 					<div class="post-meta">
-						<?php _e('Posted in:','oblivion'); ?>
-						<?php the_category(', '); ?><br />						
-						<?php the_tags(__('Tagged with:','oblivion').' ',', ',''); ?>
+						<p><?php _e('Posted in:','oblivion'); ?> <?php the_category(', '); ?></p>
+						<?php the_tags('<p>'.__('Tagged with:','oblivion').' ',', ','</p>'); ?>
 					</div>
 					<div class="clear"></div>
 					<div class="post-sharing">

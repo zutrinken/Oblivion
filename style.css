@@ -850,6 +850,9 @@ a.search-handler.active .search-open {
 	left: -12.5%;
 	background: #e4e6eb;
 }
+.post-info p:first-child {
+	margin-top: 0;
+}
 .post-sharing {
 	padding-top: 32px;
 	color: #757a80;
