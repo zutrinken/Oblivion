@@ -33,13 +33,12 @@
 }
 .commentlist li.depth-1.parent:last-child:after {
 	display: block;
-	top: 0;
 }
 .commentlist li.depth-1.parent:last-child:before {
 	position: absolute;
 	content: '';
 	left: 44px;
-	bottom: -4px;
+	bottom: -48px;
 	width: 8px;
 	height: 8px;
 	background: #757a80;
@@ -209,8 +208,7 @@
 }
 
 #reply {
-	margin-top: 0;
-	padding-right: 2em;
+	padding-top: 64px;
 }
 #cancel-comment-reply-link {
 	position: absolute;
