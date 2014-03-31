@@ -324,8 +324,13 @@ iframe body {
 	display: none;
 }
 
-
-
+form input[type="radio"],
+form input[type="checkbox"] {}
+form input[type="range"] {
+	width: 100%;
+}
+form select,
+form textarea,
 form input[type="url"],
 form input[type="tel"],
 form input[type="text"],
@@ -333,8 +338,7 @@ form input[type="email"],
 form input[type="month"],
 form input[type="number"],
 form input[type="search"],
-form input[type="password"],
-form textarea {
+form input[type="password"] {
 	background: #f9f9f9;
 	border: 1px solid #ccc;
 	color: #323232;
@@ -354,9 +358,8 @@ form textarea {
 	-webkit-border-radius: 2px;
 	border-radius: 2px;
 }
-form select {
-	width: 99%;
-}
+form select:hover,
+form textarea:hover,
 form input[type="url"]:hover,
 form input[type="tel"]:hover,
 form input[type="text"]:hover,
@@ -364,13 +367,14 @@ form input[type="email"]:hover,
 form input[type="month"]:hover,
 form input[type="number"]:hover,
 form input[type="search"]:hover,
-form input[type="password"]:hover,
-form textarea:hover {
+form input[type="password"]:hover {
 	background: #fcfcfc;
 	border: 1px solid #999;
 	-webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.1) inset;
 	box-shadow: 0 0 4px rgba(0, 0, 0, 0.1) inset;
 }
+form select:focus,
+form textarea:focus,
 form input[type="url"]:focus,
 form input[type="tel"]:focus,
 form input[type="text"]:focus,
@@ -378,8 +382,7 @@ form input[type="email"]:focus,
 form input[type="month"]:focus,
 form input[type="number"]:focus,
 form input[type="search"]:focus,
-form input[type="password"]:focus,
-form textarea:focus {
+form input[type="password"]:focus {
     background: #fcfcfc;
     border: 1px solid #59A0E2;
     box-shadow: 0 0 5px rgba(89, 160, 226, 0.4) inset;
