@@ -194,6 +194,11 @@
 	/* ------------------------------ Widget RSS */
 
 .widget_rss {}
+.widget_rss a,
+.widget_rss a:hover,
+.widget_rss a:focus {
+	color: inherit;
+}
 .widget_rss img {
 	display: inline;
 	vertical-align: bottom;
