@@ -194,27 +194,37 @@
 	/* ------------------------------ Widget RSS */
 
 .widget_rss {}
+.widget_rss img {
+	display: inline;
+	vertical-align: bottom;
+}
 .widget_rss ul {}
 .widget_rss ul li {}
 .widget_rss ul li a.rsswidget {
-	display: block;
-	font-weight: 700;
-	margin: 1em 0;
 
-	font-size: 1.666em;
-	line-height: 1.25em;
+	font-weight: 600;
+	color: #2E3033;
+	border-bottom: 2px solid rgba(0, 0, 0, 0);
+}
+.widget_rss ul li a.rsswidget:hover,
+.widget_rss ul li a.rsswidget:focus {
+	color: #000;
+	border-bottom-color: #f80;
 }
 .widget_rss ul li span.rss-date {
 	display: block;
-	margin: 0 0 2em;
-
-	font-weight: 700;
+	font-size: 0.875em;
+	line-height: 1.8em;
+	color: #757A80;
 }
-.widget_rss ul li .rssSummary {}
+.widget_rss ul li .rssSummary {
+	margin: 0.8em 0;
+}
 .widget_rss ul li cite {
 	display: block;
-	margin: 1em 0;
-	font-weight: 700;
+	margin-top: 0.6em;
+	font-size: 0.8em;
+	line-height: 1.8em;
 }
 
 	/* ------------------------------ Widget Comments */
