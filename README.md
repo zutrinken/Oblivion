@@ -42,7 +42,7 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FO
 * Set a logo-icon and a full logo in the theme options
 * Static page as frontpage displays only posts with featured image and the sidebar
 * Display videos like post images by using the custom field ```video``` with your embedded ```<iframe>``` code
-* Use shortoceds to format your pages width columns
+* Use shortcodes to format your pages width columns
 
 ## Shortcodes
 
