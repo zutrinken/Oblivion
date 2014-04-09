@@ -4,22 +4,22 @@
 			<div class="inner" data-type="prlx" data-speed="0.375">
 				<h2 class="page-title">
 					<?php if (is_category()) : ?>
-						<?php _e('Category','oblivion'); ?> “<?php single_cat_title(); ?>”
+						<?php _e('Category','oblivion'); ?>: <?php single_cat_title(); ?>
 				
 					<?php elseif (is_tag()) : ?>
-						<?php _e('Tag','oblivion'); ?> “<?php single_tag_title(); ?>”
+						<?php _e('Tag','oblivion'); ?>: <?php single_tag_title(); ?>
 
 					<?php elseif (is_author()) : ?>
-						<?php _e('Author','oblivion'); $userInfo = get_user_by('slug', get_query_var('author_name')); echo ' “' .$userInfo->display_name . '”'; ?>
+						<?php _e('Author','oblivion'); $authordata = get_userdata($post->post_author); echo ': ' . $authordata->display_name; ?>
 
 					<?php elseif (is_day()) : ?>
-						<?php _e('Day','oblivion'); ?> “<?php the_time('j. F Y'); ?>”
+						<?php _e('Day','oblivion'); ?>: <?php the_time('j. F Y'); ?>
 						
 					<?php elseif (is_month()) : ?>
-						<?php _e('Month','oblivion'); ?> “<?php the_time('F Y'); ?>”
+						<?php _e('Month','oblivion'); ?>: <?php the_time('F Y'); ?>
 						
 					<?php elseif (is_year()) : ?>
-						<?php _e('Year','oblivion'); ?> “<?php the_time('Y'); ?>”
+						<?php _e('Year','oblivion'); ?>: <?php the_time('Y'); ?>
 						
 					<?php else : ?>
 						<?php _e('Archive','oblivion'); ?>
