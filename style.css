@@ -11,7 +11,7 @@
 	License: MIT License
 	License URI:
 	
-	Version: 0.9
+	Version: 0.9.1
 
 	Github Theme URI: https://github.com/zutrinken/Oblivion
 	GitHub Branch: master
@@ -88,10 +88,10 @@
 }
 @-webkit-keyframes hideit {
 	0% {
-		-webkit-opacity: 1;
+		opacity: 1;
 	}
 	100% {
-		-webkit-opacity: 0;
+		opacity: 0;
 	}
 }
 @keyframes hideit {
@@ -653,9 +653,20 @@ a.search-handler.active .search-open {
 .hentry {
 	position: relative;
 	padding: 64px 0;
-
 	border-bottom: 1px solid #e4e6eb;
 }
+.hentry .inner {
+	-webkit-transition: -webkit-transform 0.8s cubic-bezier(0.625, -0.625, 0.375, 0.375), opacity 0.8s ease-in;
+	transition: transform 0.8s cubic-bezier(0.625, -0.625, 0.375, 0.375), opacity 0.8s ease-in;
+	opacity: 1;
+}
+.hentry.activated .inner{
+	-webkit-transform: translate(100%, 0);
+	transform: translate(100%, 0);
+	opacity: 0;
+}
+
+
 .sticky .inner {
 	position: relative;
 }

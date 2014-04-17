@@ -199,4 +199,14 @@ jQuery(function($) {
 		});
 	}
 	
+	/* ==========================================================================
+	   Loading Fun
+	   ========================================================================== */
+	
+	if($('body').is('.blog, .archive, .search')) {
+		$('.hentry a').click(function(e) {
+			$(this).closest('.hentry').addClass('activated');
+		});
+	}
+	
 });
