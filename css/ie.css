@@ -1,0 +1,21 @@
+html.lt-ie10.active-menu,
+html.lt-ie10.active-menu body {
+	overflow: inherit;
+	height: auto;
+}
+.lt-ie10.hidden-menu #header {
+	position: absolute;
+}
+.lt-ie10.hidden-menu .menu-container {
+	height: auto;
+	overflow: visible;
+}
+.lt-ie9 .page-header-cover {
+	display: none;
+}
+.lt-ie9 .page-meta {
+	color: #fff;
+}
+.lt-ie9 .post-sharing .sl span {
+	color: #fff;
+}
