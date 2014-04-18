@@ -203,7 +203,7 @@ jQuery(function($) {
 	   Loading Fun
 	   ========================================================================== */
 	
-	if($('body').is('.blog, .archive, .search')) {
+	if($('body').is('.blog, .archive, .search, .home')) {
 		$('.hentry a').click(function(e) {
 			$(this).closest('.hentry').addClass('activated');
 		});

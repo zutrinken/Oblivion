@@ -218,6 +218,18 @@
 }
 
 
+
+.home.page .post.activated {
+	-webkit-transition: -webkit-transform 0.6s cubic-bezier(0.625, -0.625, 0.375, 0.375), opacity 0.8s ease-in;
+	transition: transform 0.6s cubic-bezier(0.625, -0.625, 0.375, 0.375), opacity 0.8s ease-in;
+	opacity: 1;
+}
+.home.page .post.activated {
+	-webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+	opacity: 0;
+}
+
 /* ==========================================================================
    Blog More
    ========================================================================== */
