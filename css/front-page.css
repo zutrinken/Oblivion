@@ -58,15 +58,17 @@
 }
 
 
-#logo-large {
-	margin-top: -8%;
+#logo-image {
+	margin-top: -12%;
+	margin-bottom: -6%;
 }
-#logoless {
-	font-family: 'PoliticsHeadBold', 'Open Sans', sans-serif;
-	font-size: 5em;
-	line-height: 0.875em;
+#logo-name {
+	display: block;
 	text-align: center;
-	margin-top: -8%;
+	margin: auto;
+	font-family: 'PoliticsHeadBold', 'Open Sans', sans-serif;
+	font-size: 1.6em;
+	line-height: 0.875em;
 }
 
 /* ==========================================================================

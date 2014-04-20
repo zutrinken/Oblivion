@@ -4,11 +4,11 @@
 
 		<section class="page-header">
 			<div class="inner" data-type="prlx" data-speed="0.375">
-				<h1 class="page-title" id="logoless">
+				<h1 class="page-title">
 					<?php if($options['logo']) : ?>
-						<img id="logo-large" src="<?php echo $options['logo']; ?>" alt="<?php bloginfo('name'); ?>" />
+						<img id="logo-image" src="<?php echo $options['logo']; ?>" alt="<?php bloginfo('name'); ?>" />
 					<?php else : ?>
-						<?php bloginfo('name'); ?>
+						<span id="logo-name"><?php bloginfo('name'); ?></span>
 					<?php endif; ?>
 				</h1>
 			</div>
