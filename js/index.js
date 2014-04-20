@@ -182,7 +182,7 @@ jQuery(function($) {
 		
 			function prlx() {
 				var yPos = (viewport.scrollTop() * self.data('speed'));
-				var opc = 1 - viewport.scrollTop() / 500;
+				var opc = 1 - viewport.scrollTop() / 333;
 				if(self.hasClass('page-header-cover')) {
 					opc = opc * 0.875;
 				}
