@@ -1310,6 +1310,9 @@ a.sp:focus {
 		margin: -1px 0 0 -1px;
 		width: 50%;
 	}
+	a.sp-rss {
+		width: 100%;
+	}
 }
 
 
