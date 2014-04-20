@@ -608,11 +608,6 @@ a.sp {
 	cursor: pointer;
 	text-align: center;
 }
-a.sp-newsletter {
-	float: right;
-	margin: -1px -1px -1px 0;
-	color: #2e3033;
-}
 a.sp-rss {
 	float: right;
 	margin: -1px -1px -1px 0;
@@ -648,44 +643,6 @@ a.sp:focus {
 .section-newsletter p {
 	margin: 0 0 16px;
 }
-
-
-#newsletter-form {
-	position: relative;
-	overflow: auto;
-	margin: auto;
-}
-#newsletter-email {
-	float: left;
-	width: 75%;
-	margin: 0;
-	padding-top: 16px;
-	padding-bottom: 16px;
-	
-	-webkit-border-radius: 4px 0 0 4px;
-	border-radius: 4px 0 0 4px;
-	
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-#newsletter-email:hover {}
-#newsletter-email:focus {}
-#newsletter-submit {
-	float: left;
-	width: 25%;
-	padding-top: 17px;
-	padding-bottom: 17px;
-	
-	-webkit-border-radius: 0 4px 4px 0;
-	border-radius: 0 4px 4px 0;
-	
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-}
-#newsletter-submit:hover {}
-#newsletter-submit:focus {}
 
 /* ==========================================================================
    Footer
@@ -1341,6 +1298,17 @@ a.sp:focus {
 	}
 	.error404 .page-header {
 		background-size: 100% 100%;
+	}
+	#section-social .inner {
+		width: auto !important;
+		margin: 0 -1px -1px;
+	}
+	a.sp {
+		padding: 0;
+		float: left;
+		border-right: 0;
+		margin: -1px 0 0 -1px;
+		width: 50%;
 	}
 }
 

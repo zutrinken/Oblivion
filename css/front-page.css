@@ -285,9 +285,6 @@
 
 
 @media only screen and (max-width: 960px) {
-	#logoless {
-		font-size: 3.75em;
-	}
 	.featured-post.post {
 		width: 48%;
 	}
@@ -335,9 +332,6 @@
 
 
 @media only screen and (max-width: 640px) {
-	#logoless {
-		font-size: 2em;
-	}
 	.featured-post.post {
 		float: none;
 		width: auto;
@@ -362,24 +356,12 @@
 	.secondary-post .post-header {
 		min-height: 0;
 	}
-	#section-social .inner {
-		width: auto !important;
-		margin: 0 -1px -1px;
-	}
 	.frontpage-widget.widget {
 		float: none;
 		width: auto;
 	}
 	.frontpage-widget.widget .widget-inner {
 		margin: 0 0 64px;
-	}
-	
-	a.sp {
-		padding: 0;
-		float: left;
-		border-right: 0;
-		margin: -1px 0 0 -1px;
-		width: 50%;
 	}
 }
 

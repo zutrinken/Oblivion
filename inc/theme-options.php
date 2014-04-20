@@ -51,7 +51,7 @@ function oblivion_theme_options_page() {
 			</table>
 
 			<h3><?php _e('Frontpage','oblivion'); ?></h3>
-			<p>Only for static frontpages!</p>
+			<p><?php _e('Only for static frontpages.','oblivion'); ?></p>
 			<table class="form-table">
 				<tr valign="top">
 					<th scope="row">Featured-post count</th>
@@ -66,7 +66,11 @@ function oblivion_theme_options_page() {
 						<option value="4" <?php selected( $options['secondary-post-count'], 4 ); ?>>4</option>
 						<option value="8" <?php selected( $options['secondary-post-count'], 8 ); ?>>8</option>
 					</select> <span class="description">Default: 4</span></td>
-				</tr>	
+				</tr>
+			</table>
+			
+			<h3><?php _e('Social','oblivion'); ?></h3>
+			<table class="form-table">
 				<tr valign="top">
 					<th scope="row">Youtube</th>
 					<td><input id="oblivion_theme_options[youtube]" class="regular-text" type="text" name="oblivion_theme_options[youtube]" value="<?php esc_attr_e( $options['youtube'] ); ?>" /></td>
@@ -82,10 +86,6 @@ function oblivion_theme_options_page() {
 				<tr valign="top">
 					<th scope="row">Google +</th>
 					<td><input id="oblivion_theme_options[google]" class="regular-text" type="text" name="oblivion_theme_options[google]" value="<?php esc_attr_e( $options['google'] ); ?>" /></td>
-				</tr>
-				<tr valign="top">
-					<th scope="row">Newsletter</th>
-					<td><input id="oblivion_theme_options[newsletter]" class="regular-text" type="text" name="oblivion_theme_options[newsletter]" value="<?php esc_attr_e( $options['newsletter'] ); ?>" /></td>
 				</tr>
 			</table>
 

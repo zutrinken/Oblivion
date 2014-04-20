@@ -1,19 +1,7 @@
 		<?php $options = get_option('oblivion_theme_options'); ?>
 		<section id="section-social">
 			<div class="inner">
-				<?php if($options['newsletter']) : ?>
-				<aside class="section-newsletter">
-					<p><?php _e('Subscribe to our awesome newsletter!','oblivion'); ?></p>
-					<form id="newsletter-form" action="<?php echo $options['newsletter']; ?>" method="post">
-						<input id="newsletter-email" type="email" placeholder="<?php _e('Your Email','oblivion'); ?>" name="email">
-						<button id="newsletter-submit" type="submit" name="submit"><?php _e('Subscribe','oblivion'); ?></button>
-					</form>
-				</aside>
-				<?php endif; ?>
 				<aside class="featured-post-more">
-					<?php if($options['newsletter']) : ?>
-					<a class="sp sp-newsletter" target="_blank" title="<?php _e('Newsletter','oblivion'); ?>"><span><i class="fa fa-envelope-o fa-fw"></i></span></a>
-					<?php endif; ?>
 					<a class="sp sp-rss" target="_blank" href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('RSS','oblivion'); ?>"><span><i class="fa fa-rss fa-fw"></i></span></a>
 					<?php if($options['twitter']) : ?>
 					<a class="sp sp-twitter" target="_blank" href="<?php echo $options['twitter']; ?>" title="<?php _e('Twitter','oblivion'); ?>"><span><i class="fa fa-twitter fa-fw"></i></span></a>
