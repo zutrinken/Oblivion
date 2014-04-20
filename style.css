@@ -517,6 +517,11 @@ a.search-handler.active .search-open {
 }
 
 
+/* ==========================================================================
+   Search
+   ========================================================================== */
+
+
 #search {
 	display: none;
 	position: fixed;
@@ -576,6 +581,115 @@ a.search-handler.active .search-open {
 .no-js #search-search.searcharea .searchform {
 	border: 1px solid #b6babf;
 }
+
+
+/* ==========================================================================
+   Social
+   ========================================================================== */
+
+#section-social {
+	padding: 0;
+	border-top: 1px solid #e4e6eb;
+}
+#section-social .inner {
+	width: 90% !important;
+	max-width: 90em;
+	border-left: 1px solid #e4e6eb;
+	border-right: 1px solid #e4e6eb;
+}
+
+a.sp {
+	line-height: 64px;
+	padding: 0 12px;
+	font-size: 2em;
+	float: left;
+	border: 1px solid #e4e6eb;
+	margin: -1px 0 -1px -1px;
+	cursor: pointer;
+	text-align: center;
+}
+a.sp-newsletter {
+	float: right;
+	margin: -1px -1px -1px 0;
+	color: #2e3033;
+}
+a.sp-rss {
+	float: right;
+	margin: -1px -1px -1px 0;
+	color: #f60;
+}
+a.sp-twitter {
+	color: #3ea9dd;
+}
+a.sp-facebook {
+	color: #3c5a98;
+}
+a.sp-googleplus {
+	color: #d14836;
+}
+a.sp-youtube {
+	color: #c6312b;
+}
+a.sp:hover,
+a.sp:focus {
+	background: #fff;
+}
+
+
+.section-newsletter {
+	display: none;
+	padding: 24px;
+	background: #fff;
+	border-bottom: 1px solid #e4e6eb;
+}
+.no-js .section-newsletter {
+	display: block;
+}
+.section-newsletter p {
+	margin: 0 0 16px;
+}
+
+
+#newsletter-form {
+	position: relative;
+	overflow: auto;
+	margin: auto;
+}
+#newsletter-email {
+	float: left;
+	width: 75%;
+	margin: 0;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	
+	-webkit-border-radius: 4px 0 0 4px;
+	border-radius: 4px 0 0 4px;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#newsletter-email:hover {}
+#newsletter-email:focus {}
+#newsletter-submit {
+	float: left;
+	width: 25%;
+	padding-top: 17px;
+	padding-bottom: 17px;
+	
+	-webkit-border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0;
+	
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+#newsletter-submit:hover {}
+#newsletter-submit:focus {}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
 
 
 #footer {

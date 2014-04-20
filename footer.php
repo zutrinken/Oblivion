@@ -1,3 +1,38 @@
+		<?php $options = get_option('oblivion_theme_options'); ?>
+		<section id="section-social">
+			<div class="inner">
+				<?php if($options['newsletter']) : ?>
+				<aside class="section-newsletter">
+					<p><?php _e('Subscribe to our awesome newsletter!','oblivion'); ?></p>
+					<form id="newsletter-form" action="<?php echo $options['newsletter']; ?>" method="post">
+						<input id="newsletter-email" type="email" placeholder="<?php _e('Your Email','oblivion'); ?>" name="email">
+						<button id="newsletter-submit" type="submit" name="submit"><?php _e('Subscribe','oblivion'); ?></button>
+					</form>
+				</aside>
+				<?php endif; ?>
+				<aside class="featured-post-more">
+					<?php if($options['newsletter']) : ?>
+					<a class="sp sp-newsletter" target="_blank" title="<?php _e('Newsletter','oblivion'); ?>"><span><i class="fa fa-envelope-o fa-fw"></i></span></a>
+					<?php endif; ?>
+					<a class="sp sp-rss" target="_blank" href="<?php bloginfo('rss2_url'); ?>" title="<?php _e('RSS','oblivion'); ?>"><span><i class="fa fa-rss fa-fw"></i></span></a>
+					<?php if($options['twitter']) : ?>
+					<a class="sp sp-twitter" target="_blank" href="<?php echo $options['twitter']; ?>" title="<?php _e('Twitter','oblivion'); ?>"><span><i class="fa fa-twitter fa-fw"></i></span></a>
+					<?php endif; ?>
+					<?php if($options['facebook']) : ?>
+					<a class="sp sp-facebook" target="_blank" href="<?php echo $options['facebook']; ?>" title="<?php _e('Facebook','oblivion'); ?>"><span><i class="fa fa-facebook fa-fw"></i></span></a>
+					<?php endif; ?>
+					<?php if($options['google']) : ?>
+					<a class="sp sp-googleplus" target="_blank" href="<?php echo $options['google']; ?>" title="<?php _e('Google+','oblivion'); ?>"><span><i class="fa fa-google-plus fa-fw"></i></span></a>
+					<?php endif; ?>
+					<?php if($options['youtube']) : ?>
+					<a class="sp sp-youtube" target="_blank" href="<?php echo $options['youtube']; ?>" title="<?php _e('Youtube','oblivion'); ?>"><span><i class="fa fa-youtube-play fa-fw"></i></span></a>
+					<?php endif; ?>
+					<div class="clear"></div>
+				</aside>
+					
+			</div>
+		</section>
+
 		<div id="footer">
 			<div class="inner">
 				<nav id="footer-navigation" role="navigation">
