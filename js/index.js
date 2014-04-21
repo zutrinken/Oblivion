@@ -198,18 +198,4 @@ jQuery(function($) {
 			prlx();
 		});
 	}
-	
-	/* ==========================================================================
-	   Loading Fun
-	   ========================================================================== */
-	
-	if($('body').is('.blog, .archive, .search, .home')) {
-		$('.hentry a').click(function(e) {
-			$(this).closest('.hentry').addClass('activated');
-			setTimeout(function() {
-				$('.hentry').removeClass('activated');
-			}, 2500);
-		});
-	}
-	
 });

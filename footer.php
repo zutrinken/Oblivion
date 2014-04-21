@@ -36,27 +36,6 @@
 				</nav>
 			</div>
 		</div>
-		<script type="text/javascript">
-			window.onload = function () {
-				jQuery(function($) {
-					var loading = $('#loading');
-					loading.fadeOut(500, function() {
-						$(this).hide();
-					});
-					$('a').click(function() {
-						if($(this).attr('href').indexOf(window.location.protocol + '//' + window.location.host) === 0) {
-							loading.fadeIn(500, function() {
-								setTimeout(function() {
-									loading.fadeOut(500, function() {
-										$(this).hide();
-									});
-								}, 2500);
-							});
-						}
-					});
-				});
-			};
-		</script>
 		<?php wp_footer(); ?>
 	</body>
 </html>

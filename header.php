@@ -155,10 +155,3 @@
 			<h2 class="visuallyhidden"><?php _e('Search','oblivion'); ?></h2>
 			<?php get_search_form(); ?>
 		</div>
-		<div id="loading">
-			<div class="spinner">
-				<div class="bounce1"></div>
-				<div class="bounce2"></div>
-				<div class="bounce3"></div>
-			</div>
-		</div>
