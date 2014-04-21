@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Oblivion v0.9.2\n"
+"Project-Id-Version: Oblivion v0.9.6\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-04-18 18:58:17+0000\n"
+"PO-Revision-Date: 2014-04-21 21:06:39+0000\n"
 "Last-Translator: zutrinken <mirgehtsganzgut@web.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -81,9 +81,9 @@ msgid "Posts"
 msgstr "Artikel"
 
 #: archive.php:78
-#: front-page.php:44
-#: front-page.php:144
-#: front-page.php:193
+#: front-page.php:47
+#: front-page.php:124
+#: front-page.php:173
 #: index.php:41
 #: search.php:21
 #: single.php:17
@@ -92,9 +92,9 @@ msgid "Posted by"
 msgstr "Erstellt von"
 
 #: archive.php:80
-#: front-page.php:46
-#: front-page.php:146
-#: front-page.php:195
+#: front-page.php:49
+#: front-page.php:126
+#: front-page.php:175
 #: index.php:43
 #: search.php:23
 #: single.php:19
@@ -208,49 +208,49 @@ msgstr "Kommentar"
 msgid "Submit"
 msgstr "Senden"
 
-#: footer.php:4
+#: footer.php:27
 #: header.php:138
 #@ oblivion
 msgid "Navigation"
 msgstr "Navigation"
 
-#: front-page.php:96
+#: front-page.php:76
 #@ oblivion
 msgid "Blog"
 msgstr "Blog"
 
-#: front-page.php:211
+#: front-page.php:197
 #@ oblivion
 msgid "See all Posts"
 msgstr "Alle Beiträge"
 
-#: front-page.php:234
+#: footer.php:7
 #@ oblivion
 msgid "Twitter"
 msgstr "Twitter"
 
-#: front-page.php:237
+#: footer.php:10
 #@ oblivion
 msgid "Facebook"
 msgstr "Facebook"
 
-#: front-page.php:240
+#: footer.php:13
 #@ oblivion
 msgid "Google+"
 msgstr "Google+"
 
-#: front-page.php:243
+#: footer.php:16
 #@ oblivion
 msgid "Youtube"
 msgstr "Youtube"
 
-#: front-page.php:232
+#: footer.php:5
 #@ oblivion
 msgid "RSS"
 msgstr "RSS"
 
-#: front-page.php:259
-#: front-page.php:261
+#: front-page.php:212
+#: front-page.php:214
 #@ oblivion
 msgid "Widgets"
 msgstr "Widgets"
@@ -393,29 +393,24 @@ msgstr ""
 msgid "icon"
 msgstr ""
 
-#: inc/theme-options.php:72
+#: inc/theme-options.php:76
 #@ default
 msgid "youtube"
 msgstr ""
 
-#: inc/theme-options.php:76
+#: inc/theme-options.php:80
 #@ default
 msgid "twitter"
 msgstr ""
 
-#: inc/theme-options.php:80
+#: inc/theme-options.php:84
 #@ default
 msgid "facebook"
 msgstr ""
 
-#: inc/theme-options.php:84
-#@ default
-msgid "google"
-msgstr ""
-
 #: inc/theme-options.php:88
 #@ default
-msgid "newsletter"
+msgid "google"
 msgstr ""
 
 #: inc/theme-options.php:92
@@ -479,28 +474,26 @@ msgstr "Seite"
 msgid "of"
 msgstr "von"
 
-#: front-page.php:221
-#@ oblivion
-msgid "Subscribe to our awesome newsletter!"
-msgstr ""
-
-#: front-page.php:223
-#@ oblivion
-msgid "Your Email"
-msgstr "Deine Email-Adresse"
-
-#: front-page.php:224
-#@ oblivion
-msgid "Subscribe"
-msgstr "Eintragen"
-
-#: front-page.php:230
-#@ oblivion
-msgid "Newsletter"
-msgstr "Newsletter"
-
 #: inc/theme-options.php:40
 #@ oblivion
 msgid "Logo"
+msgstr ""
+
+#: front-page.php:195
+#, php-format
+#@ oblivion
+msgid "One post"
+msgid_plural "%s posts"
+msgstr[0] "Ein Beitrag"
+msgstr[1] "%s Beiträge"
+
+#: inc/theme-options.php:54
+#@ oblivion
+msgid "Only for static frontpages."
+msgstr "Nur für statische Startseiten"
+
+#: inc/theme-options.php:72
+#@ oblivion
+msgid "Social"
 msgstr ""
 

@@ -184,12 +184,20 @@
 					</section>
 				<?php endwhile; ?><?php endif; wp_reset_query(); ?>
 				<div class="clear"></div>
-				
-				
-				<aside id="secion-blog-more">
+			</div>
+		</section>
+		
+		
+		<section id="section-blog-more">
+			<div class="inner">
+				<aside class="featured-post-more">
+					<?php $count_posts = wp_count_posts(); ?>
+					<span class="sp sp-post-count"><span><?php printf(_n('One post','%s posts',$count_posts->publish,'oblivion'), $count_posts->publish); ?></span></span>
 					<?php $bloglink = _get_page_link(get_option('page_for_posts')); ?>
-					<a href="<?php echo $bloglink; ?>"><span><?php _e('See all Posts','oblivion'); ?> <i class="fa fa-arrow-circle-o-right fa-fw"></i></span></a>
+					<a class="sp sp-blog" href="<?php echo $bloglink; ?>"><span><?php _e('See all Posts','oblivion'); ?> <i class="fa fa-play-circle fa-fw"></i></span></a>
+					<div class="clear"></div>
 				</aside>
+					
 			</div>
 		</section>
 
