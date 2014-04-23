@@ -49,25 +49,6 @@ function oblivion_theme_options_page() {
 					<td><input id="oblivion_theme_options[logo]" class="regular-text" type="text" name="oblivion_theme_options[logo]" value="<?php esc_attr_e( $options['logo'] ); ?>" /><p class="description">displayed on orange or header background image</p></td>
 				</tr>
 			</table>
-
-			<h3><?php _e('Frontpage','oblivion'); ?></h3>
-			<p><?php _e('Only for static frontpages.','oblivion'); ?></p>
-			<table class="form-table">
-				<tr valign="top">
-					<th scope="row">Featured-post count</th>
-					<td><select id="oblivion_theme_options[featured-post-count]" name="oblivion_theme_options[featured-post-count]">
-						<option value="6" <?php selected( $options['featured-post-count'], 6 ); ?>>6</option>
-						<option value="12" <?php selected( $options['featured-post-count'], 12 ); ?>>12</option>
-					</select> <span class="description">Default: 6</span></td>
-				</tr>
-				<tr valign="top">
-					<th scope="row">Second-post count</th>
-					<td><select id="oblivion_theme_options[secondary-post-count]" name="oblivion_theme_options[secondary-post-count]">
-						<option value="4" <?php selected( $options['secondary-post-count'], 4 ); ?>>4</option>
-						<option value="8" <?php selected( $options['secondary-post-count'], 8 ); ?>>8</option>
-					</select> <span class="description">Default: 4</span></td>
-				</tr>
-			</table>
 			
 			<h3><?php _e('Social','oblivion'); ?></h3>
 			<table class="form-table">

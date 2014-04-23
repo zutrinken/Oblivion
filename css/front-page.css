@@ -83,15 +83,23 @@
 	width: 90% !important;
 	max-width: 90em;
 }
-
+#masonry {
+	margin: 0 -24px;
+}
 .featured-post.post {
-	float: left;
-	width: 30.666%;
+	width: 33.333%;
 	padding: 1px 0;
-	margin-right: 4%;
-	margin-bottom: 6em;
+	margin-bottom: 32px;
 	position: relative;
 	border: 0;
+}
+.featured-post.post.sticky:nth-child(1) {
+	width: 66.666%;
+}
+.featured-post.post .post-inner {
+	margin: 0 24px;
+	padding: 24px 0 32px;
+	border-bottom: 1px solid #dadce0;
 }
 .featured-post.post.sticky .post-inner:after {
 	font-family: 'FontAwesome';
@@ -102,30 +110,19 @@
 	content: '\f02e';
 	position: absolute;
 	font-size: 2em;
-	top: 1px;
-	right: 8px;
+	top: 25px;
+	right: 32px;
 	padding: 0;
 	margin: 0;
 	width: auto;
 	color: #cc3314;
-}
-.featured-post.post.post-count-3,
-.featured-post.post.post-count-6,
-.featured-post.post.post-count-9,
-.featured-post.post.post-count-12 {
-	margin-right: 0;
-}
-.featured-post.post.post-count-4,
-.featured-post.post.post-count-7,
-.featured-post.post.post-count-10 {
-	clear: both;
 }
 .featured-post .post-thumbnail {
 	float: none;
 	width: 100%;
 	height: 0;
 	padding-bottom: 62.5%;
-	margin: 0 auto 2.4em;
+	margin: 0 auto 1.6em;
 }
 .featured-post .post-video {
 	float: none;
@@ -138,13 +135,13 @@
 	padding-bottom: 62.5%;
 }
 .featured-post .post-header {
-	min-height: 6.4em;
-	margin-bottom: 0.8em;
+	margin-bottom: 1.2em;
 }
 .featured-post .post-title {
 	font-size: 1.6em;
 	line-height: 1.2em;
 	text-indent: -1px;
+	font-weight: 700;
 }
 .featured-post .post-meta {}
 .featured-post .post-article {
@@ -153,57 +150,6 @@
 	column-count: 1 !important;
 }
 
-
-
-
-.secondary-post.post {
-	float: left;
-	width: 22%;
-	padding: 1px 0;
-	margin-right: 4%;
-	margin-bottom: 6em;
-	position: relative;
-	border: 0;
-}
-.secondary-post.post.sticky .post-inner:after {
-	font-family: 'FontAwesome';
-	font-style: normal;
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	content: '\f02e';
-	position: absolute;
-	font-size: 1.2em;
-	top: 1px;
-	right: 8px;
-	padding: 0;
-	margin: 0;
-	width: auto;
-	color: #cc3314;
-}
-.secondary-post.post.post-count-4,
-.secondary-post.post.post-count-8 {
-	margin-right: 0;
-}
-.secondary-post.post.post-count-5 {
-	clear: both;
-}
-.secondary-post .post-header {
-	min-height: 6.8em;
-	margin-bottom: 0.8em;
-}
-.secondary-post .post-title {
-	font-weight: 700;
-	font-size: 1.1em;
-	line-height: 1.4em;
-}
-.secondary-post .post-meta {}
-.secondary-post .post-article {
-	font-size: 0.9em;
-	-webkit-column-count: 1 !important;
-	-moz-column-count: 1 !important;
-	column-count: 1 !important;
-}
 
 
 #secion-blog-more {
@@ -272,43 +218,10 @@
 
 @media only screen and (max-width: 960px) {
 	.featured-post.post {
-		width: 48%;
+		width: 50%;
 	}
-	.featured-post.post.post-count-3,
-	.featured-post.post.post-count-9 {
-		margin-right: 4%;
-	}
-	.featured-post.post.post-count-4,
-	.featured-post.post.post-count-10 {
-		clear: none;
-	}
-	.featured-post.post.post-count-2,
-	.featured-post.post.post-count-4,
-	.featured-post.post.post-count-6,
-	.featured-post.post.post-count-8,
-	.featured-post.post.post-count-10,
-	.featured-post.post.post-count-12 {
-		margin-right: 0;
-	}
-	.featured-post.post.post-count-1,
-	.featured-post.post.post-count-3,
-	.featured-post.post.post-count-5,
-	.featured-post.post.post-count-7,
-	.featured-post.post.post-count-9,
-	.featured-post.post.post-count-11 {
-		clear: none;
-	}
-	.secondary-post.post {
-		width: 48%;
-	}
-	.secondary-post.post.post-count-2,
-	.secondary-post.post.post-count-4,
-	.secondary-post.post.post-count-6,
-	.secondary-post.post.post-count-8 {
-		margin-right: 0;
-	}
-	.secondary-post.post.post-count-3 {
-		clear: both;
+	.featured-post.post.sticky:nth-child(1) {
+		width: 100%;
 	}
 }
 
@@ -321,7 +234,6 @@
 	.featured-post.post {
 		float: none;
 		width: auto;
-		margin-right: 0 !important;
 	}
 	.featured-post .post-inner {
 		min-height: 0;
@@ -333,14 +245,6 @@
 		margin: 0 auto 2.4em;
 		height: auto;
 		padding-bottom: 0;
-	}
-	.secondary-post.post {
-		float: none;
-		width: auto;
-		margin-right: 0 !important;
-	}
-	.secondary-post .post-header {
-		min-height: 0;
 	}
 	.frontpage-widget.widget {
 		float: none;

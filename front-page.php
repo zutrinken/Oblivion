@@ -76,28 +76,16 @@
 		<section id="section-blog" class="frontpage-section scroll-item" title="<?php _e('Blog','oblivion'); ?>">
 			<div class="inner">
 				<?php
-				if($options['featured-post-count']) {
-					$post_count = $options['featured-post-count'];
-				} else {
-					$post_count = 6;
-				}
 				$args = array(
-					'offset' => 0,
-					'posts_per_page' => $post_count,
-					'meta_query' => array(
-						'relation' => 'OR',
-						array(
-							'key' => '_thumbnail_id'
-						),
-						array(
-							'key' => 'video'
-						)
-					),
-					'ignore_sticky_posts' => 1
+					'posts_per_page' => 32
 				);
 				$counter = 0;
 				query_posts($args);
-				if (have_posts()) : while (have_posts()) : the_post(); $counter++; ?>
+				if (have_posts()) : ?>
+				
+				<div id="masonry">
+				
+				<?php while (have_posts()) : the_post(); $counter++; ?>
 					<section id="post-<?php the_ID(); ?>" <?php post_class('post-count-'.$counter.' featured-post'); ?>>
 						<div class="post-inner">
 							<?php if(get_post_meta($post->ID, 'video', true)) : ?>
@@ -133,56 +121,11 @@
 							<div class="clear"></div>
 						</div>
 					</section>
-				<?php endwhile; ?><?php endif; wp_reset_query(); ?>
-				<div class="clear"></div>
+				<?php endwhile; ?>
 				
-				<?php
-				if($options['secondary-post-count']) {
-					$post_count = $options['secondary-post-count'];
-				} else {
-					$post_count = 4;
-				}
-				$args = array(
-					'offset' => 0,
-					'posts_per_page' => $post_count,
-					'meta_query' => array(
-						'relation' => 'AND',
-						array(
-							'key' => '_thumbnail_id',
-							'value' => '?',
-							'compare' => 'NOT EXISTS'
-						),
-						array(
-							'key' => 'video',
-							'value' => '?',
-							'compare' => 'NOT EXISTS'
-						)
-					),
-					'ignore_sticky_posts' => 1
-				);
-				$counter = 0;
-				query_posts($args);
-				if (have_posts()) : while (have_posts()) : the_post(); $counter++; ?>
-					<section id="post-<?php the_ID(); ?>" <?php post_class('post-count-'.$counter.' secondary-post'); ?>>
-						<div class="post-inner">
-							<header class="post-header">
-								<h3 class="post-title">
-									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php echo short_title(' ...', 10); ?></a>
-								</h3>
-								<aside class="post-meta">
-									<?php _e('Posted by','oblivion'); ?>
-									<?php the_author_posts_link(); ?>
-									<?php _e('on','oblivion'); ?>
-									<?php the_time('j.m.y'); ?>
-								</aside>
-							</header>
-							<article class="post-excerpt post-article">
-								<?php echo custom_excerpt(24); ?>
-							</article>
-							<div class="clear"></div>
-						</div>
-					</section>
-				<?php endwhile; ?><?php endif; wp_reset_query(); ?>
+				</div>
+
+				<?php endif; wp_reset_query(); ?>
 				<div class="clear"></div>
 			</div>
 		</section>
