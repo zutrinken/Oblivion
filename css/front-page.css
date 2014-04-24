@@ -137,12 +137,12 @@
 .featured-post .post-video {
 	float: none;
 	width: 100%;
-	margin: 0 auto 2.4em;
+	margin: 0 auto 1.6em;
 	height: 0;
-	padding-bottom: 62.5%;
+	padding-bottom: 56.25%;
 }
 .no-js .featured-post .post-video {
-	padding-bottom: 62.5%;
+	padding-bottom: 56.25%;
 }
 .featured-post .post-header {
 	margin-bottom: 1.2em;
@@ -261,7 +261,6 @@
 		min-height: 0;
 	}
 	.featured-post .post-video {
-		margin: 0 auto 2.4em;
 		height: auto;
 		padding-bottom: 0;
 	}
