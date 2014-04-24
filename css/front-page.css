@@ -92,10 +92,10 @@
 	column-count: 3;
 }
 .masonry-item {
-	width: 33.333%;
+	width: 33.3%;
 }
 .masonry-item.sticky:nth-child(1) {
-	width: 66.666%;
+	width: 66.6%;
 }
 .no-js .masonry-item {
 	width: auto !important;
@@ -216,10 +216,17 @@
 
 
 /* ==========================================================================
-   Media Queries - Smaller than 1280px
+   Media Queries - Greater than 1280px
    ========================================================================== */
 
-@media only screen and (max-width: 1280px) {}
+@media only screen and (min-width: 1280px) {
+	.masonry-item {
+		width: 24.95%;
+	}
+	.masonry-item.sticky:nth-child(1) {
+		width: 49.95%;
+	}
+}
 
 /* ==========================================================================
    Media Queries - Smaller than 960px
@@ -233,7 +240,7 @@
 		column-count: 2;
 	}
 	.masonry-item {
-		width: 50%;
+		width: 49.95%;
 	}
 	.masonry-item.sticky:nth-child(1) {
 		width: 100%;
