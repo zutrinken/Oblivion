@@ -86,8 +86,19 @@
 				<div id="masonry">
 				
 				<?php while (have_posts()) : the_post(); $counter++; ?>
-					<section id="post-<?php the_ID(); ?>" <?php post_class('post-count-'.$counter.' featured-post'); ?>>
+					<section id="post-<?php the_ID(); ?>" <?php post_class('post-count-'.$counter.' featured-post masonry-item'); ?>>
 						<div class="post-inner">
+							<header class="post-header">
+								<h3 class="post-title">
+									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php echo short_title(' ...', 10); ?></a>
+								</h3>
+								<aside class="post-meta">
+									<?php _e('Posted by','oblivion'); ?>
+									<?php the_author_posts_link(); ?>
+									<?php _e('on','oblivion'); ?>
+									<?php the_time('j.m.y'); ?>
+								</aside>
+							</header>
 							<?php if(get_post_meta($post->ID, 'video', true)) : ?>
 								<figure class="post-video">
 									<?php echo get_post_meta($post->ID, 'video', true); ?>
@@ -104,17 +115,6 @@
 									<?php endif; ?>
 								</figure>
 							<?php endif; ?>
-							<header class="post-header">
-								<h3 class="post-title">
-									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php echo short_title(' ...', 10); ?></a>
-								</h3>
-								<aside class="post-meta">
-									<?php _e('Posted by','oblivion'); ?>
-									<?php the_author_posts_link(); ?>
-									<?php _e('on','oblivion'); ?>
-									<?php the_time('j.m.y'); ?>
-								</aside>
-							</header>
 							<article class="post-excerpt post-article">
 								<?php echo custom_excerpt(48); ?>
 							</article>
@@ -155,7 +155,6 @@
 		<section id="section-widgets" class="frontpage-section" title="<?php _e('Widgets','oblivion'); ?>">
 			<div class="inner">
 				<h2 class="visuallyhidden"><?php _e('Widgets','oblivion'); ?></h2>
-
 				<?php dynamic_sidebar('Frontpage'); ?>
 				<div class="clear"></div>
 			</div>

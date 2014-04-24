@@ -65,7 +65,7 @@ require_once(TEMPLATEPATH .'/inc/theme-options.php');
 /* add twitter and wiki profile */
 function add_twitter_contactmethod( $contactmethods ) {
 	/* Add Twitter */
-	$contactmethods['twitter'] = __('Twitter (without @)','oblivion');
+	$contactmethods['twitter'] = __('Twitter','oblivion');
 	return $contactmethods;
 }
 add_filter('user_contactmethods','add_twitter_contactmethod',10,1);
