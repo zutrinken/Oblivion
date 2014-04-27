@@ -148,6 +148,20 @@ hr {
     padding: 0;
 }
 
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+}
+iframe {
+	max-width: 100%;
+}
+iframe body {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
 blockquote {
 	font-family: 'Vollkorn', 'Georgia', serif;
 	font-size: 1.2em;
@@ -284,6 +298,18 @@ table td {
     vertical-align: top;
     border-top: 1px solid #dfe1e5;
 }
+table th[align="left"],
+table td[align="left"] {
+	text-align: left;
+}
+table th[align="center"],
+table td[align="center"] {
+	text-align: center;
+}
+table th[align="right"],
+table td[align="right"] {
+	text-align: right;
+}
 
 table th { color: #000; }
 
@@ -304,20 +330,8 @@ table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
     background-color: #edeff2;
 }
-
-
-img {
-	display: block;
-	max-width: 100%;
-	height: auto;
-	margin: auto;
-}
-iframe {
-	max-width: 100%;
-}
-iframe body {
-	margin: 0 !important;
-	padding: 0 !important;
+table img {
+	display: inline;
 }
 
 .clear {
