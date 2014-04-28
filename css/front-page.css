@@ -153,6 +153,9 @@
 	text-indent: -1px;
 	font-weight: 700;
 }
+.featured-post.sticky .post-title {
+	padding-right: 40px;
+}
 .featured-post .post-meta {}
 .featured-post .post-article {
 	-webkit-column-count: 1 !important;
