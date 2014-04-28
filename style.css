@@ -764,6 +764,7 @@ a.sp:focus {
 	-moz-hyphens: auto;
 	-ms-hyphens: auto;
 	hyphens: auto;
+	word-wrap: break-word;
 }
 .search .post-title {
 	font-size: 1.6em;
