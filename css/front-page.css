@@ -208,6 +208,10 @@
 	float: left;
 	width: 33.333%;
 }
+.frontpage-widget.widget:nth-of-type(4),
+.frontpage-widget.widget:nth-of-type(7) {
+	clear: both;
+}
 .frontpage-widget.widget .widget-inner {
 	margin: 32px;
 }
@@ -247,6 +251,19 @@
 	}
 	.masonry-item.sticky:nth-child(1) {
 		width: 100%;
+	}
+	
+	.frontpage-widget.widget {
+		width: 50%;
+	}
+	.frontpage-widget.widget:nth-of-type(4) {
+		clear: none;
+	}
+	.frontpage-widget.widget:nth-of-type(3),
+	.frontpage-widget.widget:nth-of-type(5),
+	.frontpage-widget.widget:nth-of-type(7),
+	.frontpage-widget.widget:nth-of-type(9) {
+		clear: both;
 	}
 }
 
