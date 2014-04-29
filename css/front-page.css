@@ -305,6 +305,14 @@
    ========================================================================== */
 
 @media only screen and (max-width: 480px) {
+	#masonry {
+		height: auto !important;
+	}
+	.featured-post {
+		left: auto !important;
+		top: auto !important;
+		position: relative !important;
+	}
 	.featured-post .post-thumbnail,
 	.featured-post .post-video {
 		margin: 0 auto 1.2em;
