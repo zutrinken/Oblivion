@@ -50,6 +50,18 @@ function oblivion_theme_options_page() {
 				</tr>
 			</table>
 			
+			<h3><?php _e('Highlight Posts','oblivion'); ?></h3>
+			<table class="form-table">
+				<tr valign="top">
+					<th scope="row"><?php _e('Categories','oblivion'); ?></th>
+					<td><input id="oblivion_theme_options[highlight-category]" class="regular-text" type="text" name="oblivion_theme_options[highlight-category]" value="<?php esc_attr_e( $options['highlight-category'] ); ?>" /> <p class="description">category ID</p></td>
+				</tr>
+				<tr valign="top">
+					<th scope="row"><?php _e('Tags','oblivion'); ?></th>
+					<td><input id="oblivion_theme_options[highlight-tag]" class="regular-text" type="text" name="oblivion_theme_options[highlight-tag]" value="<?php esc_attr_e( $options['highlight-tag'] ); ?>" /><p class="description">tag ID</p></td>
+				</tr>
+			</table>
+			
 			<h3><?php _e('Social','oblivion'); ?></h3>
 			<table class="form-table">
 				<tr valign="top">

@@ -106,10 +106,12 @@
 	position: relative;
 	border: 0;
 }
+.featured-post.post.highlight {}
 .featured-post.post .post-inner {
 	margin: 0 24px;
 	padding: 24px 0 32px;
 	border-bottom: 1px solid #dadce0;
+	position: relative;
 }
 .featured-post.post.sticky .post-inner:after {
 	font-family: 'FontAwesome';

@@ -72,10 +72,13 @@
 		/* ==========================================================================
 		   Blog
 		   ========================================================================== */
-		?>
+		?>		
+		
 		<section id="section-blog" class="frontpage-section scroll-item" title="<?php _e('Blog','oblivion'); ?>">
 			<div class="inner">
 				<?php
+				$cats = $options['highlight-category'];
+				$tags = $options['highlight-tag'];
 				$args = array(
 					'posts_per_page' => 32
 				);
@@ -85,8 +88,15 @@
 				
 				<div id="masonry">
 				
-				<?php while (have_posts()) : the_post(); $counter++; ?>
-					<section id="post-<?php the_ID(); ?>" <?php post_class('post-count-'.$counter.' featured-post masonry-item'); ?>>
+				<?php while (have_posts()) : the_post();
+					$counter++;
+					if(has_category($cats, $post_ID) || has_tag($tags, $post_ID)) {
+						$highlight = 'highlight';
+					} else {
+						$highlight = '';
+					}
+				?>
+					<section id="post-<?php the_ID(); ?>" <?php post_class($highlight . ' post-count-'.$counter.' featured-post masonry-item'); ?>>
 						<div class="post-inner">
 							<header class="post-header">
 								<h3 class="post-title">
