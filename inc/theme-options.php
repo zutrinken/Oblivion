@@ -51,14 +51,15 @@ function oblivion_theme_options_page() {
 			</table>
 			
 			<h3><?php _e('Highlight Posts','oblivion'); ?></h3>
+			<p><?php _e('Highlight posts on frontpage with a light gray background by category or tag. You can choose multiple categories or tags comma separated (e.g. "23" or "13, 37, 42"). You can use categories and tags together.','oblivion'); ?></p>
 			<table class="form-table">
 				<tr valign="top">
 					<th scope="row"><?php _e('Categories','oblivion'); ?></th>
-					<td><input id="oblivion_theme_options[highlight-category]" class="regular-text" type="text" name="oblivion_theme_options[highlight-category]" value="<?php esc_attr_e( $options['highlight-category'] ); ?>" /> <p class="description">category ID</p></td>
+					<td><input id="oblivion_theme_options[highlight-category]" class="regular-text" type="text" name="oblivion_theme_options[highlight-category]" value="<?php esc_attr_e( $options['highlight-category'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row"><?php _e('Tags','oblivion'); ?></th>
-					<td><input id="oblivion_theme_options[highlight-tag]" class="regular-text" type="text" name="oblivion_theme_options[highlight-tag]" value="<?php esc_attr_e( $options['highlight-tag'] ); ?>" /><p class="description">tag ID</p></td>
+					<td><input id="oblivion_theme_options[highlight-tag]" class="regular-text" type="text" name="oblivion_theme_options[highlight-tag]" value="<?php esc_attr_e( $options['highlight-tag'] ); ?>" /></td>
 				</tr>
 			</table>
 			
