@@ -79,6 +79,7 @@
 				<?php
 				$cats = $options['highlight-category'];
 				$tags = $options['highlight-tag'];
+
 				$args = array(
 					'posts_per_page' => 32
 				);

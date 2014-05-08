@@ -136,7 +136,7 @@
 .featured-post.post.highlight .post-inner{
 	border: 0;
 }
-.featured-post.post.highlight .post-inner:after {
+.featured-post.post.highlight .post-inner:before {
 	content: '';
 	position: absolute;
 	left: 0;
