@@ -79,7 +79,6 @@
 				<?php
 				$cats = $options['highlight-category'];
 				$tags = $options['highlight-tag'];
-
 				$args = array(
 					'posts_per_page' => 32
 				);
@@ -91,10 +90,12 @@
 				
 				<?php while (have_posts()) : the_post();
 					$counter++;
-					if(has_category($cats, $post_ID) || has_tag($tags, $post_ID)) {
-						$highlight = 'highlight';
-					} else {
-						$highlight = '';
+					if ($cats || $tags) {
+						if(has_category($cats, $post_ID) || has_tag($tags, $post_ID)) {
+							$highlight = 'highlight';
+						} else {
+							$highlight = false;
+						}
 					}
 				?>
 					<section id="post-<?php the_ID(); ?>" <?php post_class($highlight . ' post-count-'.$counter.' featured-post masonry-item'); ?>>
