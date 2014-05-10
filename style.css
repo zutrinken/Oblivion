@@ -186,12 +186,24 @@ body:before {
 	float: left;
 	margin: 10px;
 }
-#logo .name {
+#logo .home {
 	display: block;
+	width: 72px;
 	height: 72px;
-	width: auto;
+	text-align: center;
+	line-height: 72px;
 	float: left;
-	padding: 0 24px;
+	padding: 0;
+	font-size: 1em;
+	background: #fff;
+	color: #333;
+	cursor: pointer;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+#logo .home:hover,
+#logo .home:focus {
+	background-color: #f2f3f5;
 }
 #navigation {
 	float: right;

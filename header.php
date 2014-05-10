@@ -123,9 +123,9 @@
 					<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
 						<?php if($options['icon']) : ?>
 							<img class="icon" src="<?php echo $options['icon']; ?>" alt="<?php bloginfo('name'); ?>" />
-						<?php /* else : ?>
-							<span class="name"><?php bloginfo('name'); ?></span>
-						<?php */ endif; ?>
+						<?php else : ?>
+							<span class="home"><i class="fa fa-home"></i></span>
+						<?php endif; ?>
 					</a>
 				</h1>
 				<a id="search-link" class="search-handler" href="<?php bloginfo('url'); ?>/?s=&nbsp;&submit="><i class="fa fa-search"></i></a>
