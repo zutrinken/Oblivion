@@ -60,12 +60,12 @@
 
 #logo-image {
 	margin-top: -12%;
-	margin-bottom: -6%;
+	margin-bottom: -2%;
 }
 #logo-name {
 	display: block;
 	text-align: center;
-	margin: auto;
+	margin-top: -8%;
 	font-family: 'PoliticsHeadBold', 'Open Sans', sans-serif;
 	font-size: 1.6em;
 	line-height: 0.875em;
