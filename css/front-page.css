@@ -262,10 +262,10 @@
 
 
 /* ==========================================================================
-   Media Queries - Greater than 1280px
+   Media Queries - Greater than 1440px
    ========================================================================== */
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1440px) {
 	.masonry-item {
 		width: 24.95%;
 	}
