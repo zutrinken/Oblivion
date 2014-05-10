@@ -77,8 +77,10 @@
 		<section id="section-blog" class="frontpage-section scroll-item" title="<?php _e('Blog','oblivion'); ?>">
 			<div class="inner">
 				<?php
+/*
 				$cats = $options['highlight-category'];
 				$tags = $options['highlight-tag'];
+*/
 				$args = array(
 					'posts_per_page' => 32
 				);
@@ -90,6 +92,7 @@
 				
 				<?php while (have_posts()) : the_post();
 					$counter++;
+/*
 					if ($cats || $tags) {
 						if(has_category($cats, $post_ID) || has_tag($tags, $post_ID)) {
 							$highlight = 'highlight';
@@ -97,6 +100,7 @@
 							$highlight = false;
 						}
 					}
+*/
 				?>
 					<section id="post-<?php the_ID(); ?>" <?php post_class($highlight . ' post-count-'.$counter.' featured-post masonry-item'); ?>>
 						<div class="post-inner">

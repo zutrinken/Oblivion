@@ -133,6 +133,7 @@
 	border-bottom: 1px solid #dadce0;
 	position: relative;
 }
+/*
 .featured-post.post.highlight .post-inner{
 	border: 0;
 }
@@ -148,6 +149,7 @@
 	background: #e4e6eb;
 	z-index: -1;	
 }
+*/
 .featured-post.post.sticky .post-inner:after {
 	font-family: 'FontAwesome';
 	font-style: normal;

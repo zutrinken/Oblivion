@@ -50,6 +50,7 @@ function oblivion_theme_options_page() {
 				</tr>
 			</table>
 			
+<!--
 			<h3><?php _e('Highlight Posts','oblivion'); ?></h3>
 			<p><?php _e('Highlight posts on frontpage with a light gray background by category or tag. You can choose multiple categories or tags comma separated (e.g. "23" or "13, 37, 42"). You can use categories and tags together.','oblivion'); ?></p>
 			<table class="form-table">
@@ -62,6 +63,7 @@ function oblivion_theme_options_page() {
 					<td><input id="oblivion_theme_options[highlight-tag]" class="regular-text" type="text" name="oblivion_theme_options[highlight-tag]" value="<?php esc_attr_e( $options['highlight-tag'] ); ?>" /></td>
 				</tr>
 			</table>
+-->
 			
 			<h3><?php _e('Social','oblivion'); ?></h3>
 			<table class="form-table">
