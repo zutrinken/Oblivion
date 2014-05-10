@@ -7,10 +7,6 @@ Yet another wordpress theme.
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/oblivion&title=oblivion&language=php-js-html-css&tags=github&category=software)
 
-## Version
-
-v0.9 <font color="red">**BETA**</font>
-
 ## Screenshot
 
 ![preview](screenshot.png)
@@ -40,7 +36,6 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FO
 * Featured images must be at least 560px wide and 480px high
 * Regenerate your images with the [Regenerate Thumbnails](http://wordpress.org/plugins/regenerate-thumbnails/) Plugin
 * Set a logo-icon and a full logo in the theme options
-* Static page as frontpage displays only posts with featured image and the sidebar
 * Display videos like post images by using the custom field ```video``` with your embedded ```<iframe>``` code
 * Use shortcodes to format your pages width columns
 
