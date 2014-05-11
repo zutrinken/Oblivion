@@ -11,7 +11,7 @@
 	License: MIT License
 	License URI:
 	
-	Version: 1.0.0
+	Version: 1.0.1
 
 	Github Theme URI: https://github.com/zutrinken/Oblivion
 	GitHub Branch: master
@@ -99,7 +99,6 @@ body:before {
     width: 100%;
     background: #fff;
 }
-
 #header {
 	backface-visibility: hidden;
 	height: 100%;
@@ -120,6 +119,9 @@ body:before {
 	border-bottom: 1px solid #e3e3e3;
 	-webkit-box-shadow: 0 0 4px rgba(0,0,0,0.05);
 	box-shadow: 0 0 4px rgba(0,0,0,0.05);
+}
+.admin-bar #header {
+	top: 32px;
 }
 #header .inner {
 	width: auto !important;
@@ -143,6 +145,9 @@ body:before {
 	}
 	#header {
 		position: absolute;
+	}
+	.admin-bar #header {
+		top: 46px;
 	}
 }
 .state-nav-is-hidden #header {
