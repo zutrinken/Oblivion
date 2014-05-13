@@ -39,6 +39,11 @@
 }
 
 .size-large {}
+.size-large.aligncenter {
+	width: 125% !important;
+	max-width: none;
+	margin: 3.2em -12.5%;
+}
 .alignleft.size-large,
 .alignright.size-large {
 	max-width: 62.5%;
