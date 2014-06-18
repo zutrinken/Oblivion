@@ -27,8 +27,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	text-rendering: optimizeLegibility;
 
-	font-size: 1.5em;
-	line-height: 1.6em;
+	font-size: 1.6em;
+	line-height: 1.5em;
 	font-weight: 300;
 	
 	color: #2e3033;
@@ -47,25 +47,30 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
-	line-height: 1em;
-	margin: 32px 0 16px;
+	margin: 32px 0;
 }
 
 h1 {
-	font-size: 2.4em;
+	font-size: 2.25em; /* 36px */
+	line-height: 1.333em; /* 48px */
+	padding: 8px 0;
 	text-indent: -2px;
 }
 h2 {
-	font-size: 2em;
+	font-size: 2em; /* 32px */
+	line-height: 1.25em; /* 40px */
+	padding: 12px 0;
 	text-indent: -1px;
 }
 h3 {
-	font-size: 1.6em;
+	font-size: 1.5em; /* 24px */
+	line-height: 1.333em; /* 32px */
 }
 
 h4 {
-	font-size: 1.2em;
-	line-height: 1.6em;
+	font-size: 1.25em; /* 20px */
+	line-height: 1.2em; /* 24px */
+	padding: 4px 0;
 }
 
 h5 {
@@ -123,7 +128,7 @@ p, ul, ol {
 	content: '\f0da';
 	position: absolute;
 	top: 0.5em;
-	left: -1em;
+	left: -1.5em;
 	width: 1em;
 	height: 1em;
 	line-height: 1em;
@@ -141,10 +146,10 @@ ol ol, ul ul, ul ol, ol ul {
 
 hr {
     display: block;
-    height: 1px;
+    height: 0;
     border: 0;
     border-top: 1px solid #b6babf;
-	margin: 48px 0;
+	margin: 48px 0 47px;
     padding: 0;
 }
 
@@ -175,12 +180,12 @@ blockquote {
 }
 blockquote ul,
 blockquote ol {
-	padding-left: 1.6em;
+	padding-left: 24px;
 }
 blockquote p,
 blockquote > ul,
 blockquote > ol {
-	margin: 24px 0;
+	margin: 32px 0;
 }
 
 em, q {
@@ -223,12 +228,14 @@ mark {
 
 code, tt {
     padding: 2px 4px;
+    margin: 0 2px;
     font-family: 'Inconsolata', monospace, sans-serif;
     font-size: 0.875em;
+    font-weight: 400;
     white-space: pre;
-    border: 1px solid #292e33;
-    background: #303840;
-    color: #a7bf60;
+    border: 1px solid #dadce0;
+    background: #e4e6eb;
+    color: #232529;
     vertical-align: top;
     -webkit-border-radius: 2px;
     border-radius: 2px;
@@ -237,11 +244,11 @@ code, tt {
 pre {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-	margin: 32px 0;
-    width: 100%;
-    padding: 16px;
+    width: 105%;
+	margin: 16px -2.5%;
+    padding: 16px 2.5%;
     font-family: 'Inconsolata', monospace, sans-serif;
-
+	font-weight: 400;
     white-space: pre;
     overflow: auto;
     background: #e6e8eb;
@@ -250,15 +257,15 @@ pre {
     border-radius: 2px;
 }
 
-pre code, tt {
+pre code, pre tt {
     font-size: inherit;
     line-height: 1.6em;
     white-space: -moz-pre-wrap;
     white-space: pre-wrap;
     background: transparent;
     border: none;
-    margin: -16px;
-    padding: 16px 24px;
+    margin: -16px -2.5%;
+    padding: 16px 2.5%;
     vertical-align: inherit;
     border: 1px solid #292e33;
     background: #303840;
