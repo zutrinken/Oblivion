@@ -1,7 +1,35 @@
 <?php get_header(); ?>
-		<?php $options = get_option('oblivion_theme_options'); ?>
-		
 
+	<?php if(!is_home()) : ?>
+		
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php if(has_post_thumbnail() && $Imagefilter) : $image = wp_get_attachment_image_src( get_post_thumbnail_id(), 'large-landscape-filter'); ?>
+				<style>
+					.page-header-cover {background: url('<?php echo $image[0]; ?>') scroll center center / cover #000 !important;}
+					.page-header {background: #000 !important;}
+				</style>
+			<?php endif; ?>
+			<section class="page-header" id="opener">
+				<div class="inner" data-type="prlx" data-speed="0.375">
+					<h2 class="page-title">
+						<?php the_title(); ?>
+					</h2>
+				</div>
+				<?php if(has_post_thumbnail() && $Imagefilter) : ?>
+					<div class="page-header-cover" data-type="prlx" data-speed="0.625"></div>
+				<?php endif; ?>
+			</section>
+			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+				<div class="inner">
+					<article class="post-content post-article">
+						<?php the_content(); ?>
+					</article>
+					<div class="clear"></div>
+				</div>
+			</section>
+		<?php endwhile; endif; ?>
+	<?php else : ?>
+	
 		<section class="page-header">
 			<div class="inner" data-type="prlx" data-speed="0.375">
 				<h1 class="page-title">
@@ -17,70 +45,10 @@
 			<?php endif; ?>
 		</section>
 		
-		
-		<?php if(is_home()) : ?>
-		
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-			<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<div class="inner">
-					<?php if(get_post_meta($post->ID, 'video', true)) : ?>
-						<figure class="post-video">
-							<?php echo get_post_meta($post->ID, 'video', true); ?>
-						</figure>
-					<?php elseif(has_post_thumbnail()) : ?>
-						<figure class="post-thumbnail">
-							<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>">
-								<?php the_post_thumbnail('medium-square'); ?>
-							</a>
-							<?php if(get_post(get_post_thumbnail_id())->post_excerpt) : ?>
-								<figcaption class="post-thumbnail-caption">
-									<?php echo get_post(get_post_thumbnail_id())->post_excerpt; ?>
-								</figcaption>
-							<?php endif; ?>
-						</figure>
-					<?php endif; ?>
-					<header class="post-header">
-						<h2 class="post-title">
-							<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-						</h2>
-						<aside class="post-meta">
-							<?php _e('Posted by','oblivion'); ?>
-							<?php the_author_posts_link(); ?>
-							<?php _e('on','oblivion'); ?>
-							<?php the_time('j.m.y'); ?>
-						</aside>
-					</header>
-					<article class="post-excerpt post-article">
-						<?php the_excerpt(); ?>
-					</article>
-					<div class="clear"></div>
-				</div>
-			</section>
-		<?php endwhile; ?>
-			<nav id="pagination">
-				<div class="inner">
-					<?php wp_pagination_navi(); ?>
-				</div>
-			</nav>
-		<?php endif; ?>
-		
-		<?php else : ?>
-		
-	
-		
-		<?php
-		/* ==========================================================================
-		   Blog
-		   ========================================================================== */
-		?>		
-		
 		<section id="section-blog" class="frontpage-section scroll-item" title="<?php _e('Blog','oblivion'); ?>">
 			<div class="inner">
 				<?php
-/*
-				$cats = $options['highlight-category'];
-				$tags = $options['highlight-tag'];
-*/
+
 				$args = array(
 					'posts_per_page' => 32
 				);
@@ -90,18 +58,7 @@
 				
 				<div id="masonry">
 				
-				<?php while (have_posts()) : the_post();
-					$counter++;
-/*
-					if ($cats || $tags) {
-						if(has_category($cats, $post_ID) || has_tag($tags, $post_ID)) {
-							$highlight = 'highlight';
-						} else {
-							$highlight = false;
-						}
-					}
-*/
-				?>
+				<?php while (have_posts()) : the_post(); $counter++; ?>
 					<section id="post-<?php the_ID(); ?>" <?php post_class($highlight . ' post-count-'.$counter.' featured-post masonry-item'); ?>>
 						<div class="post-inner">
 							<header class="post-header">
@@ -160,12 +117,6 @@
 			</div>
 		</section>
 
-		<?php
-		/* ==========================================================================
-		   Widgets
-		   ========================================================================== */
-		?>
-
 		<?php if (is_active_sidebar('Frontpage')) : ?>
 
 		<section id="section-widgets" class="frontpage-section" title="<?php _e('Widgets','oblivion'); ?>">
@@ -177,7 +128,6 @@
 		</section>
 
 		<?php endif; ?>
-		
-		<?php endif; ?>
-
+	
+	<?php endif; ?>
 <?php get_footer(); ?>

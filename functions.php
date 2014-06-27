@@ -33,7 +33,7 @@ function enqueue_scripts() {
 		wp_enqueue_style( 'oblivion-highlight-style', $template.'/css/highlight.css', array(), null, false);
 		wp_enqueue_script('oblivion-highlight-script', $template.'/js/libs/highlight.pack.js', array(), null, false);
 	}
-	if(is_front_page() && !is_home()) {
+	if(is_front_page() && is_home()) {
 		wp_enqueue_style( 'oblivion-frontpage-style', $template.'/css/front-page.css', array(), null, false);
 		wp_enqueue_script('jquery-masonry');
 		wp_enqueue_script('oblivion-frontpage-script', $template.'/js/front-page.js', array(), null, true);
