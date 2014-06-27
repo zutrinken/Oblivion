@@ -29,7 +29,7 @@ function enqueue_scripts() {
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('oblivion-jquery.fitvids', $template.'/js/libs/jquery.fitvids.js', array(), null, false);
 	
-	if(!home() && (is_page() || is_single())) {
+	if(!is_home() && (is_page() || is_single())) {
 		wp_enqueue_style( 'oblivion-highlight-style', $template.'/css/highlight.css', array(), null, false);
 		wp_enqueue_script('oblivion-highlight-script', $template.'/js/libs/highlight.pack.js', array(), null, false);
 	}
