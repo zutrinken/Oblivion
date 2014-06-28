@@ -987,7 +987,7 @@ a.sp:focus {
 	position: relative;
 	top: -72px;
 	margin-bottom: -72px;
-	padding: 18% 0 6%;
+	padding: 20% 0 4%;
 	overflow: hidden;
 	
 	/* Orange */
@@ -1063,7 +1063,7 @@ a.sp:focus {
 	font-weight: 300;
 }
 .page-meta p {
-	margin: 0.8em 0;
+	margin: 16px 0 0;
 }
 .page-meta a {
 	color: inherit;
