@@ -712,6 +712,9 @@ a.sp:focus {
 
 	-webkit-transition: all cubic-bezier(1, 0, 0, 1) 0.2s;
 	transition: all cubic-bezier(1, 0, 0, 1) 0.2s;
+	
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
 }
 .post-thumbnail:hover,
 .post-thumbnail:focus {
@@ -752,6 +755,8 @@ a.sp:focus {
 	margin: 0 1.6em 0.8em 0;
 	overflow: hidden;
 	width: 50%;
+	-webkit-border-radius: 1px;
+	border-radius: 1px;
 }
 .no-js .post-video {
 	padding-bottom: 31.25%;
