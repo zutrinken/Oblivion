@@ -45,17 +45,12 @@
 			<?php endif; ?>
 		</section>
 		
+		<?php if (have_posts()) : ?>
+		
 		<section id="section-blog" class="frontpage-section scroll-item" title="<?php _e('Blog','oblivion'); ?>">
 			<div class="inner">
-				<?php
+				<?php $counter = 0; ?>
 
-				$args = array(
-					'posts_per_page' => 32
-				);
-				$counter = 0;
-				query_posts($args);
-				if (have_posts()) : ?>
-				
 				<div id="masonry">
 				
 				<?php while (have_posts()) : the_post(); $counter++; ?>
@@ -98,24 +93,18 @@
 				
 				</div>
 
-				<?php endif; wp_reset_query(); ?>
-				<div class="clear"></div>
 			</div>
 		</section>
-		
-		
-		<section id="section-blog-more">
-			<div class="inner">
-				<aside class="featured-post-more">
-					<?php $count_posts = wp_count_posts(); ?>
-					<span class="sp sp-post-count"><span><?php printf(_n('One post','%s posts',$count_posts->publish,'oblivion'), $count_posts->publish); ?></span></span>
-					<?php $bloglink = _get_page_link(get_option('page_for_posts')); ?>
-					<a class="sp sp-blog" href="<?php echo $bloglink; ?>"><span><?php _e('See all Posts','oblivion'); ?> <i class="fa fa-play-circle fa-fw"></i></span></a>
-					<div class="clear"></div>
-				</aside>
-					
-			</div>
-		</section>
+
+		<?php if($wp_query->max_num_pages > 1) : ?>
+			<nav id="pagination">
+				<div class="inner">
+					<?php wp_pagination_navi(); ?>
+				</div>
+			</nav>
+		<?php endif; ?>
+
+		<?php endif; wp_reset_query(); ?>
 
 		<?php if (is_active_sidebar('Frontpage')) : ?>
 

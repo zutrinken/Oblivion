@@ -556,7 +556,6 @@ a.search-handler.active .search-open {
 #section-blog-more,
 #section-social {
 	padding: 0;
-	border-top: 1px solid #e4e6eb;
 }
 #section-blog-more .inner,
 #section-social .inner {
@@ -701,8 +700,6 @@ a.sp:focus {
 .page .page {
 	position: relative;
 	padding: 48px 0 96px;
-	
-	border: 0;
 }
 .post-thumbnail {
 	position: relative;
@@ -1114,6 +1111,7 @@ a.sp:focus {
 #pagination {
 	padding: 48px 0 64px;
 	background: #fff;
+	border-bottom: 1px solid #e4e6eb;
 }
 .pagination-info {
 	float: left;

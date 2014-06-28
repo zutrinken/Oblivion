@@ -88,11 +88,13 @@
 			</div>
 		</section>
 	<?php endwhile; ?>
-		<nav id="pagination">
-			<div class="inner">
-				<?php wp_pagination_navi(); ?>
-			</div>
-		</nav>
+		<?php if($wp_query->max_num_pages > 1) : ?>
+			<nav id="pagination">
+				<div class="inner">
+					<?php wp_pagination_navi(); ?>
+				</div>
+			</nav>
+		<?php endif; ?>
 	<?php endif; ?>
 
 	<?php /* get_sidebar(); */ ?>

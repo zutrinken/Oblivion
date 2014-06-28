@@ -78,6 +78,7 @@
 
 #section-blog {
 	padding: 64px 0;
+	border-bottom: 1px solid #e4e6eb;
 }
 #section-blog .inner {
 	width: 90% !important;
@@ -186,29 +187,6 @@
 }
 
 
-
-#secion-blog-more {
-	width: 100%;
-	text-align: center;
-	margin: 0 auto -64px;
-	padding: 0;
-}
-#secion-blog-more a {
-	display: inline-block;
-	padding: 24px 32px;
-	color: #2e3033;
-	border: 1px solid #e4e6eb;
-	border-bottom: 0;
-	background: #fff;
-	-webkit-border-radius: 3px 3px 0 0;
-	border-radius: 3px 3px 0 0;
-}
-#secion-blog-more a:hover,
-#secion-blog-more a:focus {
-	background: #f9f9f9;
-}
-
-
 /* ==========================================================================
    Widgets
    ========================================================================== */
@@ -218,7 +196,7 @@
 	padding: 96px 0;
 	position: relative;
 	background: #fff;
-	border-top: 1px solid #e4e6eb;
+	border-bottom: 1px solid #e4e6eb;
 }
 #section-widgets .inner {
 	width: 90% !important;
