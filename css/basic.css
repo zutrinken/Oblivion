@@ -84,18 +84,18 @@ h6 {
 }
 
 a {
-	color: #ff9500;
 	color: #2996cc;
 	font-weight: 400;
 	text-decoration: none;
 	-webkit-transition: all ease 0.3s;
 	transition: all ease 0.3s;
+	border-bottom: 1px solid transparent;
 }
 
 a:hover,
 a:focus {
-	color: #ff6a00;
 	color: #1f7099;
+	border-bottom-color: #1f7099;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -143,7 +143,11 @@ ol ol, ul ul, ul ol, ol ul {
 	padding-left: 2.4em;
 	margin: 8px 0;
 }
-
+@media only screen and (max-width: 480px) {
+	ul, ol {
+		margin-left: 2.4em;
+	}
+}
 hr {
     display: block;
     height: 0;
@@ -291,16 +295,16 @@ kbd {
 table {
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-	margin: 32px 0;
-    width:100%;
-    max-width: 100%;
+	margin: 32px -2.5%;
+    width: 105%;
+    max-width: 105%;
     background-color: transparent;
 }
 
 table th,
 table td {
-    padding: 8px;
-    line-height: 20px;
+    padding: 16px 16px 16px 8px;
+    line-height: 1.6em;
     text-align: left;
     vertical-align: top;
     border-top: 1px solid #dfe1e5;

@@ -206,15 +206,14 @@
 .widget_rss ul {}
 .widget_rss ul li {}
 .widget_rss ul li a.rsswidget {
-
 	font-weight: 600;
 	color: #2E3033;
-	border-bottom: 2px solid rgba(0, 0, 0, 0);
+	border-bottom: 1.5px solid transparent;
 }
 .widget_rss ul li a.rsswidget:hover,
 .widget_rss ul li a.rsswidget:focus {
 	color: #000;
-	border-bottom-color: #f80;
+	border-bottom-color: #000;
 }
 .widget_rss ul li span.rss-date {
 	display: block;

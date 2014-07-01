@@ -152,6 +152,7 @@
 	color: #757a80;
 	background: #dadce0;
 	padding: 4px 8px;
+	border: 0;
 	
 	-webkit-border-radius: 2px;
 	-moz-border-radius: 2px;
@@ -277,9 +278,8 @@
 	color: #2e3033;
 }
 #commentform .req {
-	margin-left: 8px;
-	color: #2996cc;
-	font-weight: 400;
+	margin-left: 4px;
+	font-weight: 300;
 }
 #commentform .req i {
 	font-size: 0.5em;

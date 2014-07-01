@@ -59,8 +59,7 @@
 
 
 #logo-image {
-	margin-top: -12%;
-	margin-bottom: -2%;
+	margin-top: -16%;
 }
 #logo-name {
 	display: block;
@@ -155,31 +154,26 @@
 	width: 100%;
 	height: 0;
 	padding-bottom: 62.5%;
-	margin: 0 auto 1.6em;
+	margin: 24px auto;
 }
 .featured-post .post-video {
 	float: none;
 	width: 100%;
-	margin: 0 auto 1.6em;
+	margin: 24px auto;
 	height: 0;
 	padding-bottom: 56.25%;
 }
 .no-js .featured-post .post-video {
 	padding-bottom: 56.25%;
 }
-.featured-post .post-header {
-	margin-bottom: 1.2em;
-}
 .featured-post .post-title {
 	font-size: 1.6em;
-	line-height: 1.2em;
 	text-indent: -1px;
 	font-weight: 700;
 }
 .featured-post.sticky .post-title {
 	padding-right: 40px;
 }
-.featured-post .post-meta {}
 .featured-post .post-article {
 	-webkit-column-count: 1 !important;
 	-moz-column-count: 1 !important;
@@ -241,6 +235,10 @@
 
 
 @media only screen and (max-width: 960px) {
+	#logo-image {
+		margin-top: -8%;
+		margin-bottom: -4%;
+	}
 	.no-js #masonry {
 		-webkit-column-count: 2;
 		-moz-column-count: 2;

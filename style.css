@@ -11,7 +11,7 @@
 	License: MIT License
 	License URI:
 	
-	Version: 1.0.5
+	Version: 1.0.6
 
 	Github Theme URI: https://github.com/zutrinken/Oblivion
 	GitHub Branch: master
@@ -122,6 +122,9 @@ body:before {
 }
 .admin-bar #header {
 	top: 32px;
+}
+#header a {
+	border: 0;
 }
 #header .inner {
 	width: auto !important;
@@ -276,6 +279,7 @@ body:before {
 	font-size: 0.8em;
 	font-weight: 600;
 	white-space: nowrap;
+	border: 0;
 }
 .hidden-menu .menu-container a {
 	color: #757a80;
@@ -704,7 +708,7 @@ a.sp:focus {
 .post-thumbnail {
 	position: relative;
 	float: left;
-	margin: 0 1.6em 0.8em 0;
+	margin: 0 32px 24px 0;
 	overflow: hidden;
 	width: 25%;
 	height: 0;
@@ -752,7 +756,7 @@ a.sp:focus {
 .post-video {
 	position: relative;
 	float: left;
-	margin: 0 1.6em 0.8em 0;
+	margin: 0 32px 24px 0;
 	overflow: hidden;
 	width: 50%;
 	-webkit-border-radius: 1px;
@@ -772,9 +776,9 @@ a.sp:focus {
 	color: #000;
 	font-size: 2em;
 	font-weight: 700;
-	line-height: 1.2em;
+	line-height: 1.4em;
 	text-indent: -2px;
-	margin: 0 0 0.4em;
+	margin: 0 0 16px;
 	padding: 0;
 	
 	-webkit-hyphens: auto;
@@ -788,19 +792,18 @@ a.sp:focus {
 }
 .post-title a {
 	text-decoration: none;
-
-	border-bottom: 2px solid transparent;
+	border-bottom: 1.5px solid transparent;
 }
 .post-title a:hover,
 .post-title a:focus {
-	border-bottom-color: #f80;
+	border-bottom-color: #000;
 }
 .post-meta {
 	font-size: 0.875em;
 	line-height: 1.8em;
 	font-weight: 300;
 	color: #757a80;
-	margin: 0 0 1em;
+	margin-bottom: 16px;
 }
 .post-meta a {
 	color: #2e3033;
@@ -810,7 +813,7 @@ a.sp:focus {
 .post-meta a:hover,
 .post-meta a:focus {
 	color: #232529;
-	border-bottom-color: #f80;
+	border-bottom-color: #757a80;
 }
 .post-content {
 	line-height: 2em;
@@ -836,7 +839,7 @@ a.sp:focus {
 	position: relative;
 	font-weight: 400;
 	color: #2996cc;
-	padding-left: 1em;
+	margin-left: 1em;
 	white-space: pre;
 	display: inline-block;
 }
@@ -853,7 +856,7 @@ a.sp:focus {
 	content: '\f0da';
 	position: absolute;
 	top: 0.1em;
-	left: 0.2em;
+	left: -0.8em;
 	padding: 0;
 	margin: 0;
 	width: auto;
@@ -932,6 +935,7 @@ a.sp:focus {
 .post-nav a:hover,
 .post-nav a:focus {
 	color: #1f7099;
+	border-bottom-color: transparent;
 }
 .post-nav i {
 	color: #2e3033;
@@ -951,6 +955,13 @@ a.sp:focus {
 }
 .post-nav .title {
 	font-size: 0.875em;
+	border-bottom: 1px solid transparent;
+	-webkit-transition: all ease 0.3s;
+	transition: all ease 0.3s;
+}
+.post-nav a:hover .title,
+.post-nav a:focus .title {
+	border-bottom-color: #1f7099;
 }
 .post-nav .post-nav-prev,
 .post-nav .post-nav-next {
@@ -1064,7 +1075,7 @@ a.sp:focus {
 	padding: 0;
 }
 .page-meta {
-	color: rgba(255,255,255,0.875);
+	color: rgba(255,255,255,0.9);
 	font-weight: 300;
 }
 .page-meta p {
@@ -1072,7 +1083,12 @@ a.sp:focus {
 }
 .page-meta a {
 	color: inherit;
-	text-decoration: underline;
+	border-bottom-color: rgba(255,255,255,0.5);
+}
+.page-meta a:hover,
+.page-meta a:focus {
+	color: #fff;
+	border-bottom-color: #fff;
 }
 .page-widget {
 	position: absolute;
