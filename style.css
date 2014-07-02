@@ -753,6 +753,7 @@ a.sp:focus {
 }
 .post-thumbnail-caption a {
 	color: inherit;
+	border: 0;
 }
 .post-video {
 	position: relative;
@@ -1195,6 +1196,10 @@ a.sp:focus {
 }
 .pagination-pager > a {
 	color: #2e3033;
+}
+.pagination-pager > a:hover,
+.pagination-pager > a:focus {
+	border-color: #e4e6eb;
 }
 .pagination-pager > a:hover,
 .pagination-pager > a:focus {
