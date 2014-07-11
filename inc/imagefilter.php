@@ -4,7 +4,9 @@
  * Author URI: http://zutrinken.com
  * Description: Automatically create thumbnails for a given image size with imagefilters
  * Author: Peter Amende
- * Version: 1.0
+ * Version: 1.1
+ 
+ Imagefilter is based on Grayscale (https://wordpress.org/plugins/grayscale) by Fabien Quatravaux (http://www.1nterval.com)
  
   Copyright © 2014 Peter Amende
     
@@ -19,7 +21,7 @@
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with Grayscale.  If not, see <http://www.gnu.org/licenses/>
+    along with Imagefilter.  If not, see <http://www.gnu.org/licenses/>
 */
 
 register_activation_hook(__FILE__, 'imagefilter_check'); 
@@ -37,85 +39,72 @@ function imagefilter_check() {
 
 add_action('init', 'imagefilter_init');
 function imagefilter_init() {
-    load_plugin_textdomain(
-    	'imagefilter',
-    	false,
-    	basename(dirname(__FILE__))
-    );
+    load_plugin_textdomain('imagefilter', false, basename(dirname(__FILE__)));
 }
 
+// provide a new function to declare imagefilterd images
 function imagefilter_add_image_size( $name, $width = 0, $height = 0, $crop = false, $imagefilter = false ) {
 	global $_wp_additional_image_sizes;
-	$_wp_additional_image_sizes[$name] = array(
-		'width' => absint( $width ),
-		'height' => absint( $height ),
-		'crop' => (bool) $crop,
-		'imagefilter' => (bool) $imagefilter
-	);
+	$_wp_additional_image_sizes[$name] = array( 'width' => absint( $width ), 'height' => absint( $height ), 'crop' => (bool) $crop, 'imagefilter' => (bool) $imagefilter );
 }
 
-function imagefilter_make_imagefilter_image($resized_file){
-    $image = wp_load_image( $resized_file );
-    if ( !is_resource( $image ) )
-	    return new WP_Error( 'error_loading_image', $image, $resized_file );
-	    
-    $size = @getimagesize( $resized_file );
-    if ( !$size )
-	    return new WP_Error('invalid_image', __('Could not read image size'), $resized_file);
-    list($orig_w, $orig_h, $orig_type) = $size;
-    
-    $dest = wp_load_image( $resized_file );
+require_once(ABSPATH . 'wp-includes/class-wp-image-editor.php');
+require_once(ABSPATH . 'wp-includes/class-wp-image-editor-gd.php');
 
-	imagecopy($dest, $image, 0, 0, 0, 0, $orig_w, $orig_h);
-
-    for( $i=0; $i<4; $i++) {
-		imagefilter($dest, IMG_FILTER_GAUSSIAN_BLUR);
-		imagefilter($dest, IMG_FILTER_SMOOTH, 0);
-		imagefilter($dest, IMG_FILTER_GAUSSIAN_BLUR);
-	}
-
-    $info = pathinfo($resized_file);
-    $dir = $info['dirname'];
-    $ext = $info['extension'];
-    $name = wp_basename($resized_file, ".$ext");
-
-    $destfilename = "{$dir}/{$name}-gray.{$ext}";
-
-    if ( IMAGETYPE_GIF == $orig_type ) {
-	    if ( !imagegif( $dest, $destfilename ) )
-		    return new WP_Error('resize_path_invalid', __( 'Resize path invalid' ));
-    } elseif ( IMAGETYPE_PNG == $orig_type ) {
-	    if ( !imagepng( $dest, $destfilename ) )
-		    return new WP_Error('resize_path_invalid', __( 'Resize path invalid' ));
-    } else {
-	    $destfilename = "{$dir}/{$name}-gray.jpg";
-	    if ( !imagejpeg( $dest, $destfilename, apply_filters( 'jpeg_quality', 90, 'image_resize' ) ) )
-		    return new WP_Error('resize_path_invalid', __( 'Resize path invalid' ));
+class imagefilter_Image_Editor extends WP_Image_Editor_GD {
+    public function make_imagefilter(){
+        // create a copy
+        $dest = $this->image;
+        unset($this->image);
+        $this->load();
+        if ( is_resource( $dest ) ) {
+            // Apply imagefilter filter
+            imagecopy($dest, $this->image, 0, 0, 0, 0, $this->size['width'], $this->size['height']);
+            //imagegammacorrect($dest, 1.0, apply_filters('imagefilter_gamma_correction', 0.7));
+		    for( $i=0; $i<4; $i++) {
+				imagefilter($dest, IMG_FILTER_GAUSSIAN_BLUR);
+				imagefilter($dest, IMG_FILTER_SMOOTH, 0);
+				imagefilter($dest, IMG_FILTER_GAUSSIAN_BLUR);
+			}
+            imagedestroy( $this->image );
+            $this->image = $dest;
+            return true;
+        }
     }
-
-    imagedestroy( $image );
-    imagedestroy( $dest );
-
-    $stat = stat( dirname( $destfilename ));
-    $perms = $stat['mode'] & 0000666;
-    @ chmod( $destfilename, $perms );
-
-    return wp_basename($destfilename);
 }
 
+// hook to call the image generation function if needed
 add_filter('wp_generate_attachment_metadata', 'imagefilter_check_imagefilter_image', 10, 2);
 function imagefilter_check_imagefilter_image($metadata, $attachment_id){
     global $_wp_additional_image_sizes;
     $attachment = get_post( $attachment_id );
     if ( preg_match('!image!', get_post_mime_type( $attachment )) ) {
-        foreach($metadata['sizes'] as $size => $size_data){
-            $file = pathinfo(get_attached_file($attachment_id));
-            $metadata['sizes'][$size.'-filter'] = $metadata['sizes'][$size];
-            $metadata['sizes'][$size.'-filter']['file'] = _wp_relative_upload_path(imagefilter_make_imagefilter_image($file['dirname'].'/'.$size_data['file']));
+        
+        foreach($_wp_additional_image_sizes as $size => $size_data){
+            if(isset($size_data['imagefilter']) && $size_data['imagefilter']) {
+                if(is_array($metadata['sizes']) && isset($metadata['sizes'][$size])){
+                    $file = pathinfo(get_attached_file($attachment_id));
+                    $filename = $file['dirname'].'/'.$metadata['sizes'][$size]['file'];
+                    $metadata['sizes'][$size.'-filter'] = $metadata['sizes'][$size];
+                } else {
+                    // this size has no image attached, probably because the original is too small
+                    // create the imagefilter image from the original file
+                    $file = wp_upload_dir();
+                    $filename = $file['basedir'].'/'.$metadata['file'];
+                    $metadata['sizes'][$size.'-filter'] = array(
+                        'width' => $metadata['width'], 
+                        'height' => $metadata['height'],
+                    );
+                }
+                
+                $image = new imagefilter_Image_Editor($filename);
+                $image->load();
+                $image->make_imagefilter();
+                $result = $image->save($image->generate_filename('filter'));
+                $metadata['sizes'][$size.'-filter']['file'] = $result['file'];
+            }
         }
     }
     return $metadata;
 }
-
-    
 ?>

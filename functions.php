@@ -123,7 +123,7 @@ if ( function_exists( 'add_theme_support' ) ) {
 	if ($Imagefilter) {
 		imagefilter_add_image_size('large-landscape', 480, 180, true, true);
 	} else {
-		add_image_size('large-landscape', 480, 180, true, true);
+		add_image_size('large-landscape', 480, 180, true);
 	}
 }
 
