@@ -106,7 +106,7 @@
 	position: relative;
 	border: 0;
 }
-.js.no-touch .featured-post.post {
+.js.csstransitions.opacity.no-touch .featured-post.post {
 	opacity: 0;
 
 	-webkit-transform: translate3d(0px, 50px, 0px);
@@ -121,7 +121,7 @@
 	-webkit-transition-timing-function: ease-out;
 	transition-timing-function: ease-out;
 }
-.js.no-touch .featured-post.post.show {
+.js.csstransitions.opacity.no-touch .featured-post.post.show {
 	opacity: 1;
 
 	-webkit-transform: translate3d(0, 0, 0);
