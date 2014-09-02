@@ -16,7 +16,7 @@ if (extension_loaded('gd') && function_exists('imagecopy') && function_exists('i
 
 add_action('wp_enqueue_scripts', 'oblivion_fonts');
 function oblivion_fonts() {
-	wp_register_style('oblivion-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,400italic,700italic|Inconsolata:400|Vollkorn:400,400italic,700italic');
+	wp_register_style('oblivion-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,400italic,700italic|Vollkorn:400italic,700italic');
 	wp_enqueue_style('oblivion-fonts');
 }
 
