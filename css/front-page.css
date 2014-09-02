@@ -102,7 +102,7 @@
 }
 .featured-post.post {
 	padding: 1px 0;
-	margin-bottom: 32px;
+	margin-bottom: 96px;
 	position: relative;
 	border: 0;
 }
@@ -129,8 +129,7 @@
 }
 .featured-post.post .post-inner {
 	margin: 0 24px;
-	padding: 24px 0 32px;
-	border-bottom: 1px solid #dadce0;
+	padding: 0;
 	position: relative;
 }
 .featured-post.post.sticky .post-inner:after {

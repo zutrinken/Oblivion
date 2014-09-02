@@ -33,6 +33,7 @@
 	50%		#757a80
 	20%		#2e3033
 	16%		#232529
+	0%		#000000
 	
 	Blue
 
@@ -795,10 +796,6 @@ a.sp:focus {
 .post-title a {
 	text-decoration: none;
 	border-bottom: 1.5px solid transparent;
-}
-.post-title a:hover,
-.post-title a:focus {
-	border-bottom-color: #000;
 }
 .post-meta {
 	font-size: 0.875em;
