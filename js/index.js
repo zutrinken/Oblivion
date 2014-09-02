@@ -189,6 +189,7 @@ jQuery(function($) {
 					opc = opc * 0.875;
 				}
 				self.css({
+					'-ms-transform' : 'translate(0px, ' + yPos + 'px)',
 					'-webkit-transform' : 'translate3d(0px, ' + yPos + 'px, 0px)',
 					'transform' : 'translate3d(0px, ' + yPos + 'px, 0px)',
 					'opacity' : opc
