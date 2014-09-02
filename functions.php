@@ -24,7 +24,7 @@ add_action('wp_enqueue_scripts', 'enqueue_scripts');
 function enqueue_scripts() {
 	$template = get_template_directory_uri();
 	
-	wp_enqueue_script('oblivion-modernizr', $template.'/js/libs/modernizr-2.6.2.min.js', array(), null, false);
+	wp_enqueue_script('oblivion-modernizr', $template.'/js/libs/modernizr-2.8.3.min.js', array(), null, false);
 
 	wp_enqueue_script('jquery');
 	wp_enqueue_script('oblivion-jquery.fitvids', $template.'/js/libs/jquery.fitvids.js', array(), null, false);
