@@ -12,7 +12,7 @@ jQuery(function($) {
 	function fading() {
 		$('.featured-post').each( function(){
 
-			var bottom_of_object = $(this).offset().top + 128;
+			var bottom_of_object = $(this).offset().top;
 			var bottom_of_window = viewport.scrollTop() + viewport.height();
 
 			if( bottom_of_window > bottom_of_object ) {
