@@ -620,7 +620,7 @@ function custom_comment($comment, $args, $depth) {
 			<div class="comment-info">
 				<figure class="comment-avatar"><?php echo get_avatar($comment->comment_author_email, 128); ?></figure>
 				<cite class="comment-fn"><?php printf(__('%s','oblivion'), get_comment_author_link()); ?></cite>
-				<a class="comment-date" href="<?php echo esc_url(get_comment_link($comment->comment_ID)); ?>"><?php printf(__('%1$s'), get_comment_date('d.m.Y')) ?></a>
+				<a class="comment-date" href="<?php echo esc_url(get_comment_link($comment->comment_ID)); ?>"><?php printf(__('%1$s','oblivion'), get_comment_date('d.m.Y')) ?></a>
 				<span class="comment-reply"><?php comment_reply_link(array('reply_text' => '<i class="fa fa-reply"></i> <span>' ._x('reply','oblivion').'</span>', 'depth' => $depth, 'max_depth' => $args['max_depth'])); ?></span>
 				<div class="clear"></div>
 			</div><!--comment-info-->
