@@ -226,40 +226,26 @@ function my_register_sidebars() {
 	   Custom Header Image
 	   ========================================================================== */
 
-define('NO_HEADER_TEXT', true );
-define('HEADER_IMAGE_WIDTH', 1440);
-define('HEADER_IMAGE_HEIGHT', 540);
+add_theme_support(
+	'custom-header',
+	array(
+		'width'                  => 1440,
+		'height'                 => 540,
+		'header-text'            => false,
+		'uploads'                => true
+	)
+);
 
-function header_style() {
-		if (get_header_image()) {
-		?><style type="text/css">
-			.home .page-header-cover {			
-				background: url('<?php header_image(); ?>') no-repeat scroll center center / cover transparent;
-			}
-			.home .page-header {
-				background: #000 !important;
-			}
-		</style><?php
-		}
-
+if (get_header_image()) {
+?><style type="text/css">
+	.home .page-header-cover {			
+		background: url('<?php header_image(); ?>') no-repeat scroll center center / cover transparent;
+	}
+	.home .page-header {
+		background: #000 !important;
+	}
+</style><?php
 }
-
-function admin_header_style() {
-    ?><style type="text/css">
-		div#headimg {
-			background-size: cover;
-			background-position: center center;
-			width: 100%;
-			height: 0;
-			padding-bottom: 0.5625;
-		}
-		.default-header label img {
-			width: 37.5%;
-			height: auto;
-		}
-    </style><?php
-}
-add_custom_image_header('header_style', 'admin_header_style');
 
 
 
