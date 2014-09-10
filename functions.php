@@ -245,16 +245,17 @@ add_theme_support(
 	)
 );
 
-if (get_header_image()) {
-?><style type="text/css">
-	.home .page-header-cover {			
-		background: url('<?php header_image(); ?>') no-repeat scroll center center / cover transparent;
+function oblivion_header_image_style() {
+	if (get_header_image()) {
+		echo '<style type="text/css">';
+		echo '.home .page-header-cover {background: url("';
+		echo header_image();
+		echo '") no-repeat scroll center center / cover transparent;}';
+		echo '.home .page-header {background: #000 !important;}';
+		echo '</style>';
 	}
-	.home .page-header {
-		background: #000 !important;
-	}
-</style><?php
 }
+add_filter('wp_head', 'oblivion_header_image_style');
 
 
 
