@@ -2,7 +2,7 @@
 <!--[if IE 7]><html class="no-js lt-ie10 lt-ie9 lt-ie8"><![endif]-->
 <!--[if IE 8]><html class="no-js lt-ie10 lt-ie9"><![endif]-->
 <!--[if IE 9]><html class="no-js lt-ie10"><![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml"> <!--<![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" <?php language_attributes(); ?>> <!--<![endif]-->
 
 	<?php $options = get_option('oblivion_theme_options'); ?>
 	<?php $template_url = get_bloginfo('template_url'); ?>
