@@ -137,9 +137,11 @@
 	color: #2e3033;
 	margin-right: 0.4em;
 }
+.bypostauthor .comment-body .comment-info .comment-fn {}
 .comment-body .comment-info .comment-fn a {
 	font-weight: inherit;
 }
+.bypostauthor .comment-body .comment-info .comment-fn a {}
 .comment-body .comment-info .comment-date {
 	color: #b6babf;
 	font-weight: 300;
