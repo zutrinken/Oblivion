@@ -5,7 +5,7 @@
 <!--[if gt IE 9]><!--><html class="no-js" xmlns="http://www.w3.org/1999/xhtml" xmlns:og="http://ogp.me/ns#" xmlns:fb="https://www.facebook.com/2008/fbml" <?php language_attributes(); ?>> <!--<![endif]-->
 
 	<?php $options = get_option('oblivion_theme_options'); ?>
-	<?php $template_url = get_bloginfo('template_url'); ?>
+	<?php $template_url = get_template_directory_uri(); ?>
 	<head>
 		
 		<!--
@@ -70,7 +70,7 @@
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="alternate" type="application/rss+xml" title="RSS" href="<?php bloginfo('rss2_url'); ?>">
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-		<link rel='canonical' href='<?php bloginfo('url'); ?>' />
+		<link rel="canonical" href="<?php echo home_url(); ?>" />
 
 		<link rel="dns-prefetch" href="//fonts.googleapis.com">
 		<link rel="dns-prefetch" href="https://img.youtube.com" />
@@ -105,7 +105,7 @@
 		<?php else : ?>
 			<meta property="og:title" content="<?php bloginfo('name'); ?>" />
 			<meta property="og:type" content="website" />
-			<meta property="og:url" content="<?php bloginfo('url'); ?>" />
+			<meta property="og:url" content="<?php echo home_url(); ?>" />
 			<meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
 			<meta property="og:description" content="<?php bloginfo('description'); ?>" />
 			<meta property="twitter:card" content="summary" />
@@ -120,7 +120,7 @@
 		<header id="header" role="banner">
 			<div class="inner">
 				<h1 id="logo">
-					<a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>">
+					<a title="<?php bloginfo('name'); ?>" href="<?php echo home_url(); ?>">
 						<?php if($options['icon']) : ?>
 							<img class="icon" src="<?php echo $options['icon']; ?>" alt="<?php bloginfo('name'); ?>" />
 						<?php else : ?>
@@ -128,7 +128,7 @@
 						<?php endif; ?>
 					</a>
 				</h1>
-				<a id="search-link" class="search-handler" href="<?php bloginfo('url'); ?>/?s=&nbsp;&submit="><i class="fa fa-search"></i></a>
+				<a id="search-link" class="search-handler" href="<?php echo home_url(); ?>/?s=&nbsp;&submit="><i class="fa fa-search"></i></a>
 				<a id="search-handler" class="search-handler">
 					<i class="fa fa-times search-close"></i>
 					<i class="fa fa-search search-open"></i>

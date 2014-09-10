@@ -1,4 +1,4 @@
-<form action="<?php bloginfo('url'); ?>" class="searchform" method="get" role="search">
+<form action="<?php echo home_url() ?>" class="searchform" method="get" role="search">
 	<?php if(is_search()) : ?>
 		<input class="searchform-input" type="text" value="<?php the_search_query(); ?>" name="s">
 	<?php else : ?>
