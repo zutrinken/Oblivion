@@ -40,28 +40,26 @@ function enqueue_scripts() {
 	wp_enqueue_script('oblivion-index', $template.'/js/index.js', array(), null, true);
 }
 
-$templatepath = get_template_directory();
-
 /* localization */
-load_theme_textdomain('oblivion', $templatepath .'/languages');
+load_theme_textdomain('oblivion', get_template_directory() .'/languages');
 
 /* add "editor-style.css" for the admin-interface */
 add_editor_style('css/editor-style.css');
 
 /* add a favicon for the admin area */
 function favicon4admin() {
-	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . $templatepath . '/favicon.ico" />';
+	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_template_directory() . '/favicon.ico" />';
 }
 add_action( 'admin_head', 'favicon4admin' );
 
 /* load "login.css" for the login */
 function custom_login() {
-	echo '<link rel="stylesheet" type="text/css" href="' . $templatepath . '/css/login.css" />';
+	echo '<link rel="stylesheet" type="text/css" href="' . get_template_directory() . '/css/login.css" />';
 }
 add_action('login_head', 'custom_login');
 
 /* add custom theme-options */
-require_once($templatepath .'/inc/theme-options.php');
+require_once(get_template_directory() .'/inc/theme-options.php');
 
 /* add twitter and wiki profile */
 function add_twitter_contactmethod( $contactmethods ) {
