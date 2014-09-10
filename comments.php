@@ -1,5 +1,5 @@
  <?php
-	_deprecated_file( sprintf( __( 'Theme without %1$s' ), basename(__FILE__) ), '3.0', null, sprintf( __('Please include a %1$s template in your theme.'), basename(__FILE__) ) );
+	_deprecated_file( sprintf( __('Theme without %1$s','oblivion'), basename(__FILE__) ), '3.0', null, sprintf( __('Please include a %1$s template in your theme.','oblivion'), basename(__FILE__) ) );
 	/* Do not delete these lines */
 	if (!empty($_SERVER['SCRIPT_FILENAME']) && 'comments.php' == basename($_SERVER['SCRIPT_FILENAME']))
 		die ('Please do not load this page directly. Thanks!');
@@ -44,7 +44,7 @@
 					<form action="<?php echo get_option('siteurl'); ?>/wp-comments-post.php" method="post" id="commentform">
 						<?php if(is_user_logged_in()) : ?>
 							<p>
-								<small><?php printf(__('Logged in as <a href="%1$s">%2$s</a>.','oblivion'), get_option('siteurl') . '/wp-admin/profile.php', $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e('Log out of this account'); ?>"><?php _e('Log out','oblivion'); ?> &raquo;</a></small>
+								<small><?php printf(__('Logged in as <a href="%1$s">%2$s</a>.','oblivion'), get_option('siteurl') . '/wp-admin/profile.php', $user_identity); ?> <a href="<?php echo wp_logout_url(get_permalink()); ?>" title="<?php _e('Log out of this account','oblivion'); ?>"><?php _e('Log out','oblivion'); ?> &raquo;</a></small>
 							</p>
 						<?php else : ?>
 							<p class="input-col input-col-1">
@@ -65,8 +65,6 @@
 							</p>
 							<div class="clear"></div>
 						<?php endif; ?>
-			
-						<!--<p><small><?php printf(__('<strong>XHTML:</strong> You can use these tags: <code>%s</code>'), allowed_tags()); ?></small></p>-->
 						<p class="input-col input-col-4">
 							<label for="comment"><?php _e('Comment','oblivion'); ?> <?php if ($req) { ?><span class="req"><?php _e('required','oblivion'); ?></span><?php } ?></label>
 							<textarea class="input" name="comment" id="comment" cols="58" rows="10" tabindex="5"></textarea>
