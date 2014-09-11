@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Oblivion v0.9.6\n"
+"Project-Id-Version: Oblivion v1.0.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-04-21 21:06:39+0000\n"
+"PO-Revision-Date: 2014-09-11 12:39:00+0000\n"
 "Last-Translator: zutrinken <mirgehtsganzgut@web.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -81,9 +81,7 @@ msgid "Posts"
 msgstr "Artikel"
 
 #: archive.php:78
-#: front-page.php:47
-#: front-page.php:124
-#: front-page.php:173
+#: front-page.php:64
 #: index.php:41
 #: search.php:21
 #: single.php:17
@@ -92,9 +90,7 @@ msgid "Posted by"
 msgstr "Erstellt von"
 
 #: archive.php:80
-#: front-page.php:49
-#: front-page.php:126
-#: front-page.php:175
+#: front-page.php:66
 #: index.php:43
 #: search.php:23
 #: single.php:19
@@ -104,13 +100,13 @@ msgstr "am"
 
 #: comments.php:2
 #, php-format
-#@ default
+#@ oblivion
 msgid "Theme without %1$s"
 msgstr ""
 
 #: comments.php:2
 #, php-format
-#@ default
+#@ oblivion
 msgid "Please include a %1$s template in your theme."
 msgstr ""
 
@@ -161,9 +157,9 @@ msgid "Logged in as <a href=\"%1$s\">%2$s</a>."
 msgstr "Eingeloggt als <a href=\"%1$s\">%2$s</a>."
 
 #: comments.php:47
-#@ default
+#@ oblivion
 msgid "Log out of this account"
-msgstr ""
+msgstr "Logge dich aus"
 
 #: comments.php:47
 #@ oblivion
@@ -177,7 +173,7 @@ msgstr "Name"
 
 #: comments.php:51
 #: comments.php:57
-#: comments.php:71
+#: comments.php:69
 #@ oblivion
 msgid "required"
 msgstr "erforderlich"
@@ -193,17 +189,11 @@ msgid "Website"
 msgstr "Website"
 
 #: comments.php:69
-#, php-format
-#@ default
-msgid "<strong>XHTML:</strong> You can use these tags: <code>%s</code>"
-msgstr ""
-
-#: comments.php:71
 #@ oblivion
 msgid "Comment"
 msgstr "Kommentar"
 
-#: comments.php:75
+#: comments.php:73
 #@ oblivion
 msgid "Submit"
 msgstr "Senden"
@@ -214,17 +204,13 @@ msgstr "Senden"
 msgid "Navigation"
 msgstr "Navigation"
 
-#: front-page.php:76
+#: front-page.php:50
 #@ oblivion
 msgid "Blog"
 msgstr "Blog"
 
-#: front-page.php:197
-#@ oblivion
-msgid "See all Posts"
-msgstr "Alle Beiträge"
-
 #: footer.php:7
+#: functions.php:67
 #@ oblivion
 msgid "Twitter"
 msgstr "Twitter"
@@ -249,90 +235,84 @@ msgstr "Youtube"
 msgid "RSS"
 msgstr "RSS"
 
-#: front-page.php:212
-#: front-page.php:214
+#: front-page.php:111
+#: front-page.php:113
 #@ oblivion
 msgid "Widgets"
 msgstr "Widgets"
 
-#: functions.php:66
-#@ oblivion
-msgid "Twitter (without @)"
-msgstr ""
-
-#: functions.php:137
+#: functions.php:147
 #@ oblivion
 msgid "Header"
 msgstr ""
 
-#: functions.php:138
+#: functions.php:148
 #@ oblivion
 msgid "Footer"
 msgstr ""
 
-#: functions.php:146
+#: functions.php:156
 #@ oblivion
 msgid "Start"
 msgstr ""
 
-#: functions.php:213
-#: inc/theme-options.php:53
+#: functions.php:223
 #@ oblivion
 msgid "Frontpage"
 msgstr "Startseite"
 
-#: functions.php:214
+#: functions.php:224
 #@ oblivion
 msgid "The default sidebar."
 msgstr "Die Standard Sidebar"
 
-#: functions.php:472
-#: functions.php:509
+#: functions.php:469
+#: functions.php:506
 #@ oblivion
 msgid "read more"
 msgstr "weiterlesen"
 
-#: functions.php:551
+#: functions.php:548
 #@ oblivion
 msgid "Page "
 msgstr "Seite "
 
-#: functions.php:551
+#: functions.php:548
 #@ oblivion
 msgid " of "
 msgstr "von "
 
-#: functions.php:575
-#: functions.php:577
+#: functions.php:572
+#: functions.php:574
 #@ oblivion
 msgid "previous"
 msgstr "Vorherige"
 
-#: functions.php:598
-#: functions.php:600
+#: functions.php:595
+#: functions.php:597
 #@ oblivion
 msgid "next"
 msgstr "Nächste"
 
-#: functions.php:625
+#: functions.php:622
 #, php-format
 #@ oblivion
 msgid "%s"
 msgstr "%s"
 
-#: functions.php:626
+#: functions.php:623
 #, php-format
-#@ default
+#@ oblivion
 msgid "%1$s"
-msgstr ""
+msgstr "%1$s"
 
-#: functions.php:627
+#: functions.php:624
 #@ default
 msgctxt "oblivion"
 msgid "reply"
 msgstr ""
 
-#: functions.php:632
+#: functions.php:629
 #@ oblivion
 msgid "Your comment will be public soon."
 msgstr "Dein Kommentar wird bald veröffentlicht."
@@ -344,27 +324,15 @@ msgstr "Dein Kommentar wird bald veröffentlicht."
 msgid "Search"
 msgstr "Suche"
 
-#: inc/imagefilter.php:28
-#: inc/imagefilter.php:34
+#: inc/imagefilter.php:30
+#: inc/imagefilter.php:36
 #@ imagefilter
 msgid "PHP GD is required."
 msgstr ""
 
-#: inc/imagefilter.php:31
+#: inc/imagefilter.php:33
 #@ imagefilter
 msgid "PHP IMAGECOPY is required."
-msgstr ""
-
-#: inc/imagefilter.php:64
-#@ default
-msgid "Could not read image size"
-msgstr ""
-
-#: inc/imagefilter.php:86
-#: inc/imagefilter.php:89
-#: inc/imagefilter.php:93
-#@ default
-msgid "Resize path invalid"
 msgstr ""
 
 #: inc/theme-options.php:26
@@ -393,27 +361,27 @@ msgstr ""
 msgid "icon"
 msgstr ""
 
-#: inc/theme-options.php:76
+#: inc/theme-options.php:72
 #@ default
 msgid "youtube"
 msgstr ""
 
-#: inc/theme-options.php:80
+#: inc/theme-options.php:76
 #@ default
 msgid "twitter"
 msgstr ""
 
-#: inc/theme-options.php:84
+#: inc/theme-options.php:80
 #@ default
 msgid "facebook"
 msgstr ""
 
-#: inc/theme-options.php:88
+#: inc/theme-options.php:84
 #@ default
 msgid "google"
 msgstr ""
 
-#: inc/theme-options.php:92
+#: inc/theme-options.php:88
 #@ oblivion
 msgid "Save"
 msgstr "Speichern"
@@ -428,17 +396,17 @@ msgstr "Ergebnisse"
 msgid "Search ..."
 msgstr "Suche ..."
 
-#: single.php:34
+#: single.php:41
 #@ oblivion
 msgid "Posted in:"
 msgstr "Abgelegt in:"
 
-#: single.php:50
+#: single.php:57
 #@ oblivion
 msgid "Article Navigation"
 msgstr ""
 
-#: single.php:35
+#: single.php:42
 #@ oblivion
 msgid "Tagged with:"
 msgstr "Getaggt mit:"
@@ -448,28 +416,28 @@ msgstr "Getaggt mit:"
 msgid "cancel reply"
 msgstr "antwort abbrechen"
 
-#: functions.php:102
+#: functions.php:112
 #, php-format
 #@ oblivion
 msgid "Page %s"
 msgstr "Seite %s"
 
-#: single.php:53
+#: single.php:60
 #@ oblivion
 msgid "previous post"
 msgstr "vorheriger Artikel"
 
-#: single.php:58
+#: single.php:65
 #@ oblivion
 msgid "next post"
 msgstr "nächster Artikel"
 
-#: functions.php:572
+#: functions.php:569
 #@ oblivion
 msgid "Page"
 msgstr "Seite"
 
-#: functions.php:572
+#: functions.php:569
 #@ oblivion
 msgid "of"
 msgstr "von"
@@ -479,21 +447,44 @@ msgstr "von"
 msgid "Logo"
 msgstr ""
 
-#: front-page.php:195
-#, php-format
-#@ oblivion
-msgid "One post"
-msgid_plural "%s posts"
-msgstr[0] "Ein Beitrag"
-msgstr[1] "%s Beiträge"
-
-#: inc/theme-options.php:54
-#@ oblivion
-msgid "Only for static frontpages."
-msgstr "Nur für statische Startseiten"
-
-#: inc/theme-options.php:72
+#: inc/theme-options.php:68
 #@ oblivion
 msgid "Social"
 msgstr ""
+
+#: inc/theme-options.php:54
+#@ oblivion
+msgid "Highlight Posts"
+msgstr ""
+
+#: inc/theme-options.php:55
+#@ oblivion
+msgid "Highlight posts on frontpage with a light gray background by category or tag. You can choose multiple categories or tags comma separated (e.g. \"23\" or \"13, 37, 42\"). You can use categories and tags together."
+msgstr ""
+
+#: inc/theme-options.php:58
+#@ oblivion
+msgid "Categories"
+msgstr "Kategorien"
+
+#: inc/theme-options.php:59
+#@ default
+msgid "highlight-category"
+msgstr ""
+
+#: inc/theme-options.php:62
+#@ oblivion
+msgid "Tags"
+msgstr "Schlagwörter"
+
+#: inc/theme-options.php:63
+#@ default
+msgid "highlight-tag"
+msgstr ""
+
+#: page.php:25
+#: single.php:32
+#@ oblivion
+msgid "Pages"
+msgstr "Seiten"
 
