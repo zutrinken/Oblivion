@@ -206,13 +206,16 @@
 
 	/* ------------------------------ Commentform */
 
-
 #respond-wrapper .inner {
 	position: relative;
 }
-
-#reply {
-	padding-top: 64px;
+.comment-respond {
+	padding: 64px 0 128px;
+}
+.comment-reply-title {
+	position: relative;
+	padding: 0;
+	margin-top: 0;
 }
 #cancel-comment-reply-link {
 	position: absolute;
@@ -220,8 +223,8 @@
 	top: 0;
 	
 	color: #fff;
-	margin: 0.25em 0 0;
-	padding: 0.125em 0.625em;
+	margin: 0;
+	padding: 0 0.5em;
 	background: #cc3314;
 
 	font-weight: 400;
@@ -243,9 +246,6 @@
 #cancel-comment-reply-link span {
 	display: none;
 }
-#respond {
-	padding-bottom: 128px;
-}
 #commentform {
 	padding: 0;
 	margin: 2em 0 0;
@@ -255,17 +255,18 @@
 	margin: 16px 0;
 	overflow: auto;
 }
-#commentform p.input-col-1,
-#commentform p.input-col-2,
-#commentform p.input-col-3 {
+#commentform p.comment-form-author,
+#commentform p.comment-form-email,
+#commentform p.comment-form-url {
 	width: 30.66666666666667%;
 	margin-right: 4%;
 	float: left;
 }
-#commentform p.input-col-3 {
+#commentform p.comment-form-url {
 	margin-right: 0;
 }
-#commentform p.input-col-4 {
+#commentform p.comment-form-comment {
+	clear: both;
 	margin-top: 0;
 	margin-bottom: 24px;
 }
@@ -296,9 +297,9 @@
 
 
 @media only screen and (max-width: 640px) {
-	#commentform p.input-col-1,
-	#commentform p.input-col-2,
-	#commentform p.input-col-3 {
+	#commentform p.comment-form-author,
+	#commentform p.comment-form-email,
+	#commentform p.comment-form-url {
 		width: auto;
 		margin-right: 0;
 		float: none;
