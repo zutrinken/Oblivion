@@ -191,6 +191,7 @@ body:before {
 #logo .icon {
 	display: block;
 	max-height: 52px;
+	line-height: 52px;
 	width: auto;
 	float: left;
 	margin: 10px;
