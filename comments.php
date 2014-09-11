@@ -10,7 +10,7 @@ if ( post_password_required() ) {
 			<h3 id="comments"><?php	printf( _n( 'One comment', '%1$s comments', get_comments_number(),'oblivion' ), number_format_i18n( get_comments_number() )); ?></h3>
 	
 			<ol class="commentlist">
-				<?php wp_list_comments(array('callback' => 'custom_comment')); ?>
+				<?php wp_list_comments(array('callback' => 'oblivion_custom_comment')); ?>
 			</ol>
 			<?php if ((int) get_option('page_comments') === 1): ?>
 				<nav class="post-nav">

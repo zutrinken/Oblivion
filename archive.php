@@ -92,7 +92,7 @@
 			<nav id="pagination">
 				<div class="inner">
 					<div class="pagination-info">
-						<span><?php current_paged(); ?></span>
+						<span><?php oblivion_current_paged(); ?></span>
 					</div>
 					<nav class="pagination-pager">
 					<?php

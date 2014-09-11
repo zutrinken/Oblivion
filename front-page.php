@@ -58,7 +58,7 @@
 						<div class="post-inner">
 							<header class="post-header">
 								<h3 class="post-title">
-									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php echo short_title(' ...', 10); ?></a>
+									<a title="<?php the_title(); ?>" href="<?php the_permalink(); ?>"><?php echo oblivion_short_title(' ...', 8); ?></a>
 								</h3>
 								<aside class="post-meta">
 									<?php _e('Posted by','oblivion'); ?>
@@ -84,7 +84,7 @@
 								</figure>
 							<?php endif; ?>
 							<article class="post-excerpt post-article">
-								<?php echo custom_excerpt(48); ?>
+								<?php echo oblivion_custom_excerpt(48); ?>
 							</article>
 							<div class="clear"></div>
 						</div>
@@ -100,7 +100,7 @@
 			<nav id="pagination">
 				<div class="inner">
 					<div class="pagination-info">
-						<span><?php current_paged(); ?></span>
+						<span><?php oblivion_current_paged(); ?></span>
 					</div>
 					<nav class="pagination-pager">
 					<?php

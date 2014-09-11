@@ -19,8 +19,8 @@ function oblivion_fonts() {
 	wp_enqueue_style('oblivion-fonts');
 }
 
-add_action('wp_enqueue_scripts', 'enqueue_scripts');
-function enqueue_scripts() {
+add_action('wp_enqueue_scripts', 'oblivion_enqueue_scripts');
+function oblivion_enqueue_scripts() {
 	$template = get_template_directory_uri();
 	
 	wp_enqueue_script('oblivion-modernizr', $template.'/js/libs/modernizr-2.8.3.min.js', array(), null, false);
@@ -46,40 +46,11 @@ load_theme_textdomain('oblivion', get_template_directory() .'/languages');
 /* add "editor-style.css" for the admin-interface */
 add_editor_style('css/editor-style.css');
 
-/* add a favicon for the admin area */
-function favicon4admin() {
-	echo '<link rel="Shortcut Icon" type="image/x-icon" href="' . get_template_directory() . '/favicon.ico" />';
-}
-add_action( 'admin_head', 'favicon4admin' );
-
-/* load "login.css" for the login */
-function custom_login() {
-	echo '<link rel="stylesheet" type="text/css" href="' . get_template_directory() . '/css/login.css" />';
-}
-add_action('login_head', 'custom_login');
-
 /* add custom theme-options */
 require_once(get_template_directory() .'/inc/theme-options.php');
 
-/* add twitter and wiki profile */
-function add_twitter_contactmethod( $contactmethods ) {
-	/* Add Twitter */
-	$contactmethods['twitter'] = __('Twitter','oblivion');
-	return $contactmethods;
-}
-add_filter('user_contactmethods','add_twitter_contactmethod',10,1);
-
 /* Disable default Gallery Style */
 add_filter( 'use_default_gallery_style', '__return_false' );
-
-/* register post formats */
-add_theme_support (
-	'post-formats',
-	array (
-		'video',
-		'audio'
-	)
-);
 
 /* Enable post and comment RSS feed links to head */
 add_theme_support('automatic-feed-links');
@@ -122,17 +93,15 @@ add_filter( 'wp_title', 'oblivion_wp_title', 10, 2 );
 	   ========================================================================== */
 
 /* add custom image-sizes */
-if ( function_exists( 'add_theme_support' ) ) { 
-	add_theme_support('post-thumbnails');
+add_theme_support('post-thumbnails');
 
-	add_image_size('medium-featured', 560, 350, true);
-	add_image_size('medium-square', 480, 480, true);
+add_image_size('medium-featured', 560, 350, true);
+add_image_size('medium-square', 480, 480, true);
 
-	if ($Imagefilter) {
-		imagefilter_add_image_size('large-landscape', 480, 180, true, true);
-	} else {
-		add_image_size('large-landscape', 480, 180, true);
-	}
+if ($Imagefilter) {
+	imagefilter_add_image_size('large-landscape', 480, 180, true, true);
+} else {
+	add_image_size('large-landscape', 480, 180, true);
 }
 
 	/* ==========================================================================
@@ -140,8 +109,8 @@ if ( function_exists( 'add_theme_support' ) ) {
 	   ========================================================================== */
 
 /* register all menus */
-add_action( 'init', 'register_my_menus' );
-function register_my_menus() {
+add_action( 'init', 'oblivion_register_my_menus' );
+function oblivion_register_my_menus() {
 	register_nav_menus(
 		array(
 			'header' => __('Header','oblivion'),
@@ -150,7 +119,7 @@ function register_my_menus() {
 	);
 }
 
-function fallback_menu() {
+function oblivion_fallback_menu() {
     wp_page_menu(
     	array(
     		'show_home' => __('Start','oblivion'),
@@ -215,8 +184,8 @@ class My_Walker_Nav_Menu extends Walker_Nav_Menu {
 	   Sidebar
 	   ========================================================================== */
 
-add_action( 'widgets_init', 'my_register_sidebars' );
-function my_register_sidebars() {
+add_action( 'widgets_init', 'oblivion_register_sidebars' );
+function oblivion_register_sidebars() {
 	register_sidebar(
 		array(
 			'id'=>'frontpage',
@@ -376,7 +345,7 @@ add_shortcode('button', 'oblivion_button');
 	   Caption
 	   ========================================================================== */
 
-function custom_caption($attr, $content = null) {
+function oblivion_custom_caption($attr, $content = null) {
 	/* New-style shortcode with the caption inside the shortcode with the link and image tags. */
 	if ( ! isset( $attr['caption'] ) ) {
 		if ( preg_match( '#((?:<a [^>]+>\s*)?<img [^>]+>(?:\s*</a>)?)(.*)#is', $content, $matches ) ) {
@@ -419,15 +388,15 @@ function custom_caption($attr, $content = null) {
 	return '<figure '. $id .'class="'. esc_attr($class) .'" style="width: '. ($width) .'px">'. do_shortcode($content) .'<span class="wp-caption-text">'. $caption .'</span></figure>';
 }
 
-add_shortcode('wp_caption', 'custom_caption');
-add_shortcode('caption', 'custom_caption');
+add_shortcode('wp_caption', 'oblivion_custom_caption');
+add_shortcode('caption', 'oblivion_custom_caption');
 
 
 	/* ==========================================================================
 	   Trim Post Title
 	   ========================================================================== */
 
-function short_title($after = '', $length) {
+function oblivion_short_title($after = '', $length) {
 	$mytitle = explode(' ', get_the_title(), $length);
 	if (count($mytitle)>=$length) {
 		array_pop($mytitle);
@@ -443,7 +412,7 @@ function short_title($after = '', $length) {
 	   ========================================================================== */
 
 
-function custom_wp_trim_excerpt($text) {
+function oblivion_wp_trim_excerpt($text) {
 	$raw_excerpt = $text;
 	if ( '' == $text ) {
 		global $post;
@@ -483,11 +452,11 @@ function custom_wp_trim_excerpt($text) {
 	return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
 }
 remove_filter('get_the_excerpt', 'wp_trim_excerpt');
-add_filter('get_the_excerpt', 'custom_wp_trim_excerpt');
+add_filter('get_the_excerpt', 'oblivion_wp_trim_excerpt');
 
 
 
-function custom_excerpt($excerpt_length = 55, $id = false, $echo = true) {
+function oblivion_custom_excerpt($excerpt_length = 55, $id = false, $echo = true) {
 	$text = '';
 	
 	if($id) {
@@ -518,17 +487,13 @@ function custom_excerpt($excerpt_length = 55, $id = false, $echo = true) {
 	else
 	return $text;
 }
-	
-function get_custom_excerpt($excerpt_length = 55, $id = false, $echo = false) {
-	return custom_excerpt($excerpt_length, $id, $echo);
-}
 
 
 	/* ==========================================================================
 	   Current Page
 	   ========================================================================== */
 
-function current_paged( $var = '' ) {
+function oblivion_current_paged( $var = '' ) {
     if( empty( $var ) ) {
         global $wp_query;
         if( !isset( $wp_query->max_num_pages ) )
@@ -554,7 +519,7 @@ function current_paged( $var = '' ) {
 	   Comments
 	   ========================================================================== */
 
-function custom_comment($comment, $args, $depth) {
+function oblivion_custom_comment($comment, $args, $depth) {
 	global $comment_counter;
 	if ($comment->comment_parent < 1) {
 		$comment_counter ++;
