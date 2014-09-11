@@ -141,7 +141,7 @@
 								array(
 									'theme_location' => 'header',
 									'container_class' => 'menu-container',
-									'fallback_cb' => fallback_menu,
+									'fallback_cb' => 'fallback_menu',
 									'walker' => new My_Walker_Nav_Menu()
 								)
 							); ?>
