@@ -54,7 +54,7 @@
 				<div id="masonry">
 				
 				<?php while (have_posts()) : the_post(); $counter++; ?>
-					<section id="post-<?php the_ID(); ?>" <?php post_class($highlight . ' post-count-'.$counter.' featured-post masonry-item'); ?>>
+					<section id="post-<?php the_ID(); ?>" <?php post_class(' post-count-'.$counter.' featured-post masonry-item'); ?>>
 						<div class="post-inner">
 							<header class="post-header">
 								<h3 class="post-title">
