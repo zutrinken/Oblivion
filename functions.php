@@ -446,6 +446,7 @@ function short_title($after = '', $length) {
 function custom_wp_trim_excerpt($text) {
 	$raw_excerpt = $text;
 	if ( '' == $text ) {
+		global $post;
 		// Retrieve the post content
 		$text = get_the_content('');
  
