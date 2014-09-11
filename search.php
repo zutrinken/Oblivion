@@ -30,7 +30,19 @@
 	<?php endwhile; ?>
 		<nav id="pagination">
 			<div class="inner">
-				<?php wp_pagination_navi(); ?>
+					<div class="pagination-info">
+						<span><?php current_paged(); ?></span>
+					</div>
+					<nav class="pagination-pager">
+					<?php
+						$args = array(
+							'prev_text' => '<i class="fa fa-angle-left"></i> <span>' . __('previous','oblivion') .'</span>',
+							'next_text' => '<span>' . __('next','oblivion') .'</span> <i class="fa fa-angle-right"></i>',
+						);
+						echo paginate_links($args);
+					?>
+					</nav>
+					<div class="clear"></div>
 			</div>
 		</nav>
 	<?php else : ?>

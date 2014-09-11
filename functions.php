@@ -546,60 +546,7 @@ function current_paged( $var = '' ) {
     if( $pages < 1 )
         return;
     $page = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
-    echo __('Page ','oblivion') . $page . __(' of ','oblivion') . $pages;
-}
-
-
-	/* ==========================================================================
-	   Pagination
-	   ========================================================================== */
-
-function wp_pagination_navi($num_page_links = 5, $min_max_offset = 2){
-	global $wp_query;
-	/* Do not show paging on single pages */
-	if( !is_single() ){
-		$current_page       = intval(get_query_var('paged'));
-		$total_pages        = $wp_query->max_num_pages;
-		$left_offset        = floor(($num_page_links - 1) / 2);
-		$right_offset       = ceil(($num_page_links -1) / 2);
-		if( empty($current_page) || $current_page ==  0 ) {
-			$current_page = 1;
-		}
-		// More than one page -> render pagination
-		if ( $total_pages > 1 ) {
-			echo '<div class="pagination-info"><span>'. __('Page','oblivion') . ' ' . $current_page . ' ' . __('of','oblivion') . ' ' . $total_pages .'</span></div>';
-			echo '<nav class="pagination-pager">';
-           	if ( $current_page > 1 ) {
-				echo '<a class="pagination-previous" href="' .get_pagenum_link($current_page-1) .'" title="previous"><i class="fa fa-angle-left"></i> <span>' . __('previous','oblivion') .'</span></a>';
-			} else {
-				echo '<span class="pagination-previous" title="previous"><i class="fa fa-angle-left"></i> <span>' . __('previous','oblivion') .'</span></span>';
-			}
-			for ( $i = 1; $i <= $total_pages; $i++) {
-				if ( $i == $current_page ){
-					// Current page
-					echo '<a href="'.get_pagenum_link($current_page).'" class="current-page" title="page '.$i.'" >'.($current_page).'</a>';
-				} else {
-					// Pages before and after the current page
-					if ( ($i >= ($current_page - $left_offset)) && ($i <= ($current_page + $right_offset)) ){
-						echo '<a href="'.get_pagenum_link($i).'" title="page '.$i.'" >'.$i.'</a>';
-					} elseif ( ($i <= $min_max_offset) || ($i > ($total_pages - $min_max_offset)) ) {
-						// Start and end pages with min_max_offset
-						echo '<a href="'.get_pagenum_link($i).'" title="page '.$i.'" >'.$i.'</a>';
-					} elseif ( (($i == ($min_max_offset + 1)) && ($i < ($current_page - $left_offset + 1))) ||
-								(($i == ($total_pages - $min_max_offset)) && ($i > ($current_page + $right_offset ))) ) {
-						// Dots after/before min_max_offset
-						echo '<span class="pagination-dots">&bull;&bull;&bull;</span>';
-					}
-				}
-			}
-			if ( $current_page != $total_pages ) {
-				echo '<a class="pagination-next" href="'.get_pagenum_link($current_page+1).'" title="next"><span>' . __('next','oblivion') .'</span> <i class="fa fa-angle-right"></i></a>';
-			} else {
-				echo '<span class="pagination-next" title="next"><span>' . __('next','oblivion') .'</span> <i class="fa fa-angle-right"></i></span>';
-			}
-			echo '</nav><div class="clear"></div>'; //Close pagination
-		}
-	}
+    echo __('Page','oblivion') . ' ' . $page  . ' ' . __('of','oblivion')  . ' ' . $pages;
 }
 
 

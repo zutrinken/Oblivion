@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Oblivion v1.0.9\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-09-11 14:28:34+0000\n"
+"PO-Revision-Date: 2014-09-11 18:37:15+0000\n"
 "Last-Translator: zutrinken <mirgehtsganzgut@web.de>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -106,27 +106,27 @@ msgid_plural "%1$s comments"
 msgstr[0] "Ein Kommentar"
 msgstr[1] "%1$s Kommentare"
 
-#: comments.php:18
+#: comments.php:17
 #@ oblivion
 msgid "Older comments"
 msgstr "Ältere Kommentare"
 
-#: comments.php:19
+#: comments.php:18
 #@ oblivion
 msgid "Newer Comments"
 msgstr "Neuere Kommentare"
 
-#: comments.php:42
+#: comments.php:41
 #@ oblivion
 msgid "Name"
 msgstr "Name"
 
-#: comments.php:48
+#: comments.php:47
 #@ oblivion
 msgid "Email"
 msgstr "Email"
 
-#: comments.php:55
+#: comments.php:54
 #@ oblivion
 msgid "Website"
 msgstr "Website"
@@ -168,8 +168,8 @@ msgstr "Youtube"
 msgid "RSS"
 msgstr "RSS"
 
-#: front-page.php:111
-#: front-page.php:113
+#: front-page.php:121
+#: front-page.php:123
 #@ oblivion
 msgid "Widgets"
 msgstr "Widgets"
@@ -205,47 +205,35 @@ msgstr "Die Standard Sidebar"
 msgid "read more"
 msgstr "weiterlesen"
 
-#: functions.php:549
-#@ oblivion
-msgid "Page "
-msgstr "Seite "
-
-#: functions.php:549
-#@ oblivion
-msgid " of "
-msgstr "von "
-
-#: functions.php:573
-#: functions.php:575
+#: front-page.php:103
 #@ oblivion
 msgid "previous"
 msgstr "Vorherige"
 
-#: functions.php:596
-#: functions.php:598
+#: front-page.php:104
 #@ oblivion
 msgid "next"
 msgstr "Nächste"
 
-#: functions.php:623
+#: functions.php:570
 #, php-format
 #@ oblivion
 msgid "%s"
 msgstr "%s"
 
-#: functions.php:624
+#: functions.php:571
 #, php-format
 #@ oblivion
 msgid "%1$s"
 msgstr "%1$s"
 
-#: functions.php:625
+#: functions.php:572
 #@ default
 msgctxt "oblivion"
 msgid "reply"
 msgstr ""
 
-#: functions.php:630
+#: functions.php:577
 #@ oblivion
 msgid "Your comment will be public soon."
 msgstr "Dein Kommentar wird bald veröffentlicht."
@@ -360,16 +348,6 @@ msgstr "vorheriger Artikel"
 msgid "next post"
 msgstr "nächster Artikel"
 
-#: functions.php:570
-#@ oblivion
-msgid "Page"
-msgstr "Seite"
-
-#: functions.php:570
-#@ oblivion
-msgid "of"
-msgstr "von"
-
 #: inc/theme-options.php:40
 #@ oblivion
 msgid "Logo"
@@ -386,13 +364,23 @@ msgstr ""
 msgid "Pages"
 msgstr "Seiten"
 
-#: comments.php:37
+#: comments.php:36
 #@ oblivion
 msgid "Post Comment"
 msgstr "Abschicken"
 
-#: comments.php:36
+#: comments.php:35
 #@ oblivion
 msgid "Cancel Reply"
 msgstr "Abbrechen"
+
+#: functions.php:549
+#@ oblivion
+msgid "Page"
+msgstr "Seite"
+
+#: functions.php:549
+#@ oblivion
+msgid "of"
+msgstr "von"
 

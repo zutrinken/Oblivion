@@ -1123,6 +1123,7 @@ a.sp:focus {
 	padding: 48px 0 64px;
 	background: #fff;
 	border-bottom: 1px solid #e4e6eb;
+	text-align: center;
 }
 .pagination-info {
 	float: left;
@@ -1166,19 +1167,19 @@ a.sp:focus {
 	position: relative;
 	top: -2px;
 }
-.pagination-pager > *.pagination-previous {
+.pagination-pager > *:first-child {
 	-webkit-border-radius: 2px 0 0 2px;
 	border-radius: 2px 0 0 2px;
 }
-.pagination-pager > *.pagination-next {
+.pagination-pager > *:last-child {
 	-webkit-border-radius: 0 2px 2px 0;
 	border-radius: 0 2px 2px 0;
 }
-.pagination-pager > *.pagination-previous span,
-.pagination-pager > *.pagination-next span {
+.pagination-pager > *.prev span,
+.pagination-pager > *.next span {
 	display: none;
 }
-.pagination-pager > *.pagination-dots {
+.pagination-pager > *.dots {
 	font-size: 1em;
 }
 .pagination-pager > a {
@@ -1190,9 +1191,10 @@ a.sp:focus {
 	color: #232529;
 	border-color: #e4e6eb;
 }
-.pagination-pager > a.current-page {
+.pagination-pager > *.current {
 	background: #f2f3f5;
 	color: #757a80;
+	font-weight: 400;
 }
 
 
@@ -1294,6 +1296,13 @@ a.sp:focus {
 	.page-header {
 		padding: 172px 0 60px;
 	}
+	.pagination-info {
+		display: none;
+	}
+	.pagination-pager {
+		float: none;
+		display: inline-block;
+	}
 }
 
 /* ==========================================================================
@@ -1324,14 +1333,13 @@ a.sp:focus {
 		padding-bottom: 62.5%;
 	}
 	.pagination-pager {
-		float: none;
+		display: block;
 	}
-	.pagination-info,
 	.pagination-pager > * {
 		display: none;
 	}
-	.pagination-pager > *.pagination-previous,
-	.pagination-pager > *.pagination-next {
+	.pagination-pager > *.prev,
+	.pagination-pager > *.next {
 		display: block;
 		width: 48%;
 		padding-left: 0;
@@ -1340,8 +1348,12 @@ a.sp:focus {
 		-webkit-border-radius: 2px;
 		border-radius: 2px;
 	}
-	.pagination-pager > *.pagination-next {
+	.pagination-pager > *.next {
 		float: right;
+	}
+	.pagination-pager > *.prev span,
+	.pagination-pager > *.next span {
+		display: inline;
 	}
 	.error404 .page-header {
 		background-size: 100% 100%;
