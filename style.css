@@ -1255,6 +1255,35 @@ a.sp:focus {
 	color: #232529;
 }
 
+/* ==========================================================================
+   Widgets
+   ========================================================================== */
+
+
+#section-widgets {
+	padding: 96px 0;
+	position: relative;
+	background: #fff;
+	border-bottom: 1px solid #e4e6eb;
+}
+#section-widgets .inner {
+	width: 90% !important;
+	max-width: 90em;
+}
+
+.widget {
+	padding: 1px 0;
+	float: left;
+	width: 33.333%;
+}
+.widget:nth-of-type(4),
+.widget:nth-of-type(7) {
+	clear: both;
+}
+.widget .widget-inner {
+	margin: 32px;
+}
+
 
 
 /* ==========================================================================
@@ -1302,6 +1331,18 @@ a.sp:focus {
 	.pagination-pager {
 		float: none;
 		display: inline-block;
+	}
+	.widget {
+		width: 50%;
+	}
+	.widget:nth-of-type(4) {
+		clear: none;
+	}
+	.widget:nth-of-type(3),
+	.widget:nth-of-type(5),
+	.widget:nth-of-type(7),
+	.widget:nth-of-type(9) {
+		clear: both;
 	}
 }
 
@@ -1374,6 +1415,13 @@ a.sp:focus {
 	.sp-blog {
 		margin-bottom: 0;
 		width: 50%;
+	}
+	.widget {
+		float: none;
+		width: auto;
+	}
+	.widget .widget-inner {
+		margin: 0 0 64px;
 	}
 }
 

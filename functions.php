@@ -188,10 +188,10 @@ add_action( 'widgets_init', 'oblivion_register_sidebars' );
 function oblivion_register_sidebars() {
 	register_sidebar(
 		array(
-			'id'=>'frontpage',
-			'name'=>__('Frontpage','oblivion'),
+			'id'=>'footer-sidebar',
+			'name'=>__('Footer-Sidebar','oblivion'),
 			'description' => __('The default sidebar.','oblivion'),
-			'before_widget' => '<aside id="%1$s" class="widget frontpage-widget %2$s" role="group"><div class="widget-inner">',
+			'before_widget' => '<aside id="%1$s" class="widget %2$s" role="group"><div class="widget-inner">',
 			'after_widget' => '</div></aside>',
 			'before_title' => '<h3 class="widget-title">',
 			'after_title' => '</h3>',

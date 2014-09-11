@@ -116,19 +116,7 @@
 			</nav>
 		<?php endif; ?>
 
-		<?php endif; wp_reset_query(); ?>
-
-		<?php if (is_active_sidebar('Frontpage')) : ?>
-
-		<section id="section-widgets" class="frontpage-section" title="<?php _e('Widgets','oblivion'); ?>">
-			<div class="inner">
-				<h2 class="visuallyhidden"><?php _e('Widgets','oblivion'); ?></h2>
-				<?php dynamic_sidebar('Frontpage'); ?>
-				<div class="clear"></div>
-			</div>
-		</section>
-
-		<?php endif; ?>
+		<?php endif;?>
 	
 	<?php endif; ?>
 <?php get_footer(); ?>

@@ -1,3 +1,15 @@
+		<?php if (is_active_sidebar('Footer-Sidebar')) : ?>
+
+		<section id="section-widgets" title="<?php _e('Widgets','oblivion'); ?>">
+			<div class="inner">
+				<h2 class="visuallyhidden"><?php _e('Widgets','oblivion'); ?></h2>
+				<?php dynamic_sidebar('Footer-Sidebar'); ?>
+				<div class="clear"></div>
+			</div>
+		</section>
+
+		<?php endif; ?>
+
 		<?php $options = get_option('oblivion_theme_options'); ?>
 		<section id="section-social">
 			<div class="inner">
