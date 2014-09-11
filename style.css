@@ -1080,39 +1080,6 @@ a.sp:focus {
 	color: #fff;
 	border-bottom-color: #fff;
 }
-.page-widget {
-	position: absolute;
-	top: -4px;
-	right: 0;
-}
-.page-widget * {
-	display: block;
-}
-.page-widget thead,
-.page-widget tbody,
-.page-widget caption {
-	display: none !important;
-}
-.page-widget #prev,
-.page-widget #next {
-	display: block !important;
-	position: relative !important;
-	width: auto !important;
-	min-width: 3em;
-
-	background: #fff !important;
-	padding: 0.8em;
-	border: 0;
-	float: left;
-}
-.page-widget #prev {
-	-webkit-border-radius: 4px 0 0 4px;
-	border-radius: 4px 0 0 4px;
-}
-.page-widget #next {
-	-webkit-border-radius: 0 4px 4px 0;
-	border-radius: 0 4px 4px 0;
-}
 
 
 /* ==========================================================================

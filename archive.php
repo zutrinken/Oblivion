@@ -44,11 +44,6 @@
 						?>
 					</aside>
 				<?php endif; ?>
-				<?php if (is_date()) : ?>
-					<aside class="page-widget">
-						<?php the_widget('WP_Widget_Calendar');?>
-					</aside>
-				<?php endif; ?>
 			</div>
 		</section>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
