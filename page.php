@@ -21,6 +21,13 @@
 			<div class="inner">
 				<article class="post-content post-article">
 					<?php the_content(); ?>
+					<?php $defaults = array(
+						'before'           => '<nav id="post-pagination"><span class="post-pagination-info">' . __('Pages','Oblivion') . '</span><span class="post-pagination-pages">',
+						'after'            => '</span></nav>',
+						'link_before'      => '<span>',
+						'link_after'       => '</span>'
+					); ?>
+					<?php wp_link_pages($defaults); ?>
 				</article>
 				<div class="clear"></div>
 			</div>
