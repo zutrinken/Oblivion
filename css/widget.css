@@ -163,7 +163,7 @@
 .widget_calendar .pad {}
 .widget_calendar #today {
 	color: #000;
-	font-weight: 700;
+	font-weight: 400;
 	background: #f2f3f5 !important;
 }
 .widget_calendar tbody a {
