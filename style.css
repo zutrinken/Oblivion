@@ -143,17 +143,6 @@ body:before {
 	-webkit-transition-duration: 0.25s;
 	transition-duration: 0.25s;
 }
-@media screen and (max-width: 702px) {
-	.state-nav-is-visible #header {
-		transition-duration: 0s;
-	}
-	#header {
-		position: absolute;
-	}
-	.admin-bar #header {
-		top: 46px;
-	}
-}
 .state-nav-is-hidden #header {
 	opacity: 0;
 	-webkit-transform: translate3d(0px, -72px, 0px);
@@ -1313,6 +1302,16 @@ a.sp:focus {
 
 
 @media only screen and (max-width: 640px) {
+	.state-nav-is-visible #header {
+		-webkit-transition-duration: 0s;
+		transition-duration: 0s;
+	}
+	#header {
+		position: absolute;
+	}
+	.admin-bar #header {
+		top: 46px;
+	}
 	.no-js .inner {
 		width: 90%;
 	}
