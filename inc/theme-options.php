@@ -42,11 +42,11 @@ function oblivion_theme_options_page() {
 			<table class="form-table">
 				<tr valign="top">
 					<th scope="row">Header Icon</th>
-					<td><input id="oblivion_theme_options[icon]" class="regular-text" type="text" name="oblivion_theme_options[icon]" value="<?php esc_attr_e( $options['icon'] ); ?>" /> <p class="description">104x104px</p></td>
+					<td><input id="oblivion_theme_options[icon]" class="regular-text" type="text" name="oblivion_theme_options[icon]" value="<?php echo esc_attr( $options['icon'] ); ?>" /> <p class="description">104x104px</p></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">Frontpage Logo</th>
-					<td><input id="oblivion_theme_options[logo]" class="regular-text" type="text" name="oblivion_theme_options[logo]" value="<?php esc_attr_e( $options['logo'] ); ?>" /><p class="description">displayed on orange or header background image</p></td>
+					<td><input id="oblivion_theme_options[logo]" class="regular-text" type="text" name="oblivion_theme_options[logo]" value="<?php echo esc_attr( $options['logo'] ); ?>" /><p class="description">displayed on orange or header background image</p></td>
 				</tr>
 			</table>
 			
@@ -54,19 +54,19 @@ function oblivion_theme_options_page() {
 			<table class="form-table">
 				<tr valign="top">
 					<th scope="row">Youtube</th>
-					<td><input id="oblivion_theme_options[youtube]" class="regular-text" type="text" name="oblivion_theme_options[youtube]" value="<?php esc_attr_e( $options['youtube'] ); ?>" /></td>
+					<td><input id="oblivion_theme_options[youtube]" class="regular-text" type="text" name="oblivion_theme_options[youtube]" value="<?php echo esc_attr( $options['youtube'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">Twitter</th>
-					<td><input id="oblivion_theme_options[twitter]" class="regular-text" type="text" name="oblivion_theme_options[twitter]" value="<?php esc_attr_e( $options['twitter'] ); ?>" /></td>
+					<td><input id="oblivion_theme_options[twitter]" class="regular-text" type="text" name="oblivion_theme_options[twitter]" value="<?php echo esc_attr( $options['twitter'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">Facebook</th>
-					<td><input id="oblivion_theme_options[facebook]" class="regular-text" type="text" name="oblivion_theme_options[facebook]" value="<?php esc_attr_e( $options['facebook'] ); ?>" /></td>
+					<td><input id="oblivion_theme_options[facebook]" class="regular-text" type="text" name="oblivion_theme_options[facebook]" value="<?php echo esc_attr( $options['facebook'] ); ?>" /></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">Google +</th>
-					<td><input id="oblivion_theme_options[google]" class="regular-text" type="text" name="oblivion_theme_options[google]" value="<?php esc_attr_e( $options['google'] ); ?>" /></td>
+					<td><input id="oblivion_theme_options[google]" class="regular-text" type="text" name="oblivion_theme_options[google]" value="<?php echo esc_attr( $options['google'] ); ?>" /></td>
 				</tr>
 			</table>
 
