@@ -1,5 +1,6 @@
 <?php get_header(); ?>
 
+	<?php if (have_posts()) : ?>
 		<section class="page-header">
 			<div class="inner" data-type="prlx" data-speed="0.375">
 				<h2 class="page-title">
@@ -46,7 +47,7 @@
 				<?php endif; ?>
 			</div>
 		</section>
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+	<?php while (have_posts()) : the_post(); ?>
 		<section id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<div class="inner">
 				<?php if(get_post_meta($post->ID, 'video', true)) : ?>
