@@ -32,6 +32,9 @@ function oblivion_enqueue_scripts() {
 		wp_enqueue_style( 'oblivion-highlight-style', $template.'/css/highlight.css', array(), null, false);
 		wp_enqueue_script('oblivion-highlight-script', $template.'/js/libs/highlight.pack.js', array(), null, false);
 	}
+	if(is_single() && get_option('thread_comments')) {
+		wp_enqueue_script('comment-reply');
+	}
 	if(is_front_page() && is_home()) {
 		wp_enqueue_style( 'oblivion-frontpage-style', $template.'/css/front-page.css', array(), null, false);
 		wp_enqueue_script('jquery-masonry');

@@ -212,6 +212,13 @@
 .comment-respond {
 	padding: 64px 0 128px;
 }
+.commentlist .comment-respond {
+	margin-left: 112px;
+	padding: 8px 0 64px;
+}
+.commentlist ul .comment-respond {
+	margin-left: 24px;
+}
 .comment-reply-title {
 	position: relative;
 	padding: 0;
@@ -325,6 +332,9 @@
 		left: -48px;
 		width: 86px;
 	}
+	.commentlist ul .comment-respond {
+		margin-left: 0;
+	}
 }
 
 /* ==========================================================================
@@ -393,5 +403,17 @@
 	}
 	.commentlist li.depth-1.parent:last-child:before {
 		left: 24px;
+	}
+	.commentlist .comment-respond {
+		margin-left: 64px;
+	}
+	.commentlist ul .comment-respond {
+		margin-left: 32px;
+	}
+	.commentlist ul ul .comment-respond {
+		margin-left: 16px;
+	}
+	.commentlist ul ul ul .comment-respond {
+		margin-left: 0;
 	}
 }
