@@ -3,7 +3,7 @@
 Yet another wordpress theme.
 
 * Author: [Peter Amende](http://zutrinken.com/)
-* License: MIT License
+* License: GNU General Public License v2 or later
 
 [![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/oblivion&title=oblivion&language=php-js-html-css&tags=github&category=software)
 
@@ -17,17 +17,6 @@ Font **PoliticsHeadBold** by [Fred Bordfeld](http://kaklotter.de/)
 Font **Awesome** by [Dave Gandy](https://github.com/FortAwesome/Font-Awesome)  
 Script **Highlight.js** by [Ivan Sagalaev](https://github.com/isagalaev/highlight.js)  
 Script **FitVids** by [Dave Rupert](https://github.com/davatron5000/FitVids.js)  
-
-## Copyright & License
-
-Copyright (C) 2014 Peter Amende - Released under the MIT License.
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
-NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ## How to
 
