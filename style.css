@@ -1143,8 +1143,8 @@ a.sp:focus {
 	-webkit-border-radius: 0 2px 2px 0;
 	border-radius: 0 2px 2px 0;
 }
-.pagination-pager > *.prev span,
-.pagination-pager > *.next span {
+.pagination-pager > a > span,
+.pagination-pager > a > span {
 	display: none;
 }
 .pagination-pager > *.dots {
@@ -1345,8 +1345,14 @@ a.sp:focus {
 	.pagination-pager {
 		display: block;
 	}
+	.search .pagination-pager {
+		display: inline-block;
+	}
 	.pagination-pager > * {
 		display: none;
+	}
+	.search .pagination-pager > * {
+		display: block;
 	}
 	.pagination-pager > *.prev,
 	.pagination-pager > *.next {
@@ -1361,8 +1367,7 @@ a.sp:focus {
 	.pagination-pager > *.next {
 		float: right;
 	}
-	.pagination-pager > *.prev span,
-	.pagination-pager > *.next span {
+	.pagination-pager > a > span {
 		display: inline;
 	}
 	.error404 .page-header {
