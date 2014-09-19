@@ -1087,10 +1087,11 @@ a.sp:focus {
    ========================================================================== */
 
 #pagination {
-	padding: 48px 0 64px;
-	background: #fff;
-	border-bottom: 1px solid #e4e6eb;
+	height: 0;
+	top: -30px;
 	text-align: center;
+	position: relative;
+	z-index: 100;
 }
 .pagination-info {
 	float: left;
@@ -1151,6 +1152,7 @@ a.sp:focus {
 }
 .pagination-pager > a {
 	color: #2e3033;
+	background: #fff;
 }
 .pagination-pager > a:hover,
 .pagination-pager > a:focus {
