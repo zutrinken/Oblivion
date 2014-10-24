@@ -23,7 +23,7 @@ function oblivion_theme_options_page() {
 	<div class="wrap">
 
 		<!-- Titel -->
-		<?php screen_icon(); ?><h2><?php _e('oblivion Theme-Options','oblivion'); ?></h2> 
+		<h2><?php _e('oblivion Theme-Options','oblivion'); ?></h2> 
 
 		<!-- Message -->
 		<?php if ( false !== $_REQUEST['settings-updated'] ) : ?>
