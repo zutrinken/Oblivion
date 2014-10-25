@@ -132,22 +132,6 @@
 	padding: 0;
 	position: relative;
 }
-.featured-post.post.sticky .post-inner:after {
-	font-family: 'FontAwesome';
-	font-style: normal;
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	content: '\f02e';
-	position: absolute;
-	font-size: 2em;
-	top: 25px;
-	right: 0px;
-	padding: 0;
-	margin: 0;
-	width: auto;
-	color: #f80;
-}
 .featured-post .post-thumbnail {
 	float: none;
 	width: 100%;

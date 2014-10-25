@@ -677,22 +677,6 @@ a.sp:focus {
 .sticky .inner {
 	position: relative;
 }
-.sticky .inner:after {
-	font-family: 'FontAwesome';
-	font-style: normal;
-	font-weight: normal;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	content: '\f02e';
-	position: absolute;
-	font-size: 2em;
-	top: -63px;
-	right: 0;
-	padding: 0;
-	margin: 0;
-	width: auto;
-	color: #dadce0;
-}
 .page .page {
 	position: relative;
 	padding: 48px 0 96px;
@@ -1096,6 +1080,9 @@ a.sp:focus {
 	text-align: center;
 	position: relative;
 	margin: 32px auto;
+}
+.pagination .inner {
+	width: 90% !important;
 }
 .pagination-info {
 	float: left;
