@@ -20,8 +20,8 @@ if ( post_password_required() ) {
 			</ol>
 			<?php if ((int) get_option('page_comments') === 1): ?>
 				<div class="pagination" id="comment-pagination-bottom">
-					<span class="post-nav-prev"><?php previous_comments_link('<i class="fa fa-angle-left"></i> <span>' . __('previous','oblivion') .'</span>') ?></span>
-					<span class="post-nav-next"><?php next_comments_link('<span>' . __('next','oblivion') .'</span> <i class="fa fa-angle-right"></i>') ?></span>
+					<span class="comment-nav-prev"><?php previous_comments_link('<i class="fa fa-angle-left"></i> <span>' . __('previous','oblivion') .'</span>') ?></span>
+					<span class="comment-nav-next"><?php next_comments_link('<span>' . __('next','oblivion') .'</span> <i class="fa fa-angle-right"></i>') ?></span>
 					<div class="clear"></div>
 				</div>
 			<?php endif; ?>

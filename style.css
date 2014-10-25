@@ -1162,21 +1162,21 @@ a.sp:focus {
    Comment Pagination
    ========================================================================== */
 
-.post-nav-prev,
-.post-nav-next {
+.comment-nav-prev,
+.comment-nav-next {
 	display: block;
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
-.post-nav-prev {
+.comment-nav-prev {
 	float: left;
 }
-.post-nav-next {
+.comment-nav-next {
 	float: right;
 }
-.post-nav-prev a,
-.post-nav-next a {
+.comment-nav-prev a,
+.comment-nav-next a {
 	display: block;
 	
 	margin: 0 0 0 -1px;
