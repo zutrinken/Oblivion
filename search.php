@@ -28,7 +28,7 @@
 			</div>
 		</section>
 	<?php endwhile; ?>
-		<nav id="pagination">
+		<div class="pagination" id="index-pagination">
 			<div class="inner">
 					<div class="pagination-info">
 						<span><?php oblivion_current_paged(); ?></span>
@@ -39,7 +39,7 @@
 					</nav>
 					<div class="clear"></div>
 			</div>
-		</nav>
+		</div>
 	<?php else : ?>
 		<div id="search-search" class="searcharea">
 			<h2 class="visuallyhidden"><?php _e('Search','oblivion'); ?></h2>

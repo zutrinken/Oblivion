@@ -54,7 +54,7 @@
 		</section>
 	<?php endwhile; ?>
 		<?php if($wp_query->max_num_pages > 1) : ?>
-			<nav id="pagination">
+			<div class="pagination" id="index-pagination">
 				<div class="inner">
 					<div class="pagination-info">
 						<span><?php oblivion_current_paged(); ?></span>
@@ -70,7 +70,7 @@
 					</nav>
 					<div class="clear"></div>
 				</div>
-			</nav>
+			</div>
 		<?php endif; ?>
 	<?php endif; ?>
 
