@@ -1149,6 +1149,7 @@ a.sp:focus {
 }
 .pagination-pager > *.dots {
 	font-size: 1em;
+	background: #fff;
 }
 .pagination-pager > a {
 	color: #2e3033;
