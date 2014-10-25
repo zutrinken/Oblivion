@@ -1267,7 +1267,9 @@ a.sp:focus {
 	width: 90% !important;
 	max-width: 90em;
 }
-
+.widget-wrapper {
+	margin: 0 -32px;
+}
 .widget {
 	padding: 1px 0;
 	float: left;
@@ -1426,6 +1428,9 @@ a.sp:focus {
 	}
 	.widget .widget-inner {
 		margin: 0 0 64px;
+	}
+	.widget-wrapper {
+		margin: 0 auto;
 	}
 }
 

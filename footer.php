@@ -3,8 +3,10 @@
 		<section id="section-widgets" title="<?php _e('Widgets','oblivion'); ?>">
 			<div class="inner">
 				<h2 class="visuallyhidden"><?php _e('Widgets','oblivion'); ?></h2>
-				<?php dynamic_sidebar('Footer-Sidebar'); ?>
-				<div class="clear"></div>
+				<div class="widget-wrapper">
+					<?php dynamic_sidebar('Footer-Sidebar'); ?>
+					<div class="clear"></div>
+				</div>
 			</div>
 		</section>
 
