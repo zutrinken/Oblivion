@@ -120,7 +120,7 @@ p, ul, ol {
 .post-article ul li {
 	position: relative;
 }
-.post-article ul li:before {
+.post-article ul > li:before {
 	font-family: 'FontAwesome';
 	font-style: normal;
 	font-weight: normal;
@@ -136,8 +136,21 @@ p, ul, ol {
 	text-align: center;
 	color: #2e3033;	
 }
-.post-article ul li li:before {
+.post-article li ul li:before {
 	content: '\f105';
+}
+.post-article ol {
+	list-style-type: none;
+	counter-reset: item;
+}
+.post-article ol > li:before {
+	content: counter(item) ". " !important;
+	counter-increment: item;
+	position: absolute;
+	margin-left: -32px;
+	text-align: right;
+	width: 24px;
+	font-weight: 400;
 }
 
 ol ol, ul ul, ul ol, ol ul {
