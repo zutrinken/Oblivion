@@ -355,6 +355,9 @@ table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
     background-color: #edeff2;
 }
+table tbody > tr:last-child:nth-child(odd) > td {
+    border-bottom: 1px solid #dfe1e5;
+}
 table img {
 	display: inline;
 }
