@@ -419,37 +419,26 @@ function oblivion_wp_trim_excerpt($text) {
 	$raw_excerpt = $text;
 	if ( '' == $text ) {
 		global $post;
-		// Retrieve the post content
 		$text = get_the_content('');
- 
-		// Delete all shortcode tags from the content
 		$text = strip_shortcodes( $text );
- 
 		$text = apply_filters('the_content', $text);
 		$text = str_replace(']]>', ']]&gt;', $text); 
- 		// MODIFY THIS. Add the allowed HTML tags separated by a comma
 		$allowed_tags = '<p>,<br>,<br />';
-		$text = strip_tags($text, $allowed_tags);
- 
+		$text = strip_tags($text, $allowed_tags); 
 		$text = preg_replace('#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $text);
-
- 
- 		// MODIFY THIS. change the excerpt word count to any integer you like
 		$excerpt_word_count = 54;
 		$excerpt_length = apply_filters('excerpt_length', $excerpt_word_count);
-
- 		// MODIFY THIS. change the excerpt endind to something else
-		$excerpt_end = ' <span class="post-cut">[...]</span> <a class="post-more" href="'. get_permalink($post->ID) . '">'. __("read more","oblivion") .'</a>';
-
-		$excerpt_more = apply_filters('excerpt_more', ' ' . $excerpt_end);
- 
+		$excerpt_end = ' <span class="post-cut">[...]</span>';
+		$excerpt_cut = apply_filters('excerpt_more', ' ' . $excerpt_end);
+		$excerpt_more = ' <a class="post-more" href="'. get_permalink($post->ID) . '">'. __("read more","oblivion") .'</a>';
 		$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
 		if ( count($words) > $excerpt_length ) {
 			array_pop($words);
 			$text = implode(' ', $words);
-			$text = $text . $excerpt_more;
+			$text = $text . $excerpt_cut . $excerpt_more;
 		} else {
 			$text = implode(' ', $words);
+			$text = $text . $excerpt_more;
 		}
 	}
 	return apply_filters('wp_trim_excerpt', $text, $raw_excerpt);
@@ -461,7 +450,6 @@ add_filter('get_the_excerpt', 'oblivion_wp_trim_excerpt');
 
 function oblivion_custom_excerpt($excerpt_length = 55, $id = false, $echo = true) {
 	$text = '';
-	
 	if($id) {
 		$the_post = & get_post( $my_id = $id );
 		$text = ($the_post->post_excerpt) ? $the_post->post_excerpt : $the_post->post_content;
@@ -469,21 +457,21 @@ function oblivion_custom_excerpt($excerpt_length = 55, $id = false, $echo = true
 		global $post;
 		$text = ($post->post_excerpt) ? $post->post_excerpt : get_the_content('');
 	}
-	
 	$text = strip_shortcodes( $text );
 	$text = apply_filters('the_content', $text);
 	$text = str_replace(']]>', ']]&gt;', $text);
 	$text = strip_tags($text);
 	$text = preg_replace('#<p>\s*+(<br\s*/*>)?\s*</p>#i', '', $text);
-	
-	$excerpt_more = ' <span class="post-cut">[...]</span> <a class="post-more" href="'. get_permalink($post->ID) . '">'. __("read more","oblivion") .'</a>';
+	$excerpt_cut = ' <span class="post-cut">[...]</span>';
+	$excerpt_more = ' <a class="post-more" href="'. get_permalink($post->ID) . '">'. __("read more","oblivion") .'</a>';
 	$words = preg_split("/[\n\r\t ]+/", $text, $excerpt_length + 1, PREG_SPLIT_NO_EMPTY);
 	if ( count($words) > $excerpt_length ) {
 		array_pop($words);
 		$text = implode(' ', $words);
-		$text = $text . $excerpt_more;
+		$text = $text . $excerpt_cut . $excerpt_more;
 	} else {
 		$text = implode(' ', $words);
+		$text = $text . $excerpt_more;
 	}
 	if($echo)
 	echo apply_filters('the_content', $text);
