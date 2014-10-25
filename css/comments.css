@@ -14,12 +14,12 @@
 	margin: 0 0 48px;
 	padding: 0;
 }
-.commentlist li {
+.commentlist li.comment {
 	position: relative;
 	padding: 0;
 	margin: 0;
 }
-.commentlist li:after {
+.commentlist li.comment:after {
 	position: absolute;
 	content: '';
 	left: 47px;
@@ -29,13 +29,13 @@
 	background: #757a80;
 	z-index: 2;
 }
-.commentlist li:last-child:after {
+.commentlist li.comment:last-child:after {
 	display: none;
 }
-.commentlist li.depth-1.parent:last-child:after {
+.commentlist li.comment.depth-1.parent:last-child:after {
 	display: block;
 }
-.commentlist li.depth-1.parent:last-child:before {
+.commentlist li.comment.depth-1.parent:last-child:before {
 	position: absolute;
 	content: '';
 	left: 44px;
@@ -47,41 +47,41 @@
 	-webkit-border-radius: 12px;
 	border-radius: 12px;
 }
-.commentlist li .comment-number {
+.commentlist li.comment .comment-number {
 	display: none;
 }
-.commentlist ul {
+.commentlist ul.children {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
-.commentlist li li {
+.commentlist li.comment li.comment {
 	padding: 0 0 0 64px;
 	margin: 0;
 }
-.commentlist li li:after {
+.commentlist li.comment li.comment:after {
 	left: 47px;
 	top: 48px;
 	width: 64px;
 	height: 1px;
 	z-index: 3;
 }
-.commentlist li li:last-child:after {
+.commentlist li.comment li.comment:last-child:after {
 	display: block;
 }
-.commentlist ul ul {
+.commentlist ul.children ul.children {
 	margin: 0;
 	border-bottom: 0;
 }
-.commentlist li li li:after {
+.commentlist li.comment li.comment li.comment:after {
 	left: -16px;
 	width: 94px;
 }
-.commentlist li li li li:after {
+.commentlist li.comment li.comment li.comment li.comment:after {
 	left: -80px;
 	width: 158px;
 }
-.commentlist li li li li li:after {
+.commentlist li.comment li.comment li.comment li.comment li.comment:after {
 	left: -144px;
 	width: 222px;
 }
@@ -216,7 +216,7 @@
 	margin-left: 112px;
 	padding: 8px 0 64px;
 }
-.commentlist ul .comment-respond {
+.commentlist ul.children .comment-respond {
 	margin-left: 24px;
 }
 .comment-reply-title {
@@ -311,28 +311,28 @@
 		margin-right: 0;
 		float: none;
 	}
-	.commentlist li li {	
+	.commentlist li.comment li.comment {	
 		padding: 0 0 0 48px;
 	}
-	.commentlist li li:after {
+	.commentlist li.comment li.comment:after {
     	width: 16px;
     }
-	.commentlist li li li {	
+	.commentlist li.comment li.comment li.comment {	
 		padding: 0 0 0 24px;
 	}
-	.commentlist li li li:after {
+	.commentlist li.comment li.comment li.comment:after {
 		left: 0;
 		width: 38px;
 	}
-	.commentlist li li li li:after {
+	.commentlist li.comment li.comment li.comment li.comment:after {
 		left: -24px;
 		width: 62px;
 	}
-	.commentlist li li li li li:after {
+	.commentlist li.comment li.comment li.comment li.comment li.comment:after {
 		left: -48px;
 		width: 86px;
 	}
-	.commentlist ul .comment-respond {
+	.commentlist ul.children .comment-respond {
 		margin-left: 0;
 	}
 }
@@ -363,57 +363,57 @@
 		padding-top: 24px;
 		padding-right: 0;
 	}
-	li li .comment-body .comment-text {
+	li li.comment .comment-body .comment-text {
 		padding-left: 32px;
 	}
-	li li li .comment-body .comment-text {
+	li li.comment li.comment .comment-body .comment-text {
 		padding-left: 16px;
 	}
-	li li li li .comment-body .comment-text {
+	li li.comment li.comment li.comment .comment-body .comment-text {
 		padding-left: 0;
 	}
-	.commentlist li:after {
+	.commentlist li.comment:after {
 		left: 27px;
 	}
-	.commentlist li li {
+	.commentlist li.comment li.comment {
 		padding: 0 0 0 32px;
 	}
-	.commentlist li li:after {
+	.commentlist li.comment li.comment:after {
 		left: 27px;
 		top: 39px;
 		width: 7px;
 	}
-	.commentlist li li li {
+	.commentlist li.comment li.comment li.comment {
 		padding: 0 0 0 16px;
 	}
-	.commentlist li li li:after {
+	.commentlist li.comment li.comment li.comment:after {
 		left: -4px;
 		width: 22px;
 	}
-	.commentlist li li li li:after {
+	.commentlist li.comment li.comment li.comment li.comment:after {
 		left: -20px;
 		width: 38px;
 	}
-	.commentlist li li li li li:after {
+	.commentlist li.comment li.comment li.comment li.comment li.comment:after {
 		left: -36px;
 		width: 54px;
 	}
 	.comment-body .comment-info .comment-date {
 		display: none;
 	}
-	.commentlist li.depth-1.parent:last-child:before {
+	.commentlist li.comment.depth-1.parent:last-child:before {
 		left: 24px;
 	}
 	.commentlist .comment-respond {
 		margin-left: 64px;
 	}
-	.commentlist ul .comment-respond {
+	.commentlist ul.children .comment-respond {
 		margin-left: 32px;
 	}
-	.commentlist ul ul .comment-respond {
+	.commentlist ul.children ul.children .comment-respond {
 		margin-left: 16px;
 	}
-	.commentlist ul ul ul .comment-respond {
+	.commentlist ul.children ul.children ul.children .comment-respond {
 		margin-left: 0;
 	}
 }
