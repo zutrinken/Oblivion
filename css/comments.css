@@ -130,6 +130,11 @@
 	
 	z-index: 4;
 }
+.comment-body .comment-info .comment-avatar img {
+	width: 100%;
+	height: auto;
+	margin: 0;
+}
 .comment-body .comment-info .comment-fn {
 	font-size: 1.2em;
 	font-style: normal;
