@@ -5,8 +5,6 @@ Yet another wordpress theme.
 * Author: [Peter Amende](http://zutrinken.com/)
 * License: GNU General Public License v2 or later
 
-[![Flattr this git repo](http://api.flattr.com/button/flattr-badge-large.png)](https://flattr.com/submit/auto?user_id=zutrinken&url=https://github.com/zutrinken/oblivion&title=oblivion&language=php-js-html-css&tags=github&category=software)
-
 ## Screenshot
 
 ![preview](screenshot.png)
