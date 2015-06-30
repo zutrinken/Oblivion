@@ -174,25 +174,34 @@ jQuery(function($) {
 		
 		$('[data-type="prlx"]').each(function() {
 			var self = $(this);
-			var topOffset = self.offset().top;
+			var coverPosition = 0;
 		
 			function prlx() {
-				var yPos = (viewport.scrollTop() * self.data('speed'));
-				var opc = 1 - viewport.scrollTop() / 400;
+				var windowPosition = viewport.scrollTop();
+				(windowPosition > 0) ? coverPosition = Math.floor(windowPosition * self.data('speed')) : coverPosition = 0;
+				var opc = 1 - windowPosition / 400;
 				if(self.hasClass('page-header-cover')) {
 					opc = opc * 0.875;
 				}
 				self.css({
-					'-ms-transform' : 'translate(0px, ' + yPos + 'px)',
-					'-webkit-transform' : 'translate3d(0px, ' + yPos + 'px, 0px)',
-					'transform' : 'translate3d(0px, ' + yPos + 'px, 0px)',
+					'-ms-transform' : 'translate(0px, ' + coverPosition + 'px)',
+					'-webkit-transform' : 'translate3d(0px, ' + coverPosition + 'px, 0px)',
+					'transform' : 'translate3d(0px, ' + coverPosition + 'px, 0px)',
 					'opacity' : opc
 				});
 			}
-			viewport.on('scroll', function() {
-				prlx();
-			});
 			prlx();
+			viewport.on({
+				'scroll': function() {
+					prlx();
+				},
+				'resize': function() {
+					prlx();
+				},
+				'orientationchange': function() {
+					prlx();
+				}
+			});
 		});
 	}
 });
