@@ -7,59 +7,6 @@
 	<?php $options = get_option('oblivion_theme_options'); ?>
 	<?php $template_url = get_template_directory_uri(); ?>
 	<head>
-		
-		<!--
-                    
-                                  ..:MMMMMMM8::..                                
-                               MMMMMMMMMMMMMMMMMMO                              
-                           .MMMMMMMMMMMMMMMMMMMMMMMM..                          
-                         MMMMMMMMMMMMMMMMMMMMMMMMMMMMMM:                        
-                      .MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM                        
-                    ..MM MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMO:                    
-                   .MM.  .MMMMMMMMMMMMMMMMMM.   .MMMMMMMMMM.                    
-                   MM     .MMMMMMMMMMMMMM.         MMMMMMMMM                    
-                  MM.       MMMMMMMMMMM.            .MMMMMMMM                   
-                 MM.  MM   .MMMMMMMMMM.              .MMMMMMM.                  
-                MM.  MMMM.  .MMMMMMMM     .MMMM.       MMMMMMM.                 
-               MM   .MMMM   .MMMMMMM:     MMMMMM.      MMMMMMMM                 
-              :MM   .MMM$   MMMMMMMM     .MMMMMM.       MMMMMMMM                
-              MM           MMMMMMMMMM     MMMMMM.       MMMMMMMM.               
-             .MM..         MMMMMMMMMM     .MMMM        .MMMMMMMMM               
-             MMMM..         .MMMMMMM.                   MMMMMMMMM.              
-             MMMMM..                                   .MMMMMMMMM.              
-            MMMMMMMM..                                 MMMMMMMMMMM.             
-            MMMMMMMMMMM:.                            .MMMMMMMMMMMM.             
-           .MMM,,,,,,.:MMMMMM:..                ..MMMMMMMMMMMMMMMMM.            
-           MMM,,,,,,,,,,,,,,,MMMMMMMMMMMMMMMMMMMMMMMMMMMM,,,,,,:MMM.            
-           MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMM,,,,,,,,,,,MMM.           
-          .M8,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,=MMM:,,,,,,,,,,,,,,MM.           
-          =M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMM,,,,,,,,,,,,,,,,,MM.          
-          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,MM.          
-          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,M:          
-          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,,MM          
-          MO,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,,,,,MM.         
-          M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,,,NM.         
-          M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,,,,,,,,,,,,,,,,,,,,,,,,,M.         
-          M,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,,,,,,M.         
-          M=,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MM,:,,,,,,,,,,,,,,,,,,,,,,M          
-          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM,,,,,,,,,,,,,,,,,,,,,,M.         
-          MM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMM,,,,,,,,,,MM,,,,,,,M.         
-        MMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMMMMMMMM,,,,,,,,IM:        
-      MMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMM         
-      MMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMZ        
-       MMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMM        
-       MMMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMMM        
-       .8MMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,OMMMMMM        
-          MMMMMMMMMMMM,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,MMMMMM.        
-           .MMMMMMMMMMMN,,,DMMMMMMMMMMMMMMMMMMM:,,,,,,,,,,,,,,,MMMMMMMM         
-              .MMMMM ..,MMM~.                ..MMMMMMMN,,,,+MMMMMMMMMM         
-                                                      ,MMMMZ.MMMMMMMM.          
-                                                             .MMMMMM.           
-                                                              .MMM.             
-                                                                         
-			zutrinken.com
-		-->
-
 		<title><?php wp_title(' - ', true, 'right'); ?></title>
 
 		<meta name="description" content="<?php bloginfo('description'); ?>" />
