@@ -2,27 +2,6 @@ jQuery(function($) {
 
 	var html = $('html');
 	var viewport = $(window);
-	
-	/* ==========================================================================
-	   Exponential Width
-	   ========================================================================== */
-	   
-	function exponential() {
-		var view = viewport.width();
-		var shot = Math.sqrt(view);
-		shot = 100 - shot * view / 1000;
-		if(shot < 62.51) {
-			shot = 62.5;
-		} else if (shot > 89.999) {
-			shot = 90;
-		}
-		$('.inner').css('width', shot + '%');
-	}
-	exponential();
-	viewport.resize(exponential);
-	viewport.bind('orientationchange', function() {
-		exponential();
-	});
 
 	/* ==========================================================================
 	   Code Highlight

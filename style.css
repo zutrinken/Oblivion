@@ -66,8 +66,8 @@
    ========================================================================== */
 
 .inner {
-	width: 62.5%;
-	max-width: 90em;
+	width: 90%;
+	max-width: 60em;
 	margin: 0 auto;
 }
 
@@ -1360,9 +1360,6 @@ a.sp:focus {
 	}
 	.admin-bar #header {
 		top: 46px;
-	}
-	.no-js .inner {
-		width: 90%;
 	}
 	.post-video {
 		float: none;
