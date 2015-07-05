@@ -28,49 +28,6 @@ Script **FitVids** by [Dave Rupert](https://github.com/davatron5000/FitVids.js)
 
 ## Shortcodes
 
-### Columns
-
-It's possible to create ````[two_````, ````[three_```` or ````[four_```` columns. The last column of an column group needs the attribute ````_last]````. Every column group has to be completed with a ````[divider]```` to clear the floating. Also The basic syntax for three columns is:
-
-	[three_columns_one]
-	 first column content here...
-	[/three_columns_one]
-	[three_columns_one]
-	 second column content here...
-	[/three_columns_one]
-	[three_columns_one_last]
-	 third column content here...
-	[/three_columns_one_last]
-	[divider]
-
-The first number ````[three_```` defines the grid and the second numer ````_one]```` the column width. Mind that every column also need its close tag. As the example above you can build other columns with the following paramenters:
-
-#### 2 Columns
-
-1-1 Columns: ````[two_columns_one][two_columns_one_last]````
-
-#### 3 Columns
-
-1-1-1 Columns: ````[three_columns_one][three_columns_one][three_columns_one_last]````
-
-1-2 Columns: ````[three_columns_one][three_columns_two_last]````
-
-2-1 Columns: ````[three_columns_two][three_columns_one_last]````
-
-#### 4 Columns
-
-1-1-1-1 Columns: ````[four_columns_one][four_columns_one][four_columns_one][four_columns_one_last]````
-
-1-1-2 Columns: ````[four_columns_one][four_columns_one][four_columns_two_last]````
-
-1-2-1 Columns: ````[four_columns_one][four_columns_two][four_columns_one_last]````
-
-2-1-1 Columns: ````[four_columns_two][four_columns_one][four_columns_one_last]````
-
-1-3 Columns: ````[four_columns_one][four_columns_three_last]````
-
-3-1 Columns: ````[four_columns_three][four_columns_one_last]````
-
 ### Buttons
 
 A default button is rectangled, gray and has a normal size. It only contains an attribute for your url and can be extended by the following attributes:
