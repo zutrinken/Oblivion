@@ -61,9 +61,13 @@ jQuery(function($) {
 			}	
 		}
 		footerMenu();
-		viewport.resize(footerMenu);
-		viewport.bind('orientationchange', function() {
-			footerMenu();
+		viewport.on({
+			'resize': function() {
+				footerMenu();
+			},
+			'orientationchange': function() {
+				footerMenu();
+			}
 		});
 	}
 
@@ -112,10 +116,16 @@ jQuery(function($) {
 		
 	};
 	navCollapse();
-	viewport.resize(navCollapse);
-	viewport.bind('orientationchange', function() {
-		navCollapse();
+	viewport.on({
+		'resize': function() {
+			navCollapse();
+		},
+		'orientationchange': function() {
+			navCollapse();
+		}
 	});
+	
+	
 
 	$('#navigation-handler').click(function() {
 		$(this).toggleClass('active');
