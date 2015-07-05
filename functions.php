@@ -13,83 +13,58 @@ if (extension_loaded('gd') && function_exists('imagecopy') && function_exists('i
 	   Initials
 	   ========================================================================== */
 
-add_action('wp_enqueue_scripts', 'oblivion_fonts');
+add_action( 'wp_enqueue_scripts', 'oblivion_fonts' );
 function oblivion_fonts() {
-	wp_register_style('oblivion-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,400italic,700italic|Vollkorn:400italic,700italic');
-	wp_enqueue_style('oblivion-fonts');
+	wp_register_style( 'oblivion-fonts', 'https://fonts.googleapis.com/css?family=Open+Sans:400,700,300,600,400italic,700italic|Vollkorn:400italic,700italic' );
+	wp_enqueue_style( 'oblivion-fonts' );
 }
 
 add_action('wp_enqueue_scripts', 'oblivion_enqueue_scripts');
 function oblivion_enqueue_scripts() {
 	$template = get_template_directory_uri();
 	
-	wp_enqueue_script('oblivion-modernizr', $template.'/js/libs/modernizr-2.8.3.min.js', array(), null, false);
+	wp_enqueue_script( 'oblivion-modernizr', $template.'/js/libs/modernizr-2.8.3.min.js', array(), null, false );
 
-	wp_enqueue_script('jquery');
-	wp_enqueue_script('oblivion-jquery.fitvids', $template.'/js/libs/jquery.fitvids.js', array(), null, false);
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'oblivion-jquery.fitvids', $template.'/js/libs/jquery.fitvids.js', array(), null, false );
 	
-	if(!is_home() && (is_page() || is_single())) {
-		wp_enqueue_style( 'oblivion-highlight-style', $template.'/css/highlight.css', array(), null, false);
-		wp_enqueue_script('oblivion-highlight-script', $template.'/js/libs/highlight.pack.js', array(), null, false);
+	if( !is_home() && ( is_page() || is_single() ) ) {
+		wp_enqueue_style( 'oblivion-highlight-style', $template.'/css/highlight.css', array(), null, false );
+		wp_enqueue_script( 'oblivion-highlight-script', $template.'/js/libs/highlight.pack.js', array(), null, false );
 	}
-	if(is_single() && get_option('thread_comments')) {
-		wp_enqueue_script('comment-reply');
+	if( is_single() && get_option( 'thread_comments' ) ) {
+		wp_enqueue_script( 'comment-reply' );
 	}
-	if(is_front_page() && is_home()) {
-		wp_enqueue_style( 'oblivion-frontpage-style', $template.'/css/front-page.css', array(), null, false);
-		wp_enqueue_script('jquery-masonry');
-		wp_enqueue_script('oblivion-frontpage-script', $template.'/js/front-page.js', array(), null, true);
+	if( is_front_page() && is_home() ) {
+		wp_enqueue_style( 'oblivion-frontpage-style', $template.'/css/front-page.css', array(), null, false );
+		wp_enqueue_script( 'jquery-masonry' );
+		wp_enqueue_script( 'oblivion-frontpage-script', $template.'/js/front-page.js', array(), null, true );
 	}
-	wp_enqueue_script('oblivion-index', $template.'/js/index.js', array(), null, true);
+	wp_enqueue_script( 'oblivion-index', $template.'/js/index.js', array(), null, true );
 }
 
 /* localization */
-load_theme_textdomain('oblivion', get_template_directory() .'/languages');
+load_theme_textdomain( 'oblivion', get_template_directory() .'/languages' );
 
 /* add "editor-style.css" for the admin-interface */
-add_editor_style('css/editor-style.css');
+add_editor_style( 'css/editor-style.css' );
 
 /* add custom theme-options */
-require_once(get_template_directory() .'/inc/theme-options.php');
+require_once( get_template_directory() .'/inc/theme-options.php');
 
 /* Disable default Gallery Style */
 add_filter( 'use_default_gallery_style', '__return_false' );
 
 /* Enable post and comment RSS feed links to head */
-add_theme_support('automatic-feed-links');
+add_theme_support( 'automatic-feed-links' );
+
+/* Render Title in Head by WP */
+add_theme_support( 'title-tag' );
 
 /* Set content width */
 if ( ! isset( $content_width ) ) {
 	$content_width = 560;
 }
-
-
-	/* ==========================================================================
-	   WP Title
-	   ========================================================================== */
-
-
-function oblivion_wp_title( $title, $sep ) {
-	global $paged, $page;
-
-	if ( is_feed() ) {
-		return $title;
-	}
-	$title .= get_bloginfo( 'name' );
-
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) ) {
-		$title = "$title $sep $site_description";
-	}
-
-	if ( $paged >= 2 || $page >= 2 ) {
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'oblivion' ), max( $paged, $page ) );
-	}
-
-	return $title;
-}
-add_filter( 'wp_title', 'oblivion_wp_title', 10, 2 );
-
 
 	/* ==========================================================================
 	   Images Setup

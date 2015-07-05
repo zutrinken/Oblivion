@@ -7,10 +7,6 @@
 	<?php $options = get_option('oblivion_theme_options'); ?>
 	<?php $template_url = get_template_directory_uri(); ?>
 	<head>
-		<title><?php wp_title(' - ', true, 'right'); ?></title>
-
-		<meta name="description" content="<?php bloginfo('description'); ?>" />
-
 		<meta http-equiv="Content-Type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
 
