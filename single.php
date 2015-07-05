@@ -43,9 +43,9 @@
 					</div>
 					<div class="clear"></div>
 					<div class="post-sharing">
-						<a class="sl sl-twitter" target="_blank" href="http://twitter.com/home?status=<?php the_title(); ?> <?php the_permalink(); ?>"><i class="fa fa-twitter fa-fw"></i> <span>twitter</span></a>
-						<a class="sl sl-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>"><i class="fa fa-facebook fa-fw"></i> <span>facebook</span></a>
-						<a class="sl sl-googleplus" target="_blank" href="https://plus.google.com/share?url=<?php the_permalink(); ?>"><i class="fa fa-google-plus fa-fw"></i> <span>Google+</span></a>
+						<a class="sl sl-twitter" target="_blank" href="http://twitter.com/home?status=<?php the_title(); ?> <?php the_permalink(); ?>"><i class="icon-twitter"></i> <span>twitter</span></a>
+						<a class="sl sl-facebook" target="_blank" href="http://www.facebook.com/sharer.php?u=<?php the_permalink(); ?>"><i class="icon-facebook"></i> <span>facebook</span></a>
+						<a class="sl sl-googleplus" target="_blank" href="https://plus.google.com/share?url=<?php the_permalink(); ?>"><i class="icon-googleplus"></i> <span>Google+</span></a>
 						<div class="clear"></div>
 					</div>
 				</aside>
@@ -57,12 +57,12 @@
 				<h2 class="visuallyhidden"><?php _e('Article Navigation','oblivion'); ?></h2>
 				<span class="post-nav-prev">
 					<span class="post-nav-inner">
-						<?php previous_post_link('%link', '<span class="label">'. __('previous post','oblivion') . '</span> <span class="title"><i class="fa fa-angle-left"></i> %title</span>', true); ?>
+						<?php previous_post_link('%link', '<span class="label">'. __('previous post','oblivion') . '</span> <span class="title"><i class="icon-angle-left"></i> %title</span>', true); ?>
 					</span>
 				</span>
 				<span class="post-nav-next">
 					<span class="post-nav-inner">
-						<?php next_post_link('%link', '<span class="label">'. __('next post','oblivion') . '</span> <span class="title"><i class="fa fa-angle-right"></i> %title</span>', true); ?>
+						<?php next_post_link('%link', '<span class="label">'. __('next post','oblivion') . '</span> <span class="title"><i class="icon-angle-right"></i> %title</span>', true); ?>
 					</span>
 				</span>
 				<div class="clear"></div>

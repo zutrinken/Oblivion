@@ -34,8 +34,8 @@
 						<span><?php oblivion_current_paged(); ?></span>
 					</div>
 					<nav class="pagination-pager">
-						<?php previous_posts_link('<i class="fa fa-angle-left"></i> <span>' . __('previous','oblivion') . '</span>'); ?>
-						<?php next_posts_link('<span>' . __('next','oblivion') .'</span> <i class="fa fa-angle-right"></i>'); ?>
+						<?php previous_posts_link('<i class="icon-angle-left"></i> <span>' . __('previous','oblivion') . '</span>'); ?>
+						<?php next_posts_link('<span>' . __('next','oblivion') .'</span> <i class="icon-angle-right"></i>'); ?>
 					</nav>
 					<div class="clear"></div>
 			</div>

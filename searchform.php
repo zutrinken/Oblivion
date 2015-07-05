@@ -4,6 +4,6 @@
 	<?php else : ?>
 		<input class="searchform-input" type="text" placeholder="<?php _e('Search ...','oblivion'); ?>" name="s">
 	<?php endif; ?>
-	<button type="submit" name="submit" class="searchform-button"><i class="fa fa-search"></i></button>
+	<button type="submit" name="submit" class="searchform-button"><i class="icon-search"></i></button>
 	<div class="clear"></div>
 </form>

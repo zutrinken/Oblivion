@@ -58,7 +58,7 @@
 @import url('css/wordpress.css');
 @import url('css/widget.css');
 @import url('css/comments.css');
-@import url('css/font-awesome.min.css');
+@import url('css/icons.css');
 
 
 /* ==========================================================================
@@ -876,7 +876,7 @@ a.sp:focus {
 	border-radius: 2px;
 	white-space: nowrap;
 }
-.post-sharing .sl i {
+.post-sharing .sl i:before {
 	padding: 0 8px 0 2px;
 }
 .post-sharing .sl span {
@@ -910,7 +910,7 @@ a.sp:focus {
 	color: #1f7099;
 	border-bottom-color: transparent;
 }
-.post-nav i {
+.post-nav i:before {
 	color: #2e3033;
 	font-size: 2.4em;
 	line-height: 0.6em;
@@ -959,7 +959,7 @@ a.sp:focus {
 	padding-left: 1.6em;
 }
 .post-nav .post-nav-prev i {
-	left: 0;
+	left: -1em;
 }
 .post-nav .post-nav-next {
 	text-align: right;
@@ -969,7 +969,7 @@ a.sp:focus {
 	padding-right: 1.6em;
 }
 .post-nav .post-nav-next i {
-	right: 0;
+	right: -1em;
 }
 
 .page-header {
@@ -1116,7 +1116,8 @@ a.sp:focus {
 	border-radius: 2px;
 	margin: 0 -1px 0 0;
 }
-.pagination-pager > * i {
+.pagination-pager > * i:before {
+	width: auto;
 	font-size: 1.6em;
 	line-height: 0.625em;
 	vertical-align: text-bottom;

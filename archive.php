@@ -93,8 +93,8 @@
 					<nav class="pagination-pager">
 					<?php
 						$args = array(
-							'prev_text' => '<i class="fa fa-angle-left"></i> <span>' . __('previous','oblivion') .'</span>',
-							'next_text' => '<span>' . __('next','oblivion') .'</span> <i class="fa fa-angle-right"></i>',
+							'prev_text' => '<i class="icon-angle-left"></i> <span>' . __('previous','oblivion') .'</span>',
+							'next_text' => '<span>' . __('next','oblivion') .'</span> <i class="icon-angle-right"></i>',
 						);
 						echo paginate_links($args);
 					?>

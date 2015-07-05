@@ -170,7 +170,7 @@
 	color: #fff;
 	background: #2e3033;
 }
-.comment-body .comment-reply i {
+.comment-body .comment-reply i:before {
 	margin: 0;
 }
 .comment-body .comment-reply span {

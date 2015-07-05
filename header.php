@@ -71,19 +71,19 @@
 						<?php if($options['icon']) : ?>
 							<img class="icon" src="<?php echo $options['icon']; ?>" alt="<?php bloginfo('name'); ?>" />
 						<?php else : ?>
-							<span class="home"><i class="fa fa-home"></i></span>
+							<span class="home"><i class="icon-home"></i></span>
 						<?php endif; ?>
 					</a>
 				</h1>
-				<a id="search-link" class="search-handler" href="<?php echo home_url(); ?>/?s=&nbsp;&submit="><i class="fa fa-search"></i></a>
+				<a id="search-link" class="search-handler" href="<?php echo home_url(); ?>/?s=&nbsp;&submit="><i class="icon-search"></i></a>
 				<a id="search-handler" class="search-handler">
-					<i class="fa fa-times search-close"></i>
-					<i class="fa fa-search search-open"></i>
+					<i class="icon-close search-close"></i>
+					<i class="icon-search search-open"></i>
 				</a>
 				<nav id="navigation" role="navigation">
 					<div id="navigation-inner">
 						<h2 class="visuallyhidden"><?php _e('Navigation','oblivion'); ?></h2>
-						<a id="navigation-handler"><i class="fa fa-bars"></i></a>
+						<a id="navigation-handler"><i class="icon-menu"></i></a>
 						<?php wp_nav_menu(
 								array(
 									'theme_location' => 'header',
