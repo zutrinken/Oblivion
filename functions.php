@@ -228,48 +228,6 @@ function oblivion_header_image_style() {
 }
 add_filter('wp_head', 'oblivion_header_image_style');
 
-
-
-	/* ==========================================================================
-	   Shortcodes
-	   ========================================================================== */
-
-/* Enable shortcodes in widget areas */
-add_filter( 'widget_text', 'do_shortcode' );
-
-/* Replace WP autop formatting */
-if (!function_exists( "oblivion_remove_wpautop")) {
-	function oblivion_remove_wpautop($content) { 
-		$content = do_shortcode( shortcode_unautop( $content ) ); 
-		$content = preg_replace( '#^<\/p>|^<br \/>|<p>$#', '', $content);
-		return $content;
-	}
-}
-
-function oblivion_button( $atts, $content = null ) {
-    extract(shortcode_atts(array(
-    'link'	=> '#',
-    'target' => '',
-    'color'	=> '',
-    'size'	=> '',
-	 'form'	=> '',
-	 'font'	=> '',
-    ), $atts));
-
-	$color = ($color) ? ' '.$color. '-btn' : '';
-	$size = ($size) ? ' '.$size. '-btn' : '';
-	$form = ($form) ? ' '.$form. '-btn' : '';
-	$font = ($font) ? ' '.$font. '-btn' : '';
-	$target = ($target == 'blank') ? ' target="_blank"' : '';
-
-	$out = '<a' .$target. ' class="standard-btn' .$color.$size.$form.$font. '" href="' .$link. '"><span>' .do_shortcode($content). '</span></a>';
-
-    return $out;
-}
-add_shortcode('button', 'oblivion_button');
-
-
-
 	/* ==========================================================================
 	   Caption
 	   ========================================================================== */
