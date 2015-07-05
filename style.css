@@ -1070,10 +1070,10 @@ a.sp:focus {
    ========================================================================== */
 
 #index-pagination {
-	height: 0;
-	top: -30px;
-	z-index: 100;
-	margin: auto;
+	border-bottom: 1px solid #e4e6eb;
+	margin: 0 auto;
+	padding: 32px 0;
+	background: #fff;
 }
 .pagination {
 	text-align: center;
