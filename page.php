@@ -33,7 +33,11 @@
 			</div>
 		</section>
 	<?php endwhile; ?>
-
+		<?php if(comments_open() || get_comments_number()) : ?>
+			<section id="replies">
+				<?php comments_template(); ?>
+			</section>
+		<?php endif; ?>
 	<?php endif; ?>
 
 <?php get_footer(); ?>

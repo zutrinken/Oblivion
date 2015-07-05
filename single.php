@@ -68,11 +68,12 @@
 				<div class="clear"></div>
 			</div>
 		</nav>
+	<?php endwhile; ?>
 		<?php if(comments_open() || get_comments_number()) : ?>
 			<section id="replies">
 				<?php comments_template(); ?>
 			</section>
 		<?php endif; ?>
-	<?php endwhile; endif; ?>
+	<?php endif; ?>
 
 <?php get_footer(); ?>
