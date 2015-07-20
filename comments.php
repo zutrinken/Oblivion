@@ -10,8 +10,8 @@ if ( post_password_required() ) {
 			<h3 id="comments"><?php	printf( _n( 'One comment', '%1$s comments', get_comments_number(),'oblivion' ), number_format_i18n( get_comments_number() )); ?></h3>
 			<?php if ((int) get_option('page_comments') === 1): ?>
 				<div class="pagination" id="comment-pagination-top">
-					<span class="comment-nav-prev"><?php previous_comments_link('<i class="fa fa-angle-left"></i> <span>' . __('previous','oblivion') .'</span>') ?></span>
-					<span class="comment-nav-next"><?php next_comments_link('<span>' . __('next','oblivion') .'</span> <i class="fa fa-angle-right"></i>') ?></span>
+					<span class="comment-nav-prev"><?php previous_comments_link('<i class="icon-angle-left"></i> <span>' . __('previous','oblivion') .'</span>') ?></span>
+					<span class="comment-nav-next"><?php next_comments_link('<span>' . __('next','oblivion') .'</span> <i class="icon-angle-right"></i>') ?></span>
 					<div class="clear"></div>
 				</div>
 			<?php endif; ?>
@@ -20,8 +20,8 @@ if ( post_password_required() ) {
 			</ol>
 			<?php if ((int) get_option('page_comments') === 1): ?>
 				<div class="pagination" id="comment-pagination-bottom">
-					<span class="comment-nav-prev"><?php previous_comments_link('<i class="fa fa-angle-left"></i> <span>' . __('previous','oblivion') .'</span>') ?></span>
-					<span class="comment-nav-next"><?php next_comments_link('<span>' . __('next','oblivion') .'</span> <i class="fa fa-angle-right"></i>') ?></span>
+					<span class="comment-nav-prev"><?php previous_comments_link('<i class="icon-angle-left"></i> <span>' . __('previous','oblivion') .'</span>') ?></span>
+					<span class="comment-nav-next"><?php next_comments_link('<span>' . __('next','oblivion') .'</span> <i class="icon-angle-right"></i>') ?></span>
 					<div class="clear"></div>
 				</div>
 			<?php endif; ?>
@@ -39,7 +39,7 @@ if ( post_password_required() ) {
 			$args = array(
 				'id_form'           => 'commentform',
 				'id_submit'         => 'submit',
-				'cancel_reply_link' => '<i class="fa fa-times"></i> <span>' . __('Cancel Reply','oblivion') . '</span>',
+				'cancel_reply_link' => '<i class="icon-close"></i> <span>' . __('Cancel Reply','oblivion') . '</span>',
 				'label_submit'      => __('Post Comment','oblivion'),
 				'comment_notes_after' => '',
 				'fields' => apply_filters( 'comment_form_default_fields', array(

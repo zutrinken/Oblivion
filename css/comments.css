@@ -236,8 +236,10 @@
 	
 	color: #fff;
 	margin: 0;
-	padding: 0 0.5em;
+	padding: 0 0.75em;
 	background: #cc3314;
+
+	font-size: 0.5em;
 
 	font-weight: 400;
 	text-decoration: none !important;
