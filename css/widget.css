@@ -258,3 +258,15 @@
 	/* ------------------------------ Widget Search */
 
 .widget_search {}
+.widget_search .searchform {
+	position: relative;
+}
+.widget_search .searchform .searchform-input {
+	padding-right: 4.4em;
+}
+.widget_search .searchform .searchform-button {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 2px 0 0;
+}
