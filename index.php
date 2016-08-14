@@ -10,7 +10,7 @@
 					<?php echo get_page($blog_page_id)->post_title; ?>
 				</h2>
 				<aside class="page-meta">
-					<?php current_paged(); ?>
+					<?php oblivion_current_paged(); ?>
 				</aside>
 			</div>
 		</header>
